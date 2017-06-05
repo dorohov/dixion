@@ -1,0 +1,115 @@
+.contacts-block{}
+.contacts-item__{
+	&item{
+		&:last-child{margin-bottom: 0;}
+		@media @media-device {margin-bottom: 35px;}
+		@media @media-screen {margin-bottom: 4vw;}
+	}
+	&row{
+		margin-top: -30px;
+		align-items: center;
+		@media @media-device {flex-wrap: wrap;}
+	}
+	&cols{
+		padding-top: 30px;
+		&.cols-3{			
+			@media @media-device {.makeCols(12, 12);}
+			@media @media-screen {
+				.contacts-item__item:nth-child(2n+2) &{.makeColsOffset(1, 12, 15px);}
+			}
+			@media @media-size-md {.makeCols(4, 12);}
+		}
+		&.cols-8{
+			@media @media-device {.makeCols(12, 12);}
+			@media @media-screen {
+				.contacts-item__item:nth-child(2n+1) &{.makeColsOffset(1, 12, 15px);}
+			}
+			@media @media-size-md {.makeCols(7, 12);}
+		}
+		&.note{
+			@media @media-screen {
+				.contacts-item__item:nth-child(2n+2) &{order: 1}
+			}
+		}
+		&.map{}
+	}
+	&name{
+		color: @blue;
+		.calcFontSize(24, 34, 320, 1680);
+		.calcLineHeight(30, 44, 320, 1680);
+		@media @media-device {margin-bottom: 15px;}
+		@media @media-screen {margin-bottom: 35px;}
+	}
+	&contact{
+		position: relative;
+		padding-left: 40px;
+		margin-bottom: 20px;
+		line-height: @b-lh - 2px;
+		a{
+			&,
+			&[href^="mailto:"],
+			&[href^="tel:"]{
+				color: @b-color;
+			}
+		}
+		span{font-weight: 700;}
+	}
+	&icon{
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		&.round{
+			color: @white;
+			background-color: @b-color;
+			border-radius: 50%;
+			padding: 6px;
+		}
+	}
+	&map{
+		width: 100%;
+		height: 530px;
+		@media @media-size-xs-p {height: 350px}
+		@media @media-size-xs-l {height: 250px}
+	}
+}
+.contacts-panel__{
+	&item{
+		border: 2px solid @blue;
+		@media @media-device {
+			padding: 25px 15px;
+		}
+		@media @media-screen {
+			padding: 2.8vw 1.5vw;
+		}
+	}
+	&row{
+		margin-top: -30px;
+		justify-content: center;
+		align-items: center;
+	}
+	&cols{
+		padding-top: 30px;
+		&.cols-3{
+			@media @media-size-sm {width: auto;}
+		}
+	}
+	&name{
+		font-weight: 700;
+		.calcFontSize(18, 22, 320, 1680);
+		.calcLineHeight(24, 28, 320, 1680);
+		margin-bottom: 15px;
+	}
+	&contact{
+		a{
+			&,
+			&[href^="mailto:"],
+			&[href^="tel:"]{
+				color: @b-color;
+			}
+		}
+		span{font-weight: 700;}
+	}
+}

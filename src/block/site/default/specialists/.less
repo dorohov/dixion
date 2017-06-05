@@ -1,0 +1,103 @@
+.specialists-block{}
+.specialists-block__{}
+.specialists-item__{
+	&item{		
+		position: relative;
+	}
+	&inner{
+		display: block;
+		min-height: 380px;
+		position: relative;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		transition: @trs-site;
+		overflow: hidden;
+	}
+	&heading-block{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		background-color: fadeout(@blue-purple, 30%);
+		display: flex;
+		align-items: center;
+		overflow: hidden;
+		min-height: 105px;
+		padding: 15px 25px;
+		transition: @trs-site;
+		transform-origin: 0 0;
+		.specialists-item__item.is--hover &{
+			transform: translateX(100%);
+		}
+	}
+	&heading{
+		margin: 0;
+		color: @white;
+		width: 100%;
+		.calcFontSize(14, 16, 320, 1680);
+		.calcLineHeight(22, 24, 320, 1680);
+		font-weight: 500;
+	}
+	&note{
+		transition: @trs-site;
+		transform-origin: 0 0;
+		transform: translateX(-100%);
+		position: absolute;
+		background-color: fadeout(@blue-purple, 30%);
+		width: 100%;
+		left: 0;
+		top: 0;
+		height: 100%;
+		overflow: hidden;
+		color: @white;
+		font-size: @b-fs - 4px;
+		line-height: @b-lh - 6px;
+		padding: 45px 30px 80px;
+		.specialists-item__item.is--hover &{
+			transform: translateX(0%);
+		}
+		p, div{
+			margin-bottom: 15px;
+			&:last-child{margin-bottom: 0}
+		}
+
+	}
+	&more{
+		border-radius: 50%;
+		background-color: @blue;
+		color: @white;
+		position: absolute;
+		bottom: 10px;
+		right: 10px;
+		width: 60px;
+		height: 60px;
+		padding: 15px;
+		transition: @trs-site;
+		opacity: 0;
+		.specialists-item__item.is--hover &{
+			transform: translateX(0%);
+			opacity: 1;
+			transition-delay: 0.2s;
+		}
+	}
+	&appointment{
+		border-radius: 50%;
+		background-color: @blue;
+		color: @white;
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		width: 60px;
+		height: 60px;
+		padding: 15px;
+		transition: @trs-site;
+		opacity: 0;
+		z-index: 3;
+		.specialists-item__item.is--hover  &{
+			transform: translateX(0%);
+			opacity: 1;
+			transition-delay: 0.2s;
+		}
+	}
+}

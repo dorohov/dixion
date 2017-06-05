@@ -1,0 +1,34 @@
+<div class="{{contacts_prefix}}item">
+	<div class="{{contacts_prefix}}row row">
+		<div class="{{contacts_prefix}}cols cols note cols-3">
+			<h3 class="{{contacts_prefix}}name">{{contacts_name}}</h3>
+			<div class="{{contacts_prefix}}contact">
+				<span class="{{contacts_prefix}}icon round">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="tel" ]]</span>
+				<a href="tel:{{contacts.phone_tel}}">{{contacts.phone}},</a>
+				<a href="tel:{{contacts.phone2_tel}}">{{contacts.phone2}}</a>
+			</div>
+			<div class="{{contacts_prefix}}contact">
+				<span class="{{contacts_prefix}}icon round">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="mailto" ]]</span>
+				<a href="mailto:{{contacts.email}}">{{contacts.email}}</a>
+			</div>
+			<div class="{{contacts_prefix}}contact">
+				<span class="{{contacts_prefix}}icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="skype" ]]</span>
+				<a href="skype:{{soc.skype}}?call">{{soc.skype}}</a>
+			</div>
+			<div class="{{contacts_prefix}}contact">
+				<span class="{{contacts_prefix}}icon round">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="address" ]]</span>
+				{{contacts_address}}
+			</div>
+			<div class="{{contacts_prefix}}contact">
+				<span class="{{contacts_prefix}}icon round">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="time" ]]</span>
+				<div><span>Пн-Пт:</span> {{contacts_weekdays}}</div>
+				<div><span>Сб:</span> {{contacts_saturday}}</div>
+				<div><span>Вс:</span> {{contacts_sunday}}</div>
+			</div>
+		</div>	
+		<div class="{{contacts_prefix}}cols cols map cols-8">
+			<div class="{{contacts_prefix}}map" id="{{contacts_map_id}}"></div>
+		
+		</div>	
+	</div>	
+</div>

@@ -1,0 +1,14 @@
+._plp__{
+	&row{
+		flex-wrap: wrap;
+		margin-top: -30px; 
+		@media @media-device {flex-wrap: wrap;}
+	}
+	&cols{
+		padding-top: 30px;
+		&.cols-5,
+		&.cols-7{
+			@media @media-device {.makeCols(12, 12);}
+		}
+	}
+}

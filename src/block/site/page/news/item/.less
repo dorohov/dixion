@@ -1,0 +1,22 @@
+.news-item-page{}
+._nip__{
+	&row{
+		@media @media-device {
+			margin-top: -20px;
+			flex-wrap: wrap;
+			margin-bottom: 60px;
+		}
+		@media @media-screen {
+			margin-bottom: 4vw;
+		}
+	}
+	&cols.cols-6{
+		@media @media-device {
+			padding-top: 20px;
+			.makeCols(12, 12); 
+		}
+	}
+	&btn-block{
+		text-align: center;
+	}
+}

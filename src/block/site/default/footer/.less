@@ -1,0 +1,145 @@
+.footer-site{
+	position: relative;
+	z-index: 4;
+	font-family: @footer-ff;
+	font-size: @footer-fs - 4px; //14
+	line-height: @footer-lh - 4px; //22
+    font-weight: 300;
+    color: @footer-color;
+    background-color: @footer-bg;
+	a{
+		&, &:hover, &:focus{color: @footer-color!important}
+		&.footer__cabinet{
+			color: @white!important;
+			&:hover{color: @footer-color!important}
+		}
+	}
+
+}
+.footer__{
+	&container{
+		padding-top: 30px; padding-bottom: 30px;
+		@media @media-size-xs{padding-bottom: 10px;}
+		@media @media-size-mdl{padding-top: 20px; padding-bottom: 20px;}
+	}
+	&row{
+		align-items: center;	
+		@media @media-size-xs{
+			justify-content: center;
+			margin-top: -20px;
+			text-align: center;
+		}	
+		@media @media-notsmart{justify-content: space-between;}
+		> .cols{
+			@media @media-size-xs{padding-top: 20px;}	
+		}	
+	}
+	&copyright-cols{
+		@media @media-size-sm{.makeCols(3.1, 12);}
+		@media @media-screen{.makeCols(2, 12);}
+		@media @media-size-sm{.makeCols(2.5, 12);}
+		@media @media-size-md{.makeCols(2.5, 12);}
+		._logo{
+			display: block;
+			max-width: 225px;
+			width: 100%;
+			height: 60px;
+		}
+	}
+	&contacts-cols{		
+		@media @media-size-sm{.makeCols(5.8, 12);}//48
+		@media @media-screen{.makeCols(7, 12);}
+		@media @media-size-md{.makeCols(7, 12);}
+	}
+	&soc-cols{
+		@media @media-size-xs{margin-bottom: 15px;}
+		@media @media-size-sm{.makeCols(3.1, 12);}
+		@media @media-screen{.makeCols(3, 12);}
+		@media @media-size-md{.makeCols(2.5, 12);}
+		//@media @media-size-mdl{.makeCols(2, 12);}
+		.social__row{
+			@media @media-screen {justify-content: flex-end;}
+		}
+	}
+	/*&dorohovdesign-cols{
+		font-size: @b-fs - 4px;
+		@media @media-size-xs{margin-bottom: 15px;}
+		@media @media-size-sm{max-width: 160px; width: 23%}
+		@media @media-screen{.makeCols(3, 12);}
+		@media @media-size-mdl{.makeCols(2, 12); max-width: 145px;}
+	}*/
+	//
+	&contacts-item{
+		margin-bottom: 5px;
+		&:last-child{margin-bottom: 0}
+		span{font-weight: 700;}
+	}
+	&phone{
+		font-size: @footer-fs - 2px; 
+		line-height: @footer-lh - 2px; 
+	}
+	&cabinet{
+		text-transform: uppercase;
+		border-left: 2px solid @white;
+		padding-left: 10px;
+		letter-spacing: 1px;
+	}
+	&contacts-row{
+		margin-top: -5px;
+		@media @media-size-xs{justify-content: center;}	
+		@media @media-size-sm {
+			flex-wrap: wrap;
+			justify-content: center;
+    		text-align: center;
+		}
+		@media @media-size-md {
+			flex-wrap: wrap;
+			justify-content: center;
+    		text-align: center;
+		}
+		.cols{
+			padding-top: 5px;
+			/*@media @media-size-sm {
+				&:nth-child(2){width: 100%; order: 1;}
+			}
+			@media @media-size-md {
+				&:nth-child(2){width: 100%; order: 1;}
+			}*/
+		}
+	}
+	/*
+	&dorohovdesign__row{
+		align-items: center;
+		justify-content: flex-end;
+		margin: 0 -5px;
+		//@media @media-size-sm-p{justify-content: center; padding-top: 20px;}
+		@media @media-size-sml{flex-wrap: wrap; text-align: center;}
+		> .cols{
+			padding: 0 5px;
+			@media @media-size-sml{width: 100%;}
+		}
+	}
+	&dorohovdesign__logo{
+		a{
+			border: none;
+			display: block;
+			width: 75px;
+			height: 24px;
+			margin:0 auto;
+			@media @media-size-sml{width: 115px; height: 35px;}
+			svg{
+				fill: @footer-color;
+				transition: @trs-site;
+			}
+			&:hover{
+				svg{
+					fill: @b-color-a;
+				}
+			}
+			img{
+				@media @media-size-xs{margin: 0 auto}
+				@media @media-size-mdl{margin: 0 auto}
+			}
+		}
+	}*/
+}

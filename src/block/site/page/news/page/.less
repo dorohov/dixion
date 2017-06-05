@@ -1,0 +1,30 @@
+.news-page{}
+._np__{
+	&row{
+		flex-wrap: wrap;
+		margin-top: -50px;
+		@media @media-screen {
+			margin-left: -25px;
+			margin-right: -25px;
+		}
+	}
+	&cols{
+		padding-top: 50px;
+		@media @media-size-xs-l {
+			&.cols-4{.makeCols(6, 12);}
+		}
+		@media @media-size-xxs-l {
+			&.cols-4{.makeCols(12, 12);}
+		}
+		@media @media-size-sm {
+			&.cols-4{.makeCols(6, 12);}
+		}
+		@media @media-size-md {
+			&.cols-4{.makeCols(6, 12);}
+		}
+		@media @media-screen {
+			padding-left: 25px;
+			padding-right: 25px;
+		}
+	}
+}

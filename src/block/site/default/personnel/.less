@@ -1,0 +1,85 @@
+.personnel-item__{
+	&block{
+		@media @media-device {margin-bottom: 40px;}
+		@media @media-screen {margin-bottom: 5.2vw;}
+		&:last-child{margin-bottom: 0}
+	}
+	&heading{
+		color: @b-color-a;
+		.calcFontSize(25, 35, 320, 1680);
+		.calcLineHeight(31, 41, 320, 1680);
+		@media @media-device {margin-bottom: 30px;}
+		@media @media-screen {margin-bottom: 2.2vw;}
+	}
+	&inner{
+		border-left: 2px solid @blue;
+		@media @media-device-lg {padding-left: 10px;}
+	}
+	&preview{
+		border: 6px solid @blue-gray;
+		border-radius: 50%;
+		width: 140px;
+		height: 140px;
+		padding: 20px;
+		color: @blue-gray;
+		transition: @trs-site;
+		margin: 0 auto;
+	}
+	&row{
+		//align-items: center;
+		@media @media-size-md {
+			flex-wrap: wrap;
+		}
+	}
+	&cols{
+		&.preview{
+			@media @media-device-lg {
+				display: none;
+			}
+		}
+		&.note{
+			@media @media-size-xs-l {
+				.makeCols(6, 12);
+			}
+			@media @media-size-sm {
+				.makeCols(4, 12);
+				&.cols-6{.makeCols(6, 12);}
+			}
+			@media @media-screen{
+				.makeCols(3.3, 12);
+				&.cols-6{.makeCols(5, 12);}
+			}
+			@media @media-size-md {
+				.makeCols(4, 12);
+				&.cols-6{.makeCols(6, 12);}
+			}
+		}
+	}
+	&list{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		li{
+			.calcFontSize(18, 24, 320, 1680);
+			.calcLineHeight(26, 30, 320, 1680);
+			margin-bottom: 5px;
+		}
+		a{
+			display: inline-block;
+			&,&:focus{color: @blue-sat}
+			&:hover{color: @b-color-a}
+			@media @media-size-xs {
+				margin-bottom: 5px;
+			}
+		}
+	}
+	&collapse-inner{
+		margin-top: 10px;
+		margin-bottom: 20px;
+		padding-left: 15px;
+		margin-left: 20px;
+		border-left: 2px solid @blue;
+		.calcFontSize(14, 16, 320, 1680);
+		.calcLineHeight(18, 20, 320, 1680);
+	}
+}

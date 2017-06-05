@@ -1,0 +1,39 @@
+{
+	"contacts":{
+		"name":"F-media",
+		"domain":"klinika-dixion.ru",
+		"domain_link":"http://klinika-dixion.ru/",
+		"agreement_page":"agreement",
+		"copyright":"klinika-dixion",
+		"email":"klinika-dixion@mail.ru",
+		"phone":"+7 (4862) <span>76-00-00</span>", 
+		"phone_tel":"+74862760000",
+		"phone2":"<span>47-00-00</span>",
+		"phone2-full":"+7 (4862) <span>47-00-00</span>",
+		"phone2_tel":"+74862470000",
+		"address1":"<span>г.&nbsp;Орёл,</span> ул.&nbsp;Тургенева, д.&nbsp;42",
+		"address-code1":"302028",
+		"address2":"<span>г.&nbsp;Орел,</span> ул.&nbsp;Московская, д.&nbsp;29, лит&nbsp;А2",
+		"address-code2":"302020",
+		"weekdays":"с&nbsp;08:00 до&nbsp;21:00",
+		"saturday":"с&nbsp;08:00 до&nbsp;19:00",
+		"sunday":"с&nbsp;08:00 до&nbsp;17:00"
+	},
+	"soc":{
+		"skype":"Dixion_clinic",
+		"vk":"https://vk.com/club23566151",
+		"fb":"https://www.facebook.com/profile.php?id=100002023225136",
+		"ok":"https://www.ok.ru/klinika.dixion",
+		"inst":"https://www.instagram.com/"
+	},
+	"url-path-css":"/wp-content/themes/azbnbasetheme/css",
+	"url-path-css":"/css",
+	"url-path-img":"/wp-content/themes/azbnbasetheme/img",
+	"url-path-img":"/img",
+	"url-path-js":"/wp-content/themes/azbnbasetheme/js",
+	"url-path-js":"/js",
+	"url-path-plugins":"/wp-content/themes/azbnbasetheme/plugins",
+	"url-path-plugins":"/plugins",
+	"url-path-favicon":"/wp-content/themes/azbnbasetheme/favicon",
+	"url-path-favicon":"/favicon"
+}
