@@ -16,7 +16,7 @@
 		padding-top: 30px;
 		&.cols-2{
 			@media @media-size-xs {.makeCols(6, 12);}
-			@media @media-size-xxs {.makeCols(12, 12);}
+			@media @media-size-xxxs {.makeCols(12, 12);}
 			@media @media-size-sm {.makeCols(4, 12);}
 			@media @media-size-md {.makeCols(4, 12);}
 		}
@@ -24,6 +24,7 @@
 	&item{
 		text-align: center;
 		&, &:hover, &:focus{color: @blue-purple;}
+		@media @media-size-xxxs {text-align: left;}
 	}
 	&item-preview{
 		border: 6px solid @blue-gray;
@@ -38,6 +39,7 @@
 			background: @blue-gray;
 			color: @white;
 		}
+		@media @media-size-xxxs {margin: 0 0 20px;}
 	}
 	&name{
 

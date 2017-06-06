@@ -41,6 +41,23 @@
 		.price-list-block__item-list.active &{
 			font-weight: 700;
 			color: @b-color-a;
+			&::after{transform: translateY(-50%) scaleY(1);}		
+		}
+		position: relative;
+		&::after{
+			content: '';
+			position: absolute;
+			left: -6px;
+			width: 2px;
+			top: 50%;
+			height: 65%;
+			background-color: @navbar-active-bg;
+			transform: translateY(-50%) scaleY(0);
+			transform-origin: 0 top;
+			transition: @trs-site;
+		}
+		&:hover{
+			&::after{transform: translateY(-50%) scaleY(1);}
 		}
 	}
 	&tab-pane{
@@ -132,6 +149,22 @@
 	&line-item{
 		margin-bottom: 5px;
 		&:last-child{margin-bottom: 0}
+		position: relative;
+		&::after{
+			content: '';
+			position: absolute;
+			left: -6px;
+			width: 2px;
+			top: 50%;
+			height: 65%;
+			background-color: @navbar-active-bg;
+			transform: translateY(-50%) scaleY(0);
+			transform-origin: 0 top;
+			transition: @trs-site;
+		}
+		&:hover{
+			&::after{transform: translateY(-50%) scaleY(1);}
+		}
 	}
 	&line-link{
 		color: @blue-sat;
@@ -207,14 +240,16 @@
 					width: 3px;
 					height: 100%;
 					background-color: @blue;
-					opacity: 0;
+					//opacity: 0;
+					transform:  scaleY(0);
 					transition: @trs-site;
+					transform-origin: 0 0;
 				}
 				&:hover{
 					border-color: @blue;
 					color: @blue;
 					padding-left: 15px;
-					&::before{opacity: 1;}
+					&::before{opacity: 1;transform: scaleY(1);}
 				}
 			}
 			&.is--active{
@@ -224,14 +259,14 @@
 					padding-left: 15px;
 					cursor: default;
 					border-color: @blue;
-					&::before{opacity: 1;}
+					&::before{opacity: 1;transform: scaleY(1);}
 				}
 			}
 		}
 	}
 	&scrollbar{
 		position: relative;
-		@media @media-screen {height: 35vw;}
+		//@media @media-screen {height: 35vw;}
 	}
 	&table.table{
 		thead{

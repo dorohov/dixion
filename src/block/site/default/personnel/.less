@@ -70,6 +70,22 @@
 			&:hover{color: @b-color-a}
 			@media @media-size-xs {
 				margin-bottom: 5px;
+			}			
+			position: relative;
+			&::after{
+				content: '';
+				position: absolute;
+				left: -6px;
+				width: 2px;
+				top: 50%;
+				height: 65%;
+				background-color: @navbar-active-bg;
+				transform: translateY(-50%) scaleY(0);
+				transform-origin: 0 top;
+				transition: @trs-site;
+			}
+			&:hover{
+				&::after{transform: translateY(-50%) scaleY(1);}
 			}
 		}
 	}
