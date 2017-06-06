@@ -74,7 +74,7 @@
 											<li class="navbar__nav-dropdown-item">
 												<a href="/personnel.html" class="navbar__nav-dropdown-link">Специалисты</a>
 											</li>
-											<li class="navbar__nav-dropdown-item is--active">
+											<li class="navbar__nav-dropdown-item">
 												<a href="/license.html" class="navbar__nav-dropdown-link">Лицензии и разрешения</a>
 											</li>
 											<li class="navbar__nav-dropdown-item">
@@ -148,7 +148,7 @@
 									</a>
 									<ul class="dropdown-menu navbar__soc-dropdown-menu">
 										<div class="search-block">
-	<form action="/search.html" method="post" class="search__form">
+	<form action="/search.html?" method="#" class="search__form">
 		<input type="text" placeholder="Поиск" class="search__input">
 		<button type="submit" class="search__btn-submit">
 			<svg class="icon-svg icon-search" role="img">
@@ -338,8 +338,8 @@
 	 			<div class="cols price-list-block__cols cols-3">
 	 				<ul class="price-list-block__link-block">
 	 					<li class="price-list-block__link-item"><a href="/schedule.html" class="price-list-block__link">Расписание приема врачей</a></li>
-	 					<li class="price-list-block__link-item"><a href="/price-list.html" class="price-list-block__link" data-toggle="modal" data-target="#modal-appointment">Запись на прием</a></li>
-	 					<li class="price-list-block__link-item"><a href="/price-list.html" class="price-list-block__link" data-toggle="modal" data-target="#modal-call">Заказать звонок</a></li>
+	 					<li class="price-list-block__link-item"><a href="#" class="price-list-block__link" data-toggle="modal" data-target="#modal-appointment">Запись на прием</a></li>
+	 					<li class="price-list-block__link-item"><a href="#" class="price-list-block__link" data-toggle="modal" data-target="#modal-call">Заказать звонок</a></li>
 	 				</ul>
 	 			</div>
 	 			<div class="cols price-list-block__cols cols-3">
@@ -545,6 +545,87 @@
 </svg>
                 </label>
 				<label for="f[processing]" class="power-switch__text"> 
+					Я согласен на обработку <a href="/agreement.html">персональных данных</a>
+				</label>
+            </div>	
+		</div>
+		<div class="cols form__cols">
+			<div class="form__btn-block">
+				<button type="submit" class="btn-site btn-line btn-submit form__btn">
+					Заказать
+				</button>
+			</div>	 
+		</div>		
+	</div>	
+</form>  
+			</div> 
+		</div>
+	</div>
+</div> 
+		<div class="modal fade modal-base" id="modal-reviews" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-base__dialog">
+		<div class="modal-body modal-base__body" >
+			<button type="button" class="btn-site btn-close modal-close" data-dismiss="modal" aria-hidden="true">
+				<svg class="icon-svg icon-cancel" role="img">
+	<use xlink:href="/img/svg/sprite.svg#cancel"></use>
+</svg>
+			</button>
+			<div class="modal-content modal-base__content">
+				<form action="#" class="form-site block "  >
+	<h4 class="form__heading">Оставить отзыв!</h4>
+	<div class="form__note">Нам важно ваше мнение.</div>	
+	<div class="row form__row">
+		<div class="cols form__cols">
+			<div class="form__item">
+				<input type="text" class="form__control form-control validate[required, custom[onlyLetterSp]]" id="f[name]" name="f[Имя]" placeholder="Ваше имя">
+			</div>	
+		</div>
+		<div class="cols form__cols">
+			<div class="form__item">
+				<input type="tel" class="form__control form-control validate[required,custom[phone]]" id="f[tel]" name="f[Телефон]" placeholder="Ваш номер телефона"> 
+			</div>	
+		</div>
+		<div class="cols form__cols">
+			<div class="form__item">
+				<input type="text" class="form__control form-control validate[required]" id="f[heading]" name="f[heading]" placeholder="Заголовок отзыва"> 
+			</div>	
+		</div>
+		<div class="cols form__cols cols-6">
+			<div class="form__item">
+				<label class="form__radio">
+					<input type="radio" name="f[status]" id="f[status]" class="validate[required]" value="1">
+					<span class="icon"><svg class="icon-svg icon-dislike" role="img">
+	<use xlink:href="/img/svg/sprite.svg#dislike"></use>
+</svg></span>
+					<span class="text">Пожаловаться</span>				
+				</label>
+			</div>	
+		</div>
+		<div class="cols form__cols cols-6">
+			<div class="form__item">
+				<label class="form__radio">
+					<input type="radio" name="f[status]" id="f[status]" class="validate[required]" value="2">
+					<span class="icon"><svg class="icon-svg icon-like" role="img">
+	<use xlink:href="/img/svg/sprite.svg#like"></use>
+</svg></span>
+					<span class="text">Похвалить</span>
+				</label>
+			</div>	
+		</div>
+		<div class="cols form__cols">
+			<div class="form__item">
+				<textarea type="text" class="form__control form-control validate[required]" id="f[note]" name="f[note]" placeholder="Ваш отзыв"></textarea>
+			</div>	
+		</div>
+		<div class="cols form__cols full material-cols">
+			<div class="power-switch form__item">
+                <input class="power-switch__input validate[required]" id="f[processing-rev]" name="f[processing-rev]" type="checkbox" checked />
+                <label for="f[processing-rev]" class="power-switch__label">
+                	<svg class="icon-svg icon-power" role="img">
+	<use xlink:href="/img/svg/sprite.svg#power"></use>
+</svg>
+                </label>
+				<label for="f[processing-rev]" class="power-switch__text"> 
 					Я согласен на обработку <a href="/agreement.html">персональных данных</a>
 				</label>
             </div>	

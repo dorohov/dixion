@@ -19,13 +19,24 @@
 			class="error-page"
 			prefix_block="_ep__"    
 		]]
+			
+		[[azbntple
+			tpl="/src/block/site/default/price-list/block.html"
+			price_class="price-list-block index-block"
+			price_prefix="price-list-block__" 
+		]]	
 
 		[[azbntple 
 			tpl="/src/block/site/default/footer/.html" 
-			class="footer-site"
-			prefix_block="footer__" 
+			footer_class="footer-site"
+			footer_prefix="footer__" 
 		]]
-
+		[[azbntple 
+			tpl="/src/block/site/default/modals/appointment.html"
+			modals_class="modal-base"
+			modals_id="modal-appointment"
+			modals_prefix="modal-base__"
+		]] 
 		[[azbntple 
 			tpl="/src/block/site/default/modals/call.html"
 			modals_class="modal-base"
@@ -33,5 +44,7 @@
 			modals_prefix="modal-base__"
 		]] 
 		[[azbntple tpl="/src/block/site/default/script/script.html" ]] 
+		[[azbntple tpl="/src/block/site/default/script/owl.html" ]] 
+		[[azbntple tpl="/src/block/site/default/script/validationEngine.html" ]]
 	</body>
 </html>

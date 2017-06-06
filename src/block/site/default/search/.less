@@ -50,4 +50,25 @@
 		right: 0;
 		top: 0;
 	}
+	&item{
+		border-left: 2px solid @blue;
+		.calcFontSize(16, 20, 320, 1680);
+		.calcLineHeight(22, 26, 320, 1680);
+		padding-left: 30px;
+		&:last-child{margin-bottom: 0}
+		@media @media-device {margin-bottom: 25px;}
+		@media @media-screen {margin-bottom: 2.5vw;}
+	}
+	&heading{
+		margin-bottom: 0px;
+	}
+	&sub{
+		font-size: @b-fs - 4px;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+	}
+	&note{
+		font-size: @b-fs - 2px;
+		font-style: italic;
+	}
 }

@@ -29,8 +29,11 @@
 	}
 	&cols{
 		padding-top: 30px;
-		@media @media-device {
+		@media @media-size-xs {
 			.makeCols(12, 12);
+		}
+		@media @media-size-sm {
+			.makeCols(6, 12);
 		}
 		@media @media-screen {
 			padding-left: 25px; 
@@ -44,7 +47,11 @@
 		@media @media-size-xs {
 			height: 250px;
 		}
-		@media @media-notsmart {
+		@media @media-size-sm {
+			max-height: 400px;
+			height: 40vw;
+		}
+		@media @media-screen {
 			max-height: 400px;
 			height: 22vw;
 		}
@@ -85,7 +92,7 @@
 		@media @media-screen{margin-bottom: 25px;}
 	}
 	h2, h3{
-		@media @media-device{margin-bottom: 30px;}
+		@media @media-device{margin-bottom: 15px;}
 		@media @media-screen{margin-bottom: 1.2vw;}
 	}
 	*{

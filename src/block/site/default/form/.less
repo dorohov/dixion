@@ -158,7 +158,7 @@
 		@media @media-screen{margin-bottom: 16px;}
 	}
 	&control{
-		background-color:	fadeout(@b-form-i-bg, 100%);
+		background-color: fadeout(@b-form-i-bg, 100%);
 		border: 2px solid @b-form-i-border;   
 		height: 65px;
 		padding: 10px 30px;
@@ -197,7 +197,48 @@
 		margin-bottom: 10px;
 		text-align: center;	
 	}
+	&radio{
+		font-weight: 400;
+		text-transform: uppercase;
+		font-size: @b-fs - 4px;
+		position: relative;
+		padding-left: 52px;
+		input[type="radio"]{			
+			visibility: hidden;
+			margin: 0;
+			width: 1px;
+			height: 1px;
+			position: absolute;
+		}
+		.icon{
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+			width: 42px;
+			height: 42px;
+			padding: 10px;
+			border-radius: 50%;
+			transition: @trs-site;
+		}
+	}
 }
+.form__radio input[type="radio"]:checked + .icon{
+	color: @white;	
+}
+.form__radio input[value="1"] + .icon{
+	color: @white19;
+}
+.form__radio input[value="1"]:checked + .icon{
+	background-color: @white19;
+}
+.form__radio input[value="2"] + .icon{
+	color: @blue;
+}
+.form__radio input[value="2"]:checked + .icon{
+	background-color: @blue;
+}
+textarea.form__control{height: 150px;}
 /*
 .material-switch{
 	padding-top: 10px;    
