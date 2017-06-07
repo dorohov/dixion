@@ -24,6 +24,9 @@
 	}
 	&row{
 		align-items: center;	
+		@media @media-size-sm{
+			.footer-site.dd &{flex-wrap: wrap;}	
+		}
 		@media @media-size-xs{
 			justify-content: center;
 			margin-top: -20px;
@@ -48,11 +51,17 @@
 	}
 	&contacts-cols{		
 		@media @media-size-sm{.makeCols(5.8, 12);}//48
-		@media @media-screen{.makeCols(7, 12);}
-		@media @media-size-md{.makeCols(7, 12);}
+		@media @media-screen{
+			.makeCols(7, 12);
+			.footer-site.dd &{.makeCols(5.4, 12);}			
+		}
+		//@media @media-size-md{.makeCols(7, 12);}
 	}
 	&soc-cols{
-		@media @media-size-xs{margin-bottom: 15px;}
+		@media @media-size-xs{
+			margin-bottom: 15px;
+			.footer-site.dd &{margin-bottom: 0}	
+		}
 		@media @media-size-sm{.makeCols(3.1, 12);}
 		@media @media-screen{.makeCols(3, 12);}
 		@media @media-size-md{.makeCols(2.5, 12);}
@@ -61,13 +70,20 @@
 			@media @media-screen {justify-content: flex-end;}
 		}
 	}
-	/*&dorohovdesign-cols{
+	&dorohovdesign-cols{
 		font-size: @b-fs - 4px;
-		@media @media-size-xs{margin-bottom: 15px;}
-		@media @media-size-sm{max-width: 160px; width: 23%}
-		@media @media-screen{.makeCols(3, 12);}
+		@media @media-size-xs{
+			margin-bottom: 0px;
+			.footer-site.dd &{margin-bottom: 15px}	
+		}
+		@media @media-size-sm{.makeCols(12, 12); padding-top: 20px;}
+		@media @media-screen{
+			.makeCols(2, 12);
+			.footer-site &{display: none;}			
+			.footer-site.dd &{display: block;}			
+		}
 		@media @media-size-mdl{.makeCols(2, 12); max-width: 145px;}
-	}*/
+	}
 	//
 	&contacts-item{
 		margin-bottom: 5px;
@@ -92,7 +108,7 @@
 			justify-content: center;
     		text-align: center;
 		}
-		@media @media-size-md {
+		@media @media-size-mdl {
 			flex-wrap: wrap;
 			justify-content: center;
     		text-align: center;
@@ -107,26 +123,25 @@
 			}*/
 		}
 	}
-	/*
+	
 	&dorohovdesign__row{
 		align-items: center;
 		justify-content: flex-end;
 		margin: 0 -5px;
-		//@media @media-size-sm-p{justify-content: center; padding-top: 20px;}
-		@media @media-size-sml{flex-wrap: wrap; text-align: center;}
+		flex-wrap: wrap; 
+		text-align: center; 
 		> .cols{
 			padding: 0 5px;
-			@media @media-size-sml{width: 100%;}
+			width: 100%;
 		}
 	}
 	&dorohovdesign__logo{
 		a{
 			border: none;
 			display: block;
-			width: 75px;
-			height: 24px;
-			margin:0 auto;
-			@media @media-size-sml{width: 115px; height: 35px;}
+			width: 100px;
+			height: 32px;
+			margin:2px auto 0;
 			svg{
 				fill: @footer-color;
 				transition: @trs-site;
@@ -141,5 +156,5 @@
 				@media @media-size-mdl{margin: 0 auto}
 			}
 		}
-	}*/
+	}
 }
