@@ -44,10 +44,11 @@
 			&::after{transform: translateY(-50%) scaleY(1);}		
 		}
 		position: relative;
+		transition: @trs-site;
 		&::after{
 			content: '';
 			position: absolute;
-			left: -6px;
+			left: 0px;
 			width: 2px;
 			top: 50%;
 			height: 65%;
@@ -57,6 +58,7 @@
 			transition: @trs-site;
 		}
 		&:hover{
+			padding-left: 15px;
 			&::after{transform: translateY(-50%) scaleY(1);}
 		}
 	}
@@ -123,6 +125,24 @@
 	&link-item{
 		margin-bottom: 10px;
 		&:last-child{margin-bottom: 0}
+		position: relative;
+		transition: @trs-site;
+		&::after{
+			content: '';
+			position: absolute;
+			left: 0px;
+			width: 2px;
+			top: 50%;
+			height: 65%;
+			background-color: @navbar-active-bg;
+			transform: translateY(-50%) scaleY(0);
+			transform-origin: 0 top;
+			transition: @trs-site;
+		}
+		&:hover{
+			padding-left: 15px;
+			&::after{transform: translateY(-50%) scaleY(1);}
+		}
 	}
 	&link{
 		font-weight: 700;
@@ -150,10 +170,11 @@
 		margin-bottom: 5px;
 		&:last-child{margin-bottom: 0}
 		position: relative;
+		transition: @trs-site;
 		&::after{
 			content: '';
 			position: absolute;
-			left: -6px;
+			left: 0px;
 			width: 2px;
 			top: 50%;
 			height: 65%;
@@ -163,6 +184,7 @@
 			transition: @trs-site;
 		}
 		&:hover{
+			padding-left: 15px;
 			&::after{transform: translateY(-50%) scaleY(1);}
 		}
 	}

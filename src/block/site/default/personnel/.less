@@ -61,8 +61,8 @@
 		list-style: none;
 		li{
 			.calcFontSize(18, 24, 320, 1680);
-			.calcLineHeight(26, 30, 320, 1680);
-			margin-bottom: 5px;
+			.calcLineHeight(20, 26, 320, 1680);
+			margin-bottom: 10px;
 		}
 		a{
 			display: inline-block;
@@ -72,10 +72,11 @@
 				margin-bottom: 5px;
 			}			
 			position: relative;
+			transition: @trs-site;
 			&::after{
 				content: '';
 				position: absolute;
-				left: -6px;
+				left: 0px;
 				width: 2px;
 				top: 50%;
 				height: 65%;
@@ -85,6 +86,7 @@
 				transition: @trs-site;
 			}
 			&:hover{
+				padding-left: 15px;
 				&::after{transform: translateY(-50%) scaleY(1);}
 			}
 		}
