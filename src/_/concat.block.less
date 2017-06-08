@@ -2168,10 +2168,14 @@ textarea.form__control{height: 150px;}
 		list-style: none;
 		border-left: 3px solid @blue;
 	}
+	&item-list{		
+		margin-bottom: 8px;
+	}
 	&item-link{
 		.calcFontSize(20, 24, 320, 1680);
-		.calcLineHeight(26, 30, 320, 1680);
+		.calcLineHeight(21, 25, 320, 1680);
 		color: @blue-sat;
+		display: inline-block;
 		.price-list-block__item-list.active &{
 			font-weight: 700;
 			color: @b-color-a;
