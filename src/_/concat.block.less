@@ -292,6 +292,7 @@
 			@media @media-size-xs {
 				.makeCols(6, 12);
 				text-align: center;
+				&:nth-child(3){display: none;}
 			}
 			@media @media-size-sm {
 				.makeCols(4, 12);
@@ -2239,6 +2240,9 @@ textarea.form__control{height: 150px;}
 	}
 	&cols{
 		padding-top: 30px;
+		@media @media-size-xs{
+			&.is--hidden{display: none;}
+		}
 		&.cols-3{
 			@media @media-size-sm-p {
 				.makeCols(6, 12);

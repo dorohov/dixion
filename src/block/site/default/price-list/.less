@@ -105,6 +105,9 @@
 	}
 	&cols{
 		padding-top: 30px;
+		@media @media-size-xs{
+			&.is--hidden{display: none;}
+		}
 		&.cols-3{
 			@media @media-size-sm-p {
 				.makeCols(6, 12);

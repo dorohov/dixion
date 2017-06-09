@@ -357,7 +357,17 @@
   color: #fff;
   box-sizing: border-box;
   vertical-align: top;
-  outline: none; }
+  outline: none; 
+  //
+
+  &[data-fancybox-next],
+  &[data-fancybox-previous]{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 99994;
+  }
+}
 
 .fancybox-button--disabled {
   cursor: default;
@@ -410,10 +420,14 @@
   transform: rotate(45deg); }
 
 .fancybox-button--left {
-  border-bottom-left-radius: 5px; }
+  border-radius: 0 5px 5px 0; 
+  left: 0;
+}
 
 .fancybox-button--right {
-  border-bottom-right-radius: 5px; }
+  border-radius: 5px 0 0 5px; 
+  right: 0;
+}
 
 .fancybox-button--close {
   float: right; }
