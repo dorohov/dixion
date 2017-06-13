@@ -1,4 +1,4 @@
- <nav class="navbar {{class}} scroll">
+<nav class="navbar {{class}} scroll">
  	<div class="container {{navbar_prefix}}container">
  		<div class="row {{navbar_prefix}}row">
  			<div class="cols {{navbar_prefix}}col-header"> 				
@@ -44,32 +44,66 @@
 								<ul class="{{navbar_prefix}}nav">
 									<li class="dropdown {{navbar_prefix}}nav-item">
 										<a href="#" class="dropdown-toggle {{navbar_prefix}}nav-link" data-toggle="dropdown">О нас</a>
-										<ul class="dropdown-menu {{navbar_prefix}}nav-dropdown-menu">
-											<li class="{{navbar_prefix}}nav-dropdown-item">
-												<a href="/about.html" class="{{navbar_prefix}}nav-dropdown-link">О клиниках</a>
-											</li>
-											<li class="{{navbar_prefix}}nav-dropdown-item">
-												<a href="/personnel.html" class="{{navbar_prefix}}nav-dropdown-link">Специалисты</a>
-											</li>
-											<li class="{{navbar_prefix}}nav-dropdown-item">
-												<a href="/license.html" class="{{navbar_prefix}}nav-dropdown-link">Лицензии и разрешения</a>
-											</li>
-											<li class="{{navbar_prefix}}nav-dropdown-item">
-												<a href="/schedule.html" class="{{navbar_prefix}}nav-dropdown-link">Расписание</a>
-											</li>
-											<li class="{{navbar_prefix}}nav-dropdown-item">
-												<a href="/action.html" class="{{navbar_prefix}}nav-dropdown-link">Мероприятия</a>
-											</li>
-											<li class="{{navbar_prefix}}nav-dropdown-item">
-												<a href="/reviews.html" class="{{navbar_prefix}}nav-dropdown-link">Отзывы о работе</a>
-											</li>
-											<li class="{{navbar_prefix}}nav-dropdown-item">
-												<a href="/tour.html" class="{{navbar_prefix}}nav-dropdown-link">План помещений</a>
-											</li>
-											<li class="{{navbar_prefix}}nav-dropdown-item">
-												<a href="/vacancy.html" class="{{navbar_prefix}}nav-dropdown-link">Вакансии</a>
-											</li>
-										</ul>
+										<div class="dropdown-menu {{navbar_prefix}}nav-dropdown-menu">
+											<ul class=" {{navbar_prefix}}nav-dropdown-menu-inner">
+												<li class="{{navbar_prefix}}nav-dropdown-item">
+													<a href="/about.html" class="{{navbar_prefix}}nav-dropdown-link">
+													<span class="{{navbar_prefix}}nav-dropdown-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="nav-about" ]]</span>
+													<span class="{{navbar_prefix}}nav-dropdown-name"> 
+													О клиниках</span> 
+													</a>
+												</li>
+												<li class="{{navbar_prefix}}nav-dropdown-item">
+													<a href="/personnel.html" class="{{navbar_prefix}}nav-dropdown-link">
+													<span class="{{navbar_prefix}}nav-dropdown-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="nav-personnel" ]]</span>
+													<span class="{{navbar_prefix}}nav-dropdown-name"> 
+													Специалисты</span> 
+													</a>
+												</li>
+												<li class="{{navbar_prefix}}nav-dropdown-item">
+													<a href="/license.html" class="{{navbar_prefix}}nav-dropdown-link">
+													<span class="{{navbar_prefix}}nav-dropdown-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="nav-license" ]]</span>
+													<span class="{{navbar_prefix}}nav-dropdown-name"> 
+													Лицензии и разрешения</span> 
+													</a>
+												</li>
+												<li class="{{navbar_prefix}}nav-dropdown-item">
+													<a href="/schedule.html" class="{{navbar_prefix}}nav-dropdown-link">
+													<span class="{{navbar_prefix}}nav-dropdown-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="nav-schedule" ]]</span>
+													<span class="{{navbar_prefix}}nav-dropdown-name"> 
+													Расписание</span>  
+													</a>
+												</li>
+												<li class="{{navbar_prefix}}nav-dropdown-item">
+													<a href="/action.html" class="{{navbar_prefix}}nav-dropdown-link">
+													<span class="{{navbar_prefix}}nav-dropdown-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="nav-action" ]]</span>
+													<span class="{{navbar_prefix}}nav-dropdown-name"> 
+													Мероприятия</span>  
+													</a>
+												</li>
+												<li class="{{navbar_prefix}}nav-dropdown-item">
+													<a href="/reviews.html" class="{{navbar_prefix}}nav-dropdown-link">
+													<span class="{{navbar_prefix}}nav-dropdown-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="nav-reviews" ]]</span>
+													<span class="{{navbar_prefix}}nav-dropdown-name"> 
+													Отзывы о работе</span>  
+													</a>
+												</li>
+												<li class="{{navbar_prefix}}nav-dropdown-item">
+													<a href="/tour.html" class="{{navbar_prefix}}nav-dropdown-link">
+													<span class="{{navbar_prefix}}nav-dropdown-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="nav-tour" ]]</span>
+													<span class="{{navbar_prefix}}nav-dropdown-name"> 
+													План помещений</span>  
+													</a>
+												</li>
+												<li class="{{navbar_prefix}}nav-dropdown-item">
+													<a href="/vacancy.html" class="{{navbar_prefix}}nav-dropdown-link">
+													<span class="{{navbar_prefix}}nav-dropdown-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="nav-vacancy" ]]</span>
+													<span class="{{navbar_prefix}}nav-dropdown-name"> 
+													Вакансии</span>  
+													</a>
+												</li>
+											</ul>
+										</div>
 									</li> 	
 									<li class="{{navbar_prefix}}nav-item">
 										<a href="/directions.html" class="{{navbar_prefix}}nav-link">
@@ -78,26 +112,52 @@
 									</li>	
 									<li class="dropdown {{navbar_prefix}}nav-item">
 										<a href="#" class="dropdown-toggle {{navbar_prefix}}nav-link" data-toggle="dropdown">Услуги</a>
-										<ul class="dropdown-menu {{navbar_prefix}}nav-dropdown-menu">
-											<li class="{{navbar_prefix}}nav-dropdown-item">
-												<a href="/edit.html" class="{{navbar_prefix}}nav-dropdown-link">Медицинские услуги</a>
-											</li>
-											<li class="{{navbar_prefix}}nav-dropdown-item">
-												<a href="/services-programs.html" class="{{navbar_prefix}}nav-dropdown-link">Программы обслуживания</a>
-											</li>
-											<li class="{{navbar_prefix}}nav-dropdown-item">
-												<a href="/edit.html" class="{{navbar_prefix}}nav-dropdown-link">Аптека</a>
-											</li>
-											<li class="{{navbar_prefix}}nav-dropdown-item">
-												<a href="/abroad.html" class="{{navbar_prefix}}nav-dropdown-link">Лечение за рубежом</a>
-											</li>
-											<li class="{{navbar_prefix}}nav-dropdown-item">
-												<a href="/research.html" class="{{navbar_prefix}}nav-dropdown-link">Подготовка к исследованиям</a>
-											</li>
-											<li class="{{navbar_prefix}}nav-dropdown-item">
-												<a href="/edit.html" class="{{navbar_prefix}}nav-dropdown-link">Второе мнение</a>
-											</li>
-										</ul>
+										<div class="dropdown-menu {{navbar_prefix}}nav-dropdown-menu">
+											<ul class=" {{navbar_prefix}}nav-dropdown-menu-inner is--item3">
+												<li class="{{navbar_prefix}}nav-dropdown-item">
+													<a href="/edit.html" class="{{navbar_prefix}}nav-dropdown-link">
+													<span class="{{navbar_prefix}}nav-dropdown-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="nav-serv-med" ]]</span>
+													<span class="{{navbar_prefix}}nav-dropdown-name"> 
+													Медицинские услуги</span> 
+													</a>
+												</li>
+												<li class="{{navbar_prefix}}nav-dropdown-item">
+													<a href="/services-programs.html" class="{{navbar_prefix}}nav-dropdown-link">
+													<span class="{{navbar_prefix}}nav-dropdown-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="nav-serv-programs" ]]</span>
+													<span class="{{navbar_prefix}}nav-dropdown-name">Программы обслуживания 
+													</span> 
+													</a>
+												</li>
+												<li class="{{navbar_prefix}}nav-dropdown-item">
+													<a href="/edit.html" class="{{navbar_prefix}}nav-dropdown-link">
+													<span class="{{navbar_prefix}}nav-dropdown-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="nav-pharmacy" ]]</span>
+													<span class="{{navbar_prefix}}nav-dropdown-name">Аптека 
+													</span> 
+													</a>
+												</li>
+												<li class="{{navbar_prefix}}nav-dropdown-item">
+													<a href="/abroad.html" class="{{navbar_prefix}}nav-dropdown-link">
+													<span class="{{navbar_prefix}}nav-dropdown-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="nav-abroad" ]]</span>
+													<span class="{{navbar_prefix}}nav-dropdown-name">Лечение за рубежом 
+													</span> 
+													</a>
+												</li>
+												<li class="{{navbar_prefix}}nav-dropdown-item">
+													<a href="/research.html" class="{{navbar_prefix}}nav-dropdown-link">
+													<span class="{{navbar_prefix}}nav-dropdown-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="nav-research" ]]</span>
+													<span class="{{navbar_prefix}}nav-dropdown-name">Подготовка к исследованиям
+													</span> 
+													</a>
+												</li>
+												<li class="{{navbar_prefix}}nav-dropdown-item">
+													<a href="/edit.html" class="{{navbar_prefix}}nav-dropdown-link">
+													<span class="{{navbar_prefix}}nav-dropdown-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="nav-reviews" ]]</span>
+													<span class="{{navbar_prefix}}nav-dropdown-name">Второе мнение 
+													</span> 
+													</a>
+												</li>
+											</ul>
+										</div>
 									</li>
 									<li class="{{navbar_prefix}}nav-item">
 										<a href="/services-price.html" class="{{navbar_prefix}}nav-link">
