@@ -19,14 +19,28 @@ body {
 	@media @media-size-xs{
 		padding-top: @navbar-top-xs;
 		overflow-x: hidden; 
-		width: 100%;
+		width: 100%;			
+		&.bitrix_is-admin{
+			padding-top: ~"calc(@{navbar-top-xs} + @{bx-navbar})";
+		} 
 	}
-	@media @media-size-sm{padding-top: @navbar-top-sm;}
+	@media @media-size-sm{
+		padding-top: @navbar-top-sm;				
+		&.bitrix_is-admin{
+			padding-top: ~"calc(@{navbar-top-sm} + @{bx-navbar})";
+		} 
+	}
 	@media @media-screen{
-		padding-top: @navbar-top-screen; 
+		padding-top: @navbar-top-screen;		
+		&.bitrix_is-admin{
+			padding-top: ~"calc(@{navbar-top-screen} + @{bx-navbar})";
+		} 
 	}
 	@media @media-size-xxl{
 		padding-top: @navbar-top-screen-xxl; 
+		&.bitrix_is-admin{
+			padding-top: ~"calc(@{navbar-top-screen-xxl} + @{bx-navbar})";
+		}
 	}
 	@media @media-device-lg{
 		&::before{
@@ -54,6 +68,18 @@ body {
 		background-attachment: fixed;
 		background-repeat: no-repeat;
 		background-size: cover;
+	}
+	&.bitrix_is-admin{
+		#panel{
+			display: block;
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: 120;
+		    & + .navbar-site{
+		    	top: 39px;
+		    }
+		}
 	}
 }
 a{
