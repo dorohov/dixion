@@ -1504,11 +1504,13 @@ textarea.form__control{height: 150px;}
 		padding-left: 20px;
 		padding-right: 20px;
 		min-width: 210px;
-		font-size: @navbar-fs - 2px; //14
+		font-size: @navbar-fs - 0px; //14
 		line-height: @navbar-lh - 6px; //16
 		@media @media-device {
 			position: relative;
 			top: 0;
+			padding-left: 0;
+			margin-left: -5px;
 		}
 		@media @media-screen-lg {
 			background-color: #ccd9e2;
@@ -1531,7 +1533,7 @@ textarea.form__control{height: 150px;}
 		}
 	}
 	&nav-dropdown-item{
-		padding-bottom: 10px;
+		padding-bottom: 13px;
 		&:last-child{padding-bottom: 0}
 		@media @media-device-lg {
 			border-left: 1px solid @blue;
@@ -2563,11 +2565,13 @@ textarea.form__control{height: 150px;}
 			padding: 15px 20px;
 			border-bottom: 1px solid @white8;
 			vertical-align: middle;
-			&:first-child{
-				padding-left: 0;
-			}
-			&:last-child{
-				padding-right: 0;
+			@media @media-screen {
+				&:first-child{
+					padding-left: 0;
+				}
+				&:last-child{
+					padding-right: 0;
+				}
 			}
 		}
 	}

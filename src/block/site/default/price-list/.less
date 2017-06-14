@@ -322,11 +322,13 @@
 			padding: 15px 20px;
 			border-bottom: 1px solid @white8;
 			vertical-align: middle;
-			&:first-child{
-				padding-left: 0;
-			}
-			&:last-child{
-				padding-right: 0;
+			@media @media-screen {
+				&:first-child{
+					padding-left: 0;
+				}
+				&:last-child{
+					padding-right: 0;
+				}
 			}
 		}
 	}
