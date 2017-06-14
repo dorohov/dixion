@@ -1,5 +1,9 @@
 .price-list-block{
 	background-color: @white8;
+	@media @media-screen {
+		padding-top: 3vw!important;
+		padding-bottom: 6vw!important;
+	}
 }
 .price-list-block__{
 	&container{
@@ -315,14 +319,52 @@
 			}
 		}
 		th, td{
-			padding: 20px;
+			padding: 15px 20px;
 			border-bottom: 1px solid @white8;
+			vertical-align: middle;
 			&:first-child{
 				padding-left: 0;
 			}
 			&:last-child{
 				padding-right: 0;
 			}
+		}
+	}
+	&caption-row{
+		flex-wrap: wrap;
+		margin-top: -15px;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&caption-cols{
+		padding-top: 15px;
+		&.is--name{
+			@media @media-screen-lg {
+				.makeCols(9, 12);
+			}
+		}
+		&.is--btn{
+			@media @media-screen-lg {
+				.makeCols(3, 12);
+			}
+		}
+	}
+	&caption-name{
+		font-weight: 800;
+		.calcFontSize(16, 23, 320, 1680);
+		.calcLineHeight(22, 30, 320, 1680);
+	}
+	&modal{
+		@media @media-device {
+			margin-bottom: 25px;
+		}
+		@media @media-screen {
+			margin-bottom: 2vw;
+		}
+	}
+	&modal-scroller{
+		@media @media-screen {
+			height: 30vh;
 		}
 	}
 }

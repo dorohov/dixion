@@ -5,12 +5,17 @@
 				<div class="{{navbar_prefix}}header">
 					<div class="row {{navbar_prefix}}row-header ">
 						<div class="cols {{navbar_prefix}}col-hamburger">
-							<div class="{{navbar_prefix}}hamburger">
-								<button class="{{navbar_prefix}}hamburger-btn hamburger hamburger--rotate-close" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false" data-toggle-nav=".navbar-site" data-body="html" data-collapse-nav=".navbar__collapse">
-									<span class="hamburger-box">
-										<span class="hamburger-inner"></span>
-									</span>
-								</button>
+							<div class="{{navbar_prefix}}hamburger-wrap">
+								<a href="tel:{{contacts.phone_tel}}" class="{{navbar_prefix}}soc round is--header">
+									[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="tel" ]]
+								</a>
+								<div class="{{navbar_prefix}}hamburger">
+									<button class="{{navbar_prefix}}hamburger-btn hamburger hamburger--rotate-close" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false" data-toggle-nav=".navbar-site" data-body="html" data-collapse-nav=".navbar__collapse">
+										<span class="hamburger-box">
+											<span class="hamburger-inner"></span>
+										</span>
+									</button>
+								</div>
 							</div>
 						</div>
 						<div class="cols {{navbar_prefix}}col-brand">
@@ -189,7 +194,7 @@
 										]]
 									</ul>
 								</div>
-								<a href="tel:{{contacts.phone_tel}}" class="{{navbar_prefix}}soc round">
+								<a href="tel:{{contacts.phone_tel}}" class="{{navbar_prefix}}soc round  is--tel">
 									[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="tel" ]]
 								</a>
 								<a href="skype:{{soc.skype}}?call" class="{{navbar_prefix}}soc">

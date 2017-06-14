@@ -26,12 +26,19 @@
 				<div class="navbar__header">
 					<div class="row navbar__row-header ">
 						<div class="cols navbar__col-hamburger">
-							<div class="navbar__hamburger">
-								<button class="navbar__hamburger-btn hamburger hamburger--rotate-close" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false" data-toggle-nav=".navbar-site" data-body="html" data-collapse-nav=".navbar__collapse">
-									<span class="hamburger-box">
-										<span class="hamburger-inner"></span>
-									</span>
-								</button>
+							<div class="navbar__hamburger-wrap">
+								<a href="tel:+74862760000" class="navbar__soc round is--header">
+									<svg class="icon-svg icon-tel" role="img">
+	<use xlink:href="/img/svg/sprite.svg#tel"></use>
+</svg>
+								</a>
+								<div class="navbar__hamburger">
+									<button class="navbar__hamburger-btn hamburger hamburger--rotate-close" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false" data-toggle-nav=".navbar-site" data-body="html" data-collapse-nav=".navbar__collapse">
+										<span class="hamburger-box">
+											<span class="hamburger-inner"></span>
+										</span>
+									</button>
+								</div>
 							</div>
 						</div>
 						<div class="cols navbar__col-brand">
@@ -247,7 +254,7 @@
 </div>
 									</ul>
 								</div>
-								<a href="tel:+74862760000" class="navbar__soc round">
+								<a href="tel:+74862760000" class="navbar__soc round  is--tel">
 									<svg class="icon-svg icon-tel" role="img">
 	<use xlink:href="/img/svg/sprite.svg#tel"></use>
 </svg>
@@ -788,7 +795,16 @@
 <script src="/js/device.min.js" ></script>
 
 <script src="/js/svg4everybody.min.js" ></script>
-<script>svg4everybody();</script> 
+<script>svg4everybody();</script>
+<script src="/js/response.min.js" ></script> 
+<script>
+	Response.create({
+	    prop: "width", 
+	    prefix: "data-src- r src", 
+	    breakpoints: [1281,1025,1024,768,480,320,0], 
+	    lazy: true
+	});
+</script> 
 		<link rel="stylesheet" type="text/css" href="/css/owl.jquery.css">
 <script src="/js/owl.jquery/owl.carousel.min.js"></script> 
 <script src="/js/owl.jquery/owl.ready.js"></script>  

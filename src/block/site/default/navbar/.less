@@ -65,11 +65,11 @@
 		justify-content: space-between;
 	}
 	&col-hamburger{ 
-		@media @media-device-lg{display: block; width: 65px; order: 1}
+		@media @media-device-lg{display: block; width: 130px; order: 1}
 		@media @media-screen-lg{display: none;} 
 	}
 	&col-brand{
-		@media @media-device-lg{width: ~"calc(100% - 65px)";} 
+		@media @media-device-lg{width: ~"calc(100% - 130px)";} 
 		@media @media-screen-lg{width: 100%;}
 	}
 	&brand{
@@ -93,8 +93,8 @@
 		@media @media-device-lg{
 			position: fixed;
 			top: @navbar-top-device;
-			right: -230px;
-			width: 230px;
+			right: -250px;
+			width: 250px;
 			height: ~"calc(100vh - @{navbar-top-device})";
 			opacity: 0;
 		    visibility: hidden;
@@ -159,8 +159,8 @@
 		display: flex;
 		@media @media-device-lg{
 			flex-wrap: wrap;
-			font-size: @navbar-fs - 2px;
-			line-height: @navbar-lh - 4px;
+			font-size: @navbar-fs;
+			line-height: @navbar-lh - 2px;
 		}
 		@media @media-screen-lg {
 			font-size: @navbar-fs - 4px;
@@ -222,8 +222,8 @@
 		padding-left: 20px;
 		padding-right: 20px;
 		min-width: 210px;
-		font-size: @navbar-fs - 4px; //14
-		line-height: @navbar-lh - 8px; //16
+		font-size: @navbar-fs - 2px; //14
+		line-height: @navbar-lh - 6px; //16
 		@media @media-device {
 			position: relative;
 			top: 0;
@@ -354,7 +354,7 @@
 	&tel{
 		&,&[href^="tel:"],&[href^="tel:"]:hover, &:focus, &:hover{color: @navbar-color;}
 		span{font-weight: 700;}
-		@media @media-device-lg{display: block;}
+		//@media @media-device-lg{display: block;}
 	}
 	&address-block{		
 		font-size: @navbar-fs - 6px;
@@ -386,6 +386,18 @@
 		display: inline-block;
 		vertical-align: middle;
 		color: @navbar-color; 
+		&.is--tel{
+			@media @media-size-xs {display: none;}
+		}
+		&.is--header{
+			@media @media-size-xs {
+				margin-top: 0;
+				margin-right: 30px;
+			}
+			@media @media-notsmart {
+				display: none;
+			}
+		}
 		@media @media-device-lg{margin-right: 5px; margin-top: 5px;}
 		@media @media-screen-lg{margin-left: 5px;}
 		&.round{
@@ -401,5 +413,9 @@
 	&hamburger{
 		@media @media-device-lg{}
 		@media @media-screen-lg{display: none;}
+	}
+	&hamburger-wrap{
+		display: flex;
+		align-items: center;
 	}
 }

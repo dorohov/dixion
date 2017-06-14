@@ -26,12 +26,19 @@
 				<div class="navbar__header">
 					<div class="row navbar__row-header ">
 						<div class="cols navbar__col-hamburger">
-							<div class="navbar__hamburger">
-								<button class="navbar__hamburger-btn hamburger hamburger--rotate-close" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false" data-toggle-nav=".navbar-site" data-body="html" data-collapse-nav=".navbar__collapse">
-									<span class="hamburger-box">
-										<span class="hamburger-inner"></span>
-									</span>
-								</button>
+							<div class="navbar__hamburger-wrap">
+								<a href="tel:+74862760000" class="navbar__soc round is--header">
+									<svg class="icon-svg icon-tel" role="img">
+	<use xlink:href="/img/svg/sprite.svg#tel"></use>
+</svg>
+								</a>
+								<div class="navbar__hamburger">
+									<button class="navbar__hamburger-btn hamburger hamburger--rotate-close" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false" data-toggle-nav=".navbar-site" data-body="html" data-collapse-nav=".navbar__collapse">
+										<span class="hamburger-box">
+											<span class="hamburger-inner"></span>
+										</span>
+									</button>
+								</div>
 							</div>
 						</div>
 						<div class="cols navbar__col-brand">
@@ -247,7 +254,7 @@
 </div>
 									</ul>
 								</div>
-								<a href="tel:+74862760000" class="navbar__soc round">
+								<a href="tel:+74862760000" class="navbar__soc round  is--tel">
 									<svg class="icon-svg icon-tel" role="img">
 	<use xlink:href="/img/svg/sprite.svg#tel"></use>
 </svg>
@@ -274,10 +281,22 @@
 	<div id="banner-carousel" class="carousel slide carousel-fade banner__carousel" data-ride="carousel">
 		<div class="carousel-inner banner__carousel-inner">
 			<div class="item banner__carousel-item">
-				<a href="#"><img src="/img/temp/banner-item1.jpg" alt=""></a>
+				<a href="#"><img 
+					src="/img/temp/banner-item1.jpg" 
+					data-src-320="https://placeholdit.imgix.net/~text?txtsize=60&txt=450%D1%85500&w=450&h=500" 
+					data-src-480="https://placeholdit.imgix.net/~text?txtsize=90&txt=767%D1%85218&w=767&h=218" 
+					data-src-768="/img/temp/banner-item1.jpg" 
+					alt="">
+				</a>
 			</div>
 			<div class="item banner__carousel-item">
-				<a href="#"><img src="https://placeholdit.imgix.net/~text?txtsize=90&txt=1920%D1%85545&w=1920&h=545" alt=""></a>
+				<a href="#"><img 
+					src="https://placeholdit.imgix.net/~text?txtsize=90&txt=1920%D1%85545&w=1920&h=545" 
+					data-src-320="https://placeholdit.imgix.net/~text?txtsize=60&txt=450%D1%85500-1&w=450&h=500" 
+					data-src-480="https://placeholdit.imgix.net/~text?txtsize=90&txt=767%D1%85218-1&w=767&h=218" 
+					data-src-768="https://placeholdit.imgix.net/~text?txtsize=90&txt=1920%D1%85545&w=1920&h=545" 
+					alt="">
+				</a>
 			</div>
 		</div>
 		<a class="left carousel-control banner__carousel-control" href="#banner-carousel" data-slide="prev">
@@ -1233,7 +1252,16 @@
 <script src="/js/device.min.js" ></script>
 
 <script src="/js/svg4everybody.min.js" ></script>
-<script>svg4everybody();</script> 
+<script>svg4everybody();</script>
+<script src="/js/response.min.js" ></script> 
+<script>
+	Response.create({
+	    prop: "width", 
+	    prefix: "data-src- r src", 
+	    breakpoints: [1281,1025,1024,768,480,320,0], 
+	    lazy: true
+	});
+</script> 
 		<link rel="stylesheet" type="text/css" href="/css/owl.jquery.css">
 <script src="/js/owl.jquery/owl.carousel.min.js"></script> 
 <script src="/js/owl.jquery/owl.ready.js"></script>  

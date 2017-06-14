@@ -1,8 +1,8 @@
 'use strict';
 $(function() {
 	$('.owl-block').owlCarousel({
-		//navText: ['<svg class="icon-svg icon-arrow-prev" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/sprite.svg#arrows-prev"></use></svg>', '<svg class="icon-svg icon-arrow-next" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/sprite.svg#arrows-next"></use></svg>'],
-		nav: false,
+		navText: ['<svg class="icon-svg icon-arrow-left-900" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/sprite.svg#arrow-left-900"></use></svg> назад', 'вперед <svg class="icon-svg icon-arrow-right-900" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/sprite.svg#arrow-right-900"></use></svg> '],
+		nav: true,
 		dots: true,
 		smartSpeed: 500,
 		margin: 30,
@@ -12,6 +12,7 @@ $(function() {
 			0 : {
 				items:1,
 				margin: 0,
+				nav: false,
 			},
 			570 : {
 				items:2,

@@ -30,6 +30,10 @@
 		&.fade .modal-dialog {top: 0;}
 		&.in .modal-dialog {top: 5%;}
 	}
+	@media @media-size-mdl{
+		&.fade .modal-dialog {top: 0;}
+		&.in .modal-dialog {top: 0%;}
+	}
 }
 .modal-open .modal {
 	overflow-x: hidden;
@@ -78,6 +82,10 @@
 		top: 20px;
 		right: 20px;
 	}
+	@media @media-size-xs{
+		top: 0px;
+		right: 0px;
+	}
 	@media @media-screen{
 		top: 1.2vw;
     	right: 1.2vw;
@@ -117,10 +125,21 @@
 	opacity: 1;
 	background: @black*/
 }
-.modal-base__{}
+.modal-base__{
+	&dialog {
+		//@media @media-device {
+		height: 100%;
+		overflow: auto;
+		//}	
+	}
+}
 .modal-location{}
 .modal-location__{
 	&dialog {
+		@media @media-device {
+			height: 100%;
+			overflow: auto;
+		}	
 		@media @media-size-sm{width: 370px} 
 		@media @media-screen{width: 470px} 
 	}
