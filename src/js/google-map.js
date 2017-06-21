@@ -3,11 +3,13 @@ function initMap() {
 	var idOfficeOne = document.getElementById('map-dixion-orel'),
 		idOfficeTwo = document.getElementById('map-dixion-oka');
 	
-	var __coord1 = $(idOfficeOne).attr('data-coord') || '0,0',
-		__coord2 = $(idOfficeTwo).attr('data-coord') || '0,0';
+	var __coord1 = $('#map-dixion-orel').attr('data-coord') || '0,0',
+		__coord2 = $('#map-dixion-oka').attr('data-coord') || '0,0';
 		
 	__coord1 = __coord1.split(',');
 	__coord2 = __coord2.split(',');
+	
+	//console.log(__coord1);
 	
 	var coordMapOfficeOne = {lat: 52.9702561, lng: 36.0821053},
 		coordMapOfficeTwo = {lat: 52.9720386, lng: 36.0528446},
@@ -37,8 +39,8 @@ function initMap() {
 			scale: 0.2
 		},
 		
-		iconCoordOfficeOne = {lat: __coord1[0], lng: __coord1[1]},
-		iconCoordOfficeTwo = {lat: __coord2[0], lng: __coord1[1]},
+		iconCoordOfficeOne = {lat: parseFloat(__coord1[0]), lng: parseFloat(__coord1[1])},
+		iconCoordOfficeTwo = {lat: parseFloat(__coord2[0]), lng: parseFloat(__coord2[1])},
 		
 		OfficeOne = new google.maps.Marker({
 			position: iconCoordOfficeOne,
