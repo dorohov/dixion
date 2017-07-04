@@ -4,4 +4,5 @@ $("img").addClass("img-responsive"),$(".text-block ul").addClass("ul-site"),$(".
 var url=window.location.pathname;$('.navbar__nav a[href="'+url+'"]').parent().addClass("is--active"),$('.navbar__nav-dropdown-menu a[href="'+url+'"]').parent().addClass("is--active");
 $(".news-item__inner").on("mouseover",function(){$(this).toggleClass("is--hover")}),$(".news-item__inner").on("mouseout",function(){$(this).toggleClass("is--hover")});
 $(".specialists-item__item").on("mouseover",function(){$(this).toggleClass("is--hover")}),$(".specialists-item__item").on("mouseout",function(){$(this).toggleClass("is--hover")});
+!function(){$(document.body).on("click",".price-list-block__item-link",null,function(i){$(".price-list-block__item-list.active").removeClass("active")})}();
 var url=window.location.pathname;$('._trp__navbar a[href="'+url+'"]').parent().addClass("is--active");
