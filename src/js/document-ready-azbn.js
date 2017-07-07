@@ -415,6 +415,8 @@
 			
 		});
 		
+		$('svg polygon.azbn-tour-polygon').eq(0).trigger('click');
+		
 		
 		
 	});
