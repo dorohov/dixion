@@ -400,6 +400,22 @@
 			
 		});
 		
+		$(document.body).on('click', 'svg polygon.azbn-tour-polygon', {}, function(event){
+			//event.preventDefault();
+			
+			var btn = $(this);
+			var img = btn.attr('data-room-preview') || '';
+			var title = btn.attr('data-room-name') || '';
+			
+			$('.azbn-tour-image').css({
+				'background-image' : 'url(' + img + ')',
+			});
+			
+			$('.azbn-tour-title').html(title);
+			
+		});
+		
+		
 		
 	});
 
