@@ -110,6 +110,20 @@
 			@media @media-screen{padding-top: 0.9vw;}
 		}
 	}	
+	& > *{
+		&.img--left{ 
+			@media @media-notsmart {
+				float: left;
+				padding: 0px 20px 0px 0;
+			}
+		}
+		&.img--right{ 
+			@media @media-notsmart {
+				float: right;
+				padding: 0px 0px 0 20px ;
+			}
+		}
+	}	
 	.table{ 
 		border: 0; 
 		thead td,
