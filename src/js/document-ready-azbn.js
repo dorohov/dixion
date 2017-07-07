@@ -283,47 +283,6 @@
 			
 			if(incart_item_ideal.length) {
 				
-				/*
-				if(typeof CatalogData != 'undefined') {
-					
-				} else {
-					
-					var CatalogData = {};
-					
-				}
-				*/
-				
-				incart_item_ideal.detach();
-				
-				incart_items.empty();
-				
-				/*
-				$('.basket-page .basket-list .azbn-cart-item').empty().remove();
-				
-				Cart.iterAll(function(item){
-					
-					//console.log(CatalogData[item.id] ? item : 'Not found: ' + item.id);
-					
-					CartPageItem($.extend(item, CatalogData[item.id])).appendTo($('.basket-page .basket-list'));
-					
-				}, function(sum, qty){
-					
-					if((sum > 0) || (qty > 0)) {
-						
-						$('.azbn-cart-deliver-row .azbn-cart-sum').html(sum);
-						
-						$('.azbn-formsave-order input[name="o[order]"]').val(encodeURIComponent(LS.get(Cart.lscart_uid())));
-						
-					} else {
-						
-						$('.azbn-cart-title').html('Корзина пуста');
-						$('.azbn-cart-deliver-row').empty().remove();
-						
-					}
-					
-				});
-				*/
-				
 				$(document.body).on('azbn.cart.recalc', null, {}, function(event){
 					
 					Cart.iterAll(function(item){
@@ -376,49 +335,71 @@
 					
 				});
 				
-				$(document.body).on('submit', '.azbn-formsave-order', {}, function(event){
-					event.preventDefault();
-					
-					/*
-					var form = $(this);
-					var _form = form.clone(true);
-					
-					_form
-						.append($('<input/>', {
-							type : 'hidden',
-							name : 'action',
-							value : 'azbnajax_call',
-						}))
-						.append($('<input/>', {
-							type : 'hidden',
-							name : 'method',
-							value : 'formsave_order',
-						}))
-						.append($('<input/>', {
-							type : 'hidden',
-							name : 'type',
-							value : 'plain',
-						}))
-					;
-					
-					$.post('/wp-admin/admin-ajax.php', _form.serialize(), function(data){
-						
-						_form.empty().remove();
-						form.trigger('reset');
-						
-						Cart.clear();
-						
-						$('#modal-message-order').modal();
-						
-					});
-					*/
-				});
+				incart_item_ideal.detach();
+				
+				incart_items.empty();
 				
 				$(document.body).trigger('azbn.cart.recalc');
 				
 			}
 			
 		}
+		
+		
+		$(document.body).on('submit', '.azbn-api-formsave', {}, function(event){
+			event.preventDefault();
+			
+			var form = $(this);
+			var _form = form.clone(true);
+			
+			var _method = form.attr('data-method') || 'formsave'
+			
+			_form
+				.append($('<input/>', {
+					type : 'hidden',
+					name : 'method',
+					value : _method,
+				}))
+			;
+			
+			$.post('/api/', _form.serialize(), function(data){
+				
+				data = JSON.parse(data);
+				
+				_form.empty().remove();
+				form.trigger('reset');
+				
+				form.closest('.modal').modal('hide');
+				
+				$('.azbn-api-formsave-result').html(data.response.message.text);
+				
+				$('#modal-message-formsave-result').modal();
+					
+			});
+			
+		});
+		
+		
+		$(document.body).on('click', '.azbn-specialist-order-btn', {}, function(event){
+			//event.preventDefault();
+			
+			var btn = $(this);
+			var spec_name = btn.attr('data-specialist-name') || '';
+			
+			$('#modal-appointment input.azbn-form-editable').val(spec_name);
+			
+		});
+		
+		$(document.body).on('click', '.azbn-service-program-order-btn', {}, function(event){
+			//event.preventDefault();
+			
+			var btn = $(this);
+			var spec_name = btn.attr('data-service-program') || '';
+			
+			$('#modal-order input.azbn-form-editable').val(spec_name);
+			
+		});
+		
 		
 	});
 
