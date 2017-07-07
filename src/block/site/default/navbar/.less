@@ -248,6 +248,9 @@
 			flex-wrap: wrap;
 			max-width: 600px;
 			margin: -3vw auto 0;
+			&.is--item5{
+				max-width: 760px;
+			}
 		}
 	}
 	&nav-dropdown-item{
@@ -260,6 +263,7 @@
 			padding: 3vw 20px 0;
 			.makeCols(3, 12);
 			.navbar__nav-dropdown-menu-inner.is--item3 &{.makeCols(4, 12);}
+			.navbar__nav-dropdown-menu-inner.is--item5 &{.makeCols(2.4, 12);}
 		}
 	}
 	&nav-dropdown-link{
