@@ -285,14 +285,35 @@
 				
 				$(document.body).on('azbn.cart.recalc', null, {}, function(event){
 					
+					var form_input_arr = [''];//["Заказанные услуги"];
+					
 					Cart.iterAll(function(item){
 						
 						CartPageItem(item).appendTo(incart_items);
+						
+						form_input_arr.push(item.id + ') ' + item.title + '. Первичный: ' + item.cost1 + ' руб. Вторичный: ' + item.cost2);
+						
+						$('.azbn__service-item[data-service-id="' + item.id + '"]').each(function(index){
+							
+							var btn = $(this).find('.btn-basket.azbn__service-item__add');
+							
+							btn.addClass('is--active');
+							btn.find('svg')
+								.removeClass('icon-basket-add')
+								.addClass('icon-basket-active')
+							;
+							var _use_href = btn.find('svg use').attr('xlink:href');
+							_use_href = _use_href.split('#');
+							_use_href = _use_href[0];
+							btn.find('svg use').attr('xlink:href', _use_href + '#basket-active');
+							
+						});
 						
 					}, function(sum, qty){
 						
 						$('.azbn__incart-sum').html(sum);
 						$('.azbn__incart-qty').html(qty);
+						$('.azbn__incart-list').val(form_input_arr.join("\n"));
 						
 					});
 					
@@ -313,6 +334,18 @@
 					}, 1);
 					
 					incart_items.empty();
+					
+					/*
+					btn.addClass('is--active');
+					btn.find('svg')
+						.removeClass('icon-basket-add')
+						.addClass('icon-basket-active')
+					;
+					var _use_href = btn.find('svg use').attr('xlink:href');
+					_use_href = _use_href.split('#');
+					_use_href = _use_href[0];
+					btn.find('svg use').attr('xlink:href', _use_href + '#basket-active');
+					*/
 					
 					$(document.body).trigger('azbn.cart.recalc');
 					
@@ -374,7 +407,13 @@
 				$('.azbn-api-formsave-result').html(data.response.message.text);
 				
 				$('#modal-message-formsave-result').modal();
+				
+				if(form.hasClass('_azbn-service-order-form')) {
 					
+					Cart.clear();
+					
+				}
+				
 			});
 			
 		});
