@@ -47,6 +47,7 @@ $(function() {
 			margin: 30,
 			//loop: true,
 			//mouseDrag: false,
+			//center : true,
 			responsive : {
 				0 : {
 					items:1,
