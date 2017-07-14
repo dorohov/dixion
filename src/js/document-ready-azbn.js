@@ -456,7 +456,7 @@
 		
 		$('svg polygon.azbn-tour-polygon').eq(0).trigger('click');
 		
-		
+		$('.schedule-page .price-list-block__item-list .price-list-block__item-link').eq(0).trigger('click');
 		
 	});
 
