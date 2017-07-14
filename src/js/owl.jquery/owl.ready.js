@@ -3,43 +3,11 @@ $(function() {
 	
 	var owl = $('.owl-block');
 	
-	if(owl.length) {
+	var genOwl = function(_owl, _item_length) {
 		
-		if(screenJS.isXS()) {
-			
-			owl.each(function(index){
-				
-				var _own = $(this);
-				
-				var items;
-				
-				items = _own.find('.news-item__item');
-				if(items.length) {
-					items.each(function(index){
-						
-						if(index > 3) {
-							$(this).empty().remove();
-						}
-						
-					})
-				}
-				
-				items = _own.find('.specialists-item__item');
-				if(items.length) {
-					items.each(function(index){
-						
-						if(index > 3) {
-							$(this).empty().remove();
-						}
-						
-					})
-				}
-				
-			});
-			
-		}
+		_item_length = parseInt(_item_length);
 		
-		owl.owlCarousel({
+		_owl.owlCarousel({
 			navText: ['<svg class="icon-svg icon-arrow-left-900" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/bitrix/templates/azbn7theme/img/svg/sprite.svg#arrow-left-900"></use></svg> назад', 'вперед <svg class="icon-svg icon-arrow-right-900" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/bitrix/templates/azbn7theme/img/svg/sprite.svg#arrow-right-900"></use></svg> '],
 			nav: true,
 			dots: true,
@@ -56,15 +24,98 @@ $(function() {
 				},
 				570 : {
 					items:2,
+					nav: (_item_length > 2) ? true : false,
 				},
 				980 : {
 					items:3,
+					nav: (_item_length > 3) ? true : false,
 				},
 				1400 : {
 					items:5,
+					nav: (_item_length > 5) ? true : false,
 				}
 			}
 		});	
+		
+	}
+	
+	if(owl.length) {
+		
+		if(screenJS.isXS()) {
+			
+			owl.each(function(index){
+				
+				var _owl = $(this);
+				
+				var items;
+				
+				
+				
+				items = _owl.find('.news-item__item');
+				if(items.length) {
+					
+					items.each(function(index){
+						
+						if(index > 3) {
+							$(this).empty().remove();
+						}
+						
+					});
+					
+					genOwl(_owl, _owl.find('.news-item__item').length);
+					
+				} else {
+					
+					
+					items = _owl.find('.specialists-item__item');
+					if(items.length) {
+						
+						items.each(function(index){
+							
+							if(index > 3) {
+								$(this).empty().remove();
+							}
+							
+						});
+						
+						genOwl(_owl, _owl.find('.specialists-item__item').length);
+						
+					}
+					
+				
+				}
+				
+				
+				
+			});
+			
+		} else {
+			
+			owl.each(function(index){
+				
+				var _owl = $(this);
+				
+				var items;
+				
+				items = _owl.find('.news-item__item');
+				
+				if(items.length) {
+					
+					genOwl(_owl, items.length);
+					
+				} else {
+					
+					items = _owl.find('.specialists-item__item');
+					
+					if(items.length) {
+						genOwl(_owl, items.length);
+					}
+					
+				}
+				
+			});
+			
+		}
 		
 	}
 	
