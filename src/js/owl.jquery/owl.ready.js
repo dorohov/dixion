@@ -25,14 +25,17 @@ $(function() {
 				570 : {
 					items:2,
 					nav: (_item_length > 2) ? true : false,
+					dots: (_item_length > 2) ? true : false,
 				},
 				980 : {
 					items:3,
 					nav: (_item_length > 3) ? true : false,
+					dots: (_item_length > 3) ? true : false,
 				},
 				1400 : {
 					items:5,
 					nav: (_item_length > 5) ? true : false,
+					dots: (_item_length > 5) ? true : false,
 				}
 			}
 		});	
@@ -49,9 +52,8 @@ $(function() {
 				
 				var items;
 				
-				
-				
 				items = _owl.find('.news-item__item');
+				
 				if(items.length) {
 					
 					items.each(function(index){
@@ -64,8 +66,7 @@ $(function() {
 					
 					genOwl(_owl, _owl.find('.news-item__item').length);
 					
-				} else {
-					
+				} else if(_owl.find('.specialists-item__item').length) {
 					
 					items = _owl.find('.specialists-item__item');
 					if(items.length) {
@@ -82,7 +83,15 @@ $(function() {
 						
 					}
 					
-				
+				} else if(_owl.find('.license-item__item').length) {
+					
+					items = _owl.find('.license-item__item');
+					if(items.length) {
+						
+						genOwl(_owl, items.length);
+						
+					}
+					
 				}
 				
 				
@@ -103,9 +112,17 @@ $(function() {
 					
 					genOwl(_owl, items.length);
 					
-				} else {
+				} else if(_owl.find('.specialists-item__item').length) {
 					
 					items = _owl.find('.specialists-item__item');
+					
+					if(items.length) {
+						genOwl(_owl, items.length);
+					}
+					
+				} else if(_owl.find('.license-item__item').length) {
+					
+					items = _owl.find('.license-item__item');
 					
 					if(items.length) {
 						genOwl(_owl, items.length);
