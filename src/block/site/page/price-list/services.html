@@ -11,7 +11,17 @@
 				<button type="button" class="{{price_prefix}}btn btn-site btn-line btn-blue" data-toggle="collapse" data-target="#price-navbar">Меню раздела</button>
 				<div class="collapse {{price_prefix}}collapse" id="price-navbar">
 					<ul class="{{price_prefix}}nav">
-						<li><a href="#">Приём специалистов</a></li>
+						<li>
+							<a href="#" data-category-tree="x123" >Приём специалистов</a>
+							
+							<ul class="{{price_prefix}}nav_azbn" data-category-tree="x123" >
+								<li><a href="#">Урология</a></li>
+								<li class="is--active" ><a href="#">Хирургия</a></li>
+								<li><a href="#">Лазерное удаление новообразований кожи</a></li>
+								<li><a href="#">Малые операции</a></li>
+							</ul>
+							
+						</li>
 						<li><a href="#">Гинекология</a></li>
 						<li><a href="#">Колопроктология</a></li>
 						<li><a href="#">Процедурная</a></li>

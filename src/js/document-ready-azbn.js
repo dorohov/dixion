@@ -452,6 +452,9 @@
 			
 			$('.azbn-tour-title').html(title);
 			
+			$('svg polygon.azbn-tour-polygon').removeClass('is--active');
+			btn.addClass('is--active');
+			
 		});
 		
 		$('svg polygon.azbn-tour-polygon').eq(0).trigger('click');
