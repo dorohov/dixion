@@ -54,7 +54,7 @@
 				})
 				
 				if(block.data('is_loaded')) {
-					percent_position = percent_position + 15;
+					percent_position = percent_position + 12;
 				}
 				
 				//var h = 100 + (pos);
@@ -77,7 +77,7 @@
 				
 			}
 			
-		}, 40);
+		}, 30);
 		
 	} else {
 		
