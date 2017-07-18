@@ -457,9 +457,27 @@
 			
 		});
 		
+		$(document.body).on('click', '.price-list__nav_azbn-filter li ._azbn-btn', {}, function(event){//:not(.is--active)
+			event.preventDefault();
+			
+			var btn = $(this);
+			var clinic_filter = btn.attr('data-clinic-code');
+			var cont = btn.closest('ul');
+			var catcont = cont.next(btn.attr('data-clinic-filter'));
+			
+			cont.find('li.is--active').removeClass('is--active');
+			btn.closest('li').addClass('is--active');
+			
+			catcont.children('li:not([data-clinic-code="' + clinic_filter + '"])').hide();
+			catcont.children('li[data-clinic-code="' + clinic_filter + '"]').fadeIn('fast');
+			
+		});
+		
 		$('svg polygon.azbn-tour-polygon').eq(0).trigger('click');
 		
 		$('.schedule-page .price-list-block__item-list .price-list-block__item-link').eq(0).trigger('click');
+		
+		$('.price-list__nav_azbn-filter li.is--active ._azbn-btn').eq(0).trigger('click');
 		
 	});
 

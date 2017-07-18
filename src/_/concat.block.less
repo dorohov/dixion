@@ -2722,6 +2722,34 @@ textarea.form__control{height: 150px;}
 				display:block;
 			}
 		}
+		&_azbn-filter {
+			list-style: none;
+			margin-left:0;
+			margin-bottom:18px;
+			
+			li {
+				display:inline-block;
+				padding:3px 15px;
+				#site.bg(#ffffff);
+				
+				&.is--active {
+					#site.bg(#29497a);
+					
+					._azbn-btn {
+						#site.color(#ffffff);
+					}
+					
+				}
+				
+				._azbn-btn {
+					.cleardefault();
+					border:none;
+					transition:all 0.2s ease;
+					#site.color(#29497a);
+					#site.bg(transparent);
+				}
+			}
+		}
 		
 	}
 	&scrollbar{
