@@ -9,11 +9,12 @@
 		var percent_position = 0;
 		
 		var percent_level = block.find('.azbn7-preloader__percent-level');
+		var percent_value = block.find('.azbn7-preloader__percent__value');
 		
 		$(document.body).on('azbn7.preloader.check', null, {}, function(event){
 			event.preventDefault();
 			
-			if(block.data('is_loaded') && is_timed) {
+			if(is_timed) {//block.data('is_loaded') && 
 				$(document.body).removeClass('_preloading');
 				$(window).trigger('resize');
 			}
@@ -51,10 +52,12 @@
 				
 				percent_level.css({
 					width : percent_position + '%',
-				})
+				});
+				
+				percent_value.html(percent_position);
 				
 				if(block.data('is_loaded')) {
-					percent_position = percent_position + 12;
+					percent_position = percent_position + 7;
 				}
 				
 				//var h = 100 + (pos);
