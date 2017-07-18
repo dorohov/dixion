@@ -20,3 +20,31 @@
 	</a>
 	
 </div>
+
+<script>
+(function(){
+	
+	var pl = document.getElementsByClassName('azbn7-preloader');
+	
+	if(sessionStorage.getItem('hide_azbn7-preloader')) {
+		
+		if(pl.length) {
+			
+			for(var i in pl) {
+				
+				if(pl[i].parentNode) {
+					pl[i].parentNode.removeChild(pl[i]);
+				}
+				
+			}
+			
+		}
+		
+	} else {
+		
+		sessionStorage.setItem('hide_azbn7-preloader', true);
+		
+	}
+	
+})();
+</script>

@@ -278,6 +278,7 @@
 		if(cont.length) {
 			
 			var incart_items = $('.azbn__incart-items');
+			var incart_items2 = $('.azbn__incart-items2');
 			
 			incart_item_ideal = incart_items.find('.azbn__incart-item_ideal');
 			
@@ -287,9 +288,33 @@
 					
 					var form_input_arr = [''];//["Заказанные услуги"];
 					
+					$('.azbn__service-item').each(function(index){
+						
+						var btn = $(this).find('.btn-basket.azbn__service-item__add');
+						
+						btn.removeClass('is--active');
+						btn.find('svg')
+							.removeClass('icon-basket-active')
+							.addClass('icon-basket-add')
+						;
+						var _use_href = btn.find('svg use').attr('xlink:href');
+						_use_href = _use_href.split('#');
+						_use_href = _use_href[0];
+						btn.find('svg use').attr('xlink:href', _use_href + '#basket-add');
+						
+					});
+					
 					Cart.iterAll(function(item){
 						
 						CartPageItem(item).appendTo(incart_items);
+						CartPageItem(item).appendTo(incart_items2);
+						/*
+						incart_items.each(function(index){
+							
+							$(this).append(CartPageItem(item));
+							
+						});
+						*/
 						
 						form_input_arr.push(item.id + ') ' + item.title + '. Первичный: ' + item.cost1 + ' руб. Вторичный: ' + item.cost2);
 						
@@ -334,6 +359,7 @@
 					}, 1);
 					
 					incart_items.empty();
+					incart_items2.empty();
 					
 					/*
 					btn.addClass('is--active');
@@ -363,6 +389,7 @@
 					})
 					
 					incart_items.empty();
+					incart_items2.empty();
 					
 					$(document.body).trigger('azbn.cart.recalc');
 					
@@ -371,6 +398,7 @@
 				incart_item_ideal.detach();
 				
 				incart_items.empty();
+				incart_items2.empty();
 				
 				$(document.body).trigger('azbn.cart.recalc');
 				
@@ -468,7 +496,7 @@
 			cont.find('li.is--active').removeClass('is--active');
 			btn.closest('li').addClass('is--active');
 			
-			catcont.children('li:not([data-clinic-code="' + clinic_filter + '"])').hide();
+			catcont.children('li:not([data-clinic-code="' + clinic_filter + '"]):not(._no-hide)').hide();
 			catcont.children('li[data-clinic-code="' + clinic_filter + '"]').fadeIn('fast');
 			
 		});

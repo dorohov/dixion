@@ -2456,7 +2456,7 @@ textarea.form__control{height: 150px;}
 		margin-bottom: 8px;
 	}
 	&item-link{
-		.calcFontSize(20, 24, 320, 1680);
+		.calcFontSize(18, 20, 320, 1680);
 		.calcLineHeight(21, 25, 320, 1680);
 		color: @blue-sat;
 		display: inline-block;
@@ -2725,11 +2725,13 @@ textarea.form__control{height: 150px;}
 		&_azbn-filter {
 			list-style: none;
 			margin-left:0;
-			margin-bottom:18px;
+			margin-bottom:30px;
+			word-spacing: -4px;
 			
 			li {
 				display:inline-block;
 				padding:3px 15px;
+				border-bottom:1px #29497a solid;
 				#site.bg(#ffffff);
 				
 				&.is--active {
@@ -2836,8 +2838,18 @@ textarea.form__control{height: 150px;}
 	}
 	&caption-name{
 		font-weight: 800;
+		margin-top:20px;
 		.calcFontSize(16, 23, 320, 1680);
 		.calcLineHeight(22, 30, 320, 1680);
+		
+		a, a:visited {
+			#site.color(inherit);
+			#site.underline();
+			
+			&:hover {
+				#site.underline(none);
+			}
+		}
 	}
 	&modal{
 		@media @media-device {
