@@ -2679,6 +2679,7 @@ textarea.form__control{height: 150px;}
 			a{
 				color: @b-color;
 				position: relative;
+				display:inline-block;
 				&::before{
 					content: '';
 					position: absolute;
@@ -2727,6 +2728,20 @@ textarea.form__control{height: 150px;}
 		position: relative;
 		//@media @media-screen {height: 35vw;}
 	}
+	/*
+	&table {
+		&__row__help {
+			opacity:0;
+			transition:all 0.2s ease;
+			#site.color(grey);
+			#site.size(0.75em);
+			
+			tr:hover & {
+				opacity:1;
+			}
+		}
+	}
+	*/
 	&table.table{
 		thead{
 			th, td{
@@ -2742,6 +2757,9 @@ textarea.form__control{height: 150px;}
 					font-weight: 300;
 					font-size: @b-fs - 4;
 				}
+			}
+			th {
+				line-height: 1em;
 			}
 		}
 		th, td{
@@ -2767,6 +2785,7 @@ textarea.form__control{height: 150px;}
 				width:7%;
 			}
 		}
+		
 	}
 	&caption-row{
 		flex-wrap: wrap;
