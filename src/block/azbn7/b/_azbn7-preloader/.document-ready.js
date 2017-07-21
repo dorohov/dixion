@@ -44,7 +44,7 @@
 			
 			var check = Math.random();
 			
-			if(check > 0.5 && percent_position < 100) {
+			if(check > 0.35 && percent_position < 100) {
 				
 				percent_position++;
 				
@@ -80,7 +80,7 @@
 				
 			}
 			
-		}, 30);
+		}, 33);
 		
 	} else {
 		
