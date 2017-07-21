@@ -507,6 +507,22 @@
 		
 		$('.price-list__nav_azbn-filter li.is--active ._azbn-btn').eq(0).trigger('click');
 		
+		(function(){
+			
+			var btn = $('.directions-page .panel-group li.panel a[data-toggle="collapse"][href="' + window.location.hash + '"]');
+			
+			if(btn.length) {
+				/*
+				$('html, body').animate({
+					scrollTop : btn.closest('.personnel-item__block').offset().top - 60 + 'px',
+				}, 333);
+				*/
+				btn.eq(0).trigger('click');
+				
+			}
+			
+		})();
+		
 	});
 
 })();
