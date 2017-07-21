@@ -188,20 +188,6 @@ body._preloading {
 	}
 	&gallery-noview{}
 }
-.line-block__{
-	&item{
-		border-left: 2px solid @blue;
-		.calcFontSize(16, 20, 320, 1680);
-		.calcLineHeight(22, 26, 320, 1680);
-		padding-left: 30px;
-		letter-spacing: 1px;
-		button, a{
-			font-weight: 700;
-			color: @b-color-a;
-			text-align: left;
-		}
-	}
-}
 .banner-block{
 	/*@media @media-device {padding-top: 20px;}
 	@media @media-screen {padding-top: 1.4vw;}*/
@@ -235,6 +221,20 @@ body._preloading {
 		.banner__carousel:hover &{
 			opacity: 1;
 
+		}
+	}
+}
+.line-block__{
+	&item{
+		border-left: 2px solid @blue;
+		.calcFontSize(16, 20, 320, 1680);
+		.calcLineHeight(22, 26, 320, 1680);
+		padding-left: 30px;
+		letter-spacing: 1px;
+		button, a{
+			font-weight: 700;
+			color: @b-color-a;
+			text-align: left;
 		}
 	}
 }
