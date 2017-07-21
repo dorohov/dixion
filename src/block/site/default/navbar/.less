@@ -66,7 +66,9 @@
 	}
 	&col-hamburger{ 
 		@media @media-device-lg{display: block; width: 130px; order: 1}
-		@media @media-screen-lg{display: none;} 
+		@media @media-screen-lg{display: none;}
+		@media @media-size-xs{display: flex;justify-content: flex-end;}
+		@media @media-size-sm{display: flex;justify-content: flex-end;}
 	}
 	&col-brand{
 		@media @media-device-lg{width: ~"calc(100% - 130px)";} 
@@ -97,14 +99,14 @@
 			width: 250px;
 			height: ~"calc(100vh - @{navbar-top-device})";
 			opacity: 0;
-		    visibility: hidden;
-		    transition: @trs-site;
-		    background: @navbar-bg-device;
-		    &.is--open{
-		    	visibility: visible;
-		    	opacity: 1;
-		    	right: 0;
-		    }
+			visibility: hidden;
+			transition: @trs-site;
+			background: @navbar-bg-device;
+			&.is--open{
+				visibility: visible;
+				opacity: 1;
+				right: 0;
+			}
 		}
 		@media @media-size-md{		
 			padding: 15px 30px;
@@ -185,28 +187,28 @@
 	&nav-link{
 		color: @navbar-color;
 		transition: @trs-site;
-    	text-transform: uppercase;
+		text-transform: uppercase;
 		@media @media-device{display: inline-block;}
 		@media @media-screen{
 			display: block;
-    		//padding: 10px 0 15px;
+			//padding: 10px 0 15px;
 		}
-    	position: relative;
-    	&::after{
-    		content: '';
-    		position: absolute;
-    		left: -6px;
-    		width: 2px;
-    		top: 50%;
-    		height: 60%;
-    		background-color: @navbar-active-bg;
-    		transform: translateY(-60%) scaleY(0);
-    		transform-origin: 0 top;
-    		transition: @trs-site;
-    	}
+		position: relative;
+		&::after{
+			content: '';
+			position: absolute;
+			left: -6px;
+			width: 2px;
+			top: 50%;
+			height: 60%;
+			background-color: @navbar-active-bg;
+			transform: translateY(-60%) scaleY(0);
+			transform-origin: 0 top;
+			transition: @trs-site;
+		}
 		&:hover{
 			color: @navbar-color-hover;
-    		&::after{transform: translateY(-60%) scaleY(1);}
+			&::after{transform: translateY(-60%) scaleY(1);}
 		}
 		.navbar__nav-item.open &,
 		.navbar__nav-item.is--active &{
@@ -214,7 +216,7 @@
 			background: none; 
 			cursor: default;
 			font-weight: 700;
-    		&::after{transform: translateY(-60%) scaleY(1);}
+			&::after{transform: translateY(-60%) scaleY(1);}
 		}
 	}
 	&nav-dropdown-menu{
@@ -269,66 +271,66 @@
 	&nav-dropdown-link{
 		color: @navbar-color;
 		transition: @trs-site;
-    	position: relative;
-    	@media @media-device-lg {padding: 0 0 0 10px;}
+		position: relative;
+		@media @media-device-lg {padding: 0 0 0 10px;}
 		@media @media-device{display: inline-block;}
 		@media @media-screen{display: block;}
-    	&::after{
-    		@media @media-device-lg {
-    		 	content: '';
-    		} 
-    		position: absolute;
-    		left: 0px;
-    		width: 2px;
-    		top: 0%;
-    		height: 100%;
-    		background-color: @navbar-active-bg;
-    		transform: scaleY(0);
-    		transform-origin: 0 top;
-    		transition: @trs-site;
-    	}
+		&::after{
+			@media @media-device-lg {
+			 	content: '';
+			} 
+			position: absolute;
+			left: 0px;
+			width: 2px;
+			top: 0%;
+			height: 100%;
+			background-color: @navbar-active-bg;
+			transform: scaleY(0);
+			transform-origin: 0 top;
+			transition: @trs-site;
+		}
 		&:hover{
 			color: @navbar-color-hover;
-    		&::after{transform: scaleY(1);}
+			&::after{transform: scaleY(1);}
 		}
 		.navbar__nav-dropdown-item.is--active &{
 			color: @navbar-active-color; 
 			background: none; 
 			cursor: default;
 			font-weight: 700;
-    		&::after{transform: scaleY(1);}
+			&::after{transform: scaleY(1);}
 		}
 	}
 	&nav-dropdown-name{
-    	@media @media-screen-lg {
+		@media @media-screen-lg {
 			position: relative;
-	    	transition: @trs-site;	
-	    	display: block;
-	    	text-align: center;	
-	    	&::after{
-	    		content: '';
-	    		position: absolute;
-	    		left: 0px;
-	    		width: 2px;
-	    		top: 0%;
-	    		height: 100%;
-	    		background-color: @navbar-active-bg;
-	    		transform: scaleY(0);
-	    		transform-origin: 0 top;
-	    		transition: @trs-site;
-	    	}			
-	    	.navbar__nav-dropdown-link:hover &{			
-	    		padding: 0 0 0 10px;
+			transition: @trs-site;	
+			display: block;
+			text-align: center;	
+			&::after{
+				content: '';
+				position: absolute;
+				left: 0px;
+				width: 2px;
+				top: 0%;
+				height: 100%;
+				background-color: @navbar-active-bg;
+				transform: scaleY(0);
+				transform-origin: 0 top;
+				transition: @trs-site;
+			}			
+			.navbar__nav-dropdown-link:hover &{			
+				padding: 0 0 0 10px;
 				color: @navbar-color-hover;
-	    		&::after{transform: scaleY(1);}
+				&::after{transform: scaleY(1);}
 			}
 			.navbar__nav-dropdown-item.is--active &{
 				color: @navbar-active-color; 
 				background: none; 
 				cursor: default;
 				font-weight: 700;
-	    		padding: 0 0 0 10px;
-	    		&::after{transform: scaleY(1);}
+				padding: 0 0 0 10px;
+				&::after{transform: scaleY(1);}
 			}
 		}
 	}
@@ -398,10 +400,16 @@
 		&.is--header{
 			@media @media-size-xs {
 				margin-top: 0;
-				margin-right: 30px;
+				margin-right: 12px;
 			}
+			/*
 			@media @media-notsmart {
 				display: none;
+			}
+			*/
+			@media @media-size-sm {
+				margin-top: 0;
+				margin-right: 12px;
 			}
 		}
 		@media @media-device-lg{margin-right: 5px; margin-top: 5px;}
