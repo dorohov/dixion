@@ -322,28 +322,41 @@
 			margin-left:0;
 			margin-bottom:30px;
 			word-spacing: -4px;
-			
+			@media @media-device {
+				margin-top: 20px;
+				margin-bottom: 0;
+			}			
 			li {
 				display:inline-block;
 				padding:3px 15px;
-				border-bottom:1px #29497a solid;
-				#site.bg(#ffffff);
 				
+				#site.bg(#ffffff);
+				@media @media-size-xs-p {
+					margin-bottom: 10px;
+				}
+				@media @media-device {
+					padding: 7px 15px;
+				}
+				@media @media-notsmart {
+					border-bottom:1px #29497a solid;
+				}
 				&.is--active {
 					#site.bg(#29497a);
-					
 					._azbn-btn {
 						#site.color(#ffffff);
-					}
-					
+					}					
 				}
 				
 				._azbn-btn {
 					.cleardefault();
 					border:none;
-					transition:all 0.2s ease;
+					transition:@trs-site;
 					#site.color(#29497a);
 					#site.bg(transparent);
+					@media @media-size-xs {
+						font-size: @b-fs - 2;
+						line-height: @b-lh - 6;
+					}
 				}
 			}
 		}
