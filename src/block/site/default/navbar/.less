@@ -239,6 +239,15 @@
 			padding: 4vw;
 			.calcFontSize(13, 17, 320, 1680);
 			.calcLineHeight(15, 19, 320, 1680);
+			display: block;
+			max-height: 0;
+			transition: all 0.35s ease-in-out;
+			overflow: hidden;
+			padding: 0;
+			.navbar__nav-item.open  &{
+				max-height: 500px;
+				padding: 4vw;
+			}
 	  	} 		
 	}
 	&nav-dropdown-menu-inner{
