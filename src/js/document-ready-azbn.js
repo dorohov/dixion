@@ -340,6 +340,12 @@
 						$('.azbn__incart-qty').html(qty);
 						$('.azbn__incart-list').val(form_input_arr.join("\n"));
 						
+						if(qty > 0) {
+							$('.price-list__btn-order.is--basket-fix').fadeIn('fast');
+						} else {
+							$('.price-list__btn-order.is--basket-fix').fadeOut('fast');
+						}
+						
 					});
 					
 				});
