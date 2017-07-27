@@ -8,8 +8,8 @@
 		]] 
 		<div class="row {{prefix_block}}row">
 			<div class="cols {{prefix_block}}cols cols-5">
-				<button type="button" class="{{price_prefix}}btn btn-site btn-line btn-blue" data-toggle="collapse" data-target="#price-navbar">Меню раздела</button>
-				<div class="collapse {{price_prefix}}collapse" id="price-navbar">
+				<!-- <button type="button" class="{{price_prefix}}btn btn-site btn-line btn-blue" data-toggle="collapse" data-target="#price-navbar">Меню раздела</button> -->
+				<!-- <div class="collapse {{price_prefix}}collapse" id="price-navbar"> -->
 					<ul class="{{price_prefix}}nav">
 						<li><a href="#">Приём специалистов</a></li>
 						<li><a href="#">Гинекология</a></li>
@@ -40,7 +40,7 @@
 						<li><a href="#">Программы диспансеризации</a></li>
 						<li><a href="#">Выдача справок</a></li>
 					</ul>
-				</div>
+				<!-- </div> -->
 			</div>
 			<div class="cols {{prefix_block}}cols cols-7 ">
 				<div class="{{price_prefix}}scrollbar">					
@@ -159,4 +159,8 @@
 			</div>
 		</div>
 	</div>
+	<button type="button" class="{{price_prefix}}btn-order btn-site btn-line  is--basket-fix" data-toggle="modal" data-target="#modal-basket">
+		<span class="btn-icon  is--basket-fix">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="basket-active" ]]</span>
+		<span>Заказать</span>
+	</button>  
 </div>
