@@ -27,12 +27,15 @@
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background-color: fadeout(@blue-purple, 50%);
-			opacity: 0;
+			//background-color: fadeout(@blue-purple, 50%);
+			background-color: fadeout(@blue-purple, 30%);
+			transform: translateX(-100%);
+			//opacity: 0;
 			z-index: 1;
 			transition: @trs-site;
-			.tour-item__item:hover &{
-				opacity: 1;
+			.tour-item__item.is--hover &{
+				//opacity: 1;
+				transform: translateX(0%);
 			}
 		}
 	}
@@ -46,7 +49,11 @@
 		padding: 30px 35px;
 		transition: @trs-site;
 		.tour-item__item:hover &{
-			background-color: fadeout(@blue-purple, 10%);
+			//background-color: fadeout(@blue-purple, 10%);
+		}
+
+		.tour-item__item.is--hover &{
+			transform: translateX(100%);
 		}
 	}
 	&heading{
@@ -69,9 +76,9 @@
 		padding: 15px;
 		transition: @trs-site;
 		opacity: 0;
-		.tour-item__item:hover &{
+		.tour-item__item.is--hover &{
 			opacity: 1;
-			transition-delay: 0.1s;
+			transition-delay: 0.2s;
 		}
 	}
 }
