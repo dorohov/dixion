@@ -531,5 +531,17 @@
 		})();
 		*/
 	});
+	
+	$(function(){
+		if($(window).outerWidth(true) < 992) {
+			if($('.price-list-page').length && $('.price-list-page .price-list__scrollbar').length) {
+				
+				$('html, body').animate({
+					scrollTop : $('.price-list-page .price-list__scrollbar').eq(0).parent().offset().top - 50,
+				}, 777);
+				
+			}
+		}
+	});
 
 })();
