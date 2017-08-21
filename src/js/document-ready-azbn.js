@@ -446,6 +446,8 @@
 					
 					Cart.clear();
 					
+					$(document.body).trigger('azbn.cart.recalc');
+					
 				}
 				
 			});
