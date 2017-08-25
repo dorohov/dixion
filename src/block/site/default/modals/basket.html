@@ -1,0 +1,49 @@
+<div class="modal fade {{modals_class}}" id="{{modals_id}}" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog {{modals_prefix}}dialog">
+		<div class="modal-body {{modals_prefix}}body" >
+			<button type="button" class="btn-site btn-close modal-close" data-dismiss="modal" aria-hidden="true">
+				[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="cancel" class="icon-cancel"]]
+			</button>
+			<div class="modal-content {{modals_prefix}}content">
+				<div class="price-list__modal">
+					<div class="price-list__modal-scroller">
+						<div class="mCustomScrollbar scroller" data-mcs-theme="blue">
+							<div class="table-responsive">
+								<table class="table price-list__table">
+									<thead>
+										<tr>
+											<th>
+												<br><span>Наименование услуги</span>
+											</th>
+											<th>
+												Цена<span>/руб.</span>				
+												<br><span>перв./повторн. прием</span>
+											</th>
+											<th></th>
+										</tr>
+									</thead>
+									<tbody class="azbn__incart-items" >
+										<tr class="azbn__incart-item azbn__incart-item_ideal" data-service-id="0" >
+											<td class="azbn__incart-item__title" ></td>
+											<td><span class="azbn__incart-item__cost1" >0</span> <span class="azbn__incart-item__cost2" >/ 0</span></td>
+											<td><button class="btn-site btn-basket is--remove azbn__incart-item__delete" >[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="basket-remove" ]]</button></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="price-list__caption-name">Всего <span class="azbn__incart-qty" ></span> услуг в корзине на сумму: <span class="azbn__incart-sum" ></span> р.</div>						
+				</div>
+				[[azbntple 
+					tpl="/src/block/site/default/form/fio-tel.html"
+					heading_form="Заказать услуги"
+					note_form="  "
+					prefix_form="form__"
+					class_form="block "
+					btn_name="Заказать"
+				]] 
+			</div> 
+		</div>
+	</div>
+</div>

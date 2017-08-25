@@ -1,0 +1,23 @@
+<div class="{{clinics_prefix}}block">
+	<div class="row {{clinics_prefix}}row">
+		<div class="cols {{clinics_prefix}}cols cols-6 preview">
+			<div class="{{clinics_prefix}}preview" style="background-image: url({{url-path-img}}/temp/{{clinics_preview}})"></div>
+		</div>
+		<div class="cols {{clinics_prefix}}cols cols-6 note">
+			<h3 class="{{clinics_prefix}}name">{{clinics_name}}</h3>
+			<div class="{{clinics_prefix}}address">{{clinics_address}}</div>
+			<div class="{{clinics_prefix}}phone">Тел. 
+				<a href="tel:{{contacts.phone_tel}}" class="{{navbar_prefix}}tel">{{contacts.phone}},</a>
+				<a href="tel:{{contacts.phone2_tel}}" class="{{navbar_prefix}}tel">{{contacts.phone2}}</a>
+			</div>
+			<div class="{{clinics_prefix}}work">
+				<div>Время работы:</div>
+				<div>Понедельник&nbsp;— Пятница: {{contacts.weekdays}}</div>
+				<div>Суббота: {{contacts.saturday}}</div>
+				<div>Воскресенье: {{contacts.sunday}}</div>
+			</div>
+			<div><a href="{{clinics_link}}" class="btn-site btn-blue {{clinics_prefix}}btn btn-line">Подробнее</a></div>
+		</div>
+	</div>
+	
+</div> 

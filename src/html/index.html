@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>
+		[[azbntple 
+			tpl="/src/block/site/default/head/.html" 
+			title=" "
+			description=" "
+		]]
+		
+		<!--<link href="/css/azbn7-preloader.css" rel="stylesheet" />-->
+		
+	</head>
+	<body class="_preloading" >	
+		[[azbntple 
+			tpl="/src/block/azbn7/b/_azbn7-preloader/.html"
+		]] 
+		[[azbntple 
+			tpl="/src/block/site/default/navbar/.html"
+			class="navbar-site scroll"
+			navbar_prefix="navbar__" 
+		]] 
+		[[azbntple
+			tpl="/src/block/site/default/banner/.html"
+			banner_class="banner-block"
+			banner_prefix="banner__"
+			banner_carousel_id="banner-carousel"
+		]]
+
+		[[azbntple 
+			tpl="/src/block/site/page/index/.html"
+			class="index-page"
+			prefix_block="_ip__"    
+		]]
+			
+		[[azbntple
+			tpl="/src/block/site/default/price-list/block.html"
+			price_class="price-list-block index-block"
+			price_prefix="price-list-block__" 
+		]]	
+
+		[[azbntple 
+			tpl="/src/block/site/default/footer/.html" 
+			footer_class="footer-site"
+			footer_prefix="footer__" 
+		]]
+		[[azbntple 
+			tpl="/src/block/site/default/modals/appointment.html"
+			modals_class="modal-base"
+			modals_id="modal-appointment"
+			modals_prefix="modal-base__"
+		]] 
+		[[azbntple 
+			tpl="/src/block/site/default/modals/call.html"
+			modals_class="modal-base"
+			modals_id="modal-call"
+			modals_prefix="modal-base__"
+		]] 
+		[[azbntple tpl="/src/block/site/default/script/script.html" ]] 
+		[[azbntple tpl="/src/block/site/default/script/owl.html" ]] 
+		[[azbntple tpl="/src/block/site/default/script/validationEngine.html" ]] 
+	</body>
+</html>

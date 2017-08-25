@@ -1,0 +1,39 @@
+.vacancy-item__{
+	&heading{
+		margin-bottom: 25px;
+	}
+	&panel{
+		margin-bottom: 25px;
+	}
+	&link{
+		display: block;
+		position: relative;
+		padding-left: 50px;
+		margin-bottom: 15px;
+		&[aria-expanded="true"]{
+			color: @blue-sat;
+		}
+	}
+	&link-icon{
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		width: 36px;
+		height: 36px;
+		background-color: @blue;
+		color: @white;
+		transition: @trs-site;
+		padding: 8px;
+		border-radius: 50%;
+		.vacancy-item__link[aria-expanded="true"] &{
+			transform: translateY(-50%) rotate(-45deg);
+			background-color: @blue-sat;
+		}
+	}
+	&note{
+		padding-top: 15px;
+		font-size: @b-fs - 4px;
+		line-height: @b-lh - 6px;
+	}
+}

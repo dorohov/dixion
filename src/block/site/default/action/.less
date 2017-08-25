@@ -1,0 +1,44 @@
+.action-item__{
+	&block{		
+		@media @media-device {margin-bottom: 40px;}
+		@media @media-screen {margin-bottom: 4.5vw;}
+		&:last-child{margin-bottom: 0}
+	}
+	&cols{
+		&.note{
+			.action-item__block:nth-child(2n+2) &{
+				order: 1;
+				@media @media-screen{padding-left: ~"calc(2.5vw + 15px)";}
+			}
+		}
+		&.gallery{}
+	}
+	&name{	
+		text-transform: uppercase;
+		.calcFontSize(16, 18, 320, 1680);	
+		.calcLineHeight(22, 24, 320, 1680);
+		margin-bottom: 15px;
+		letter-spacing: 0.5px;
+	}
+	&gallery-row{
+		margin-top: -30px;
+		flex-wrap: wrap;
+	}
+	&gallery-cols{
+		padding-top: 30px;
+		&.cols-12{
+			text-align: right;
+		}
+	}
+	&gallery-link{
+		display: inline-block;
+		border-left: 3px solid ;
+		text-transform: uppercase;
+		font-size: @b-fs - 4px;
+		line-height: @b-lh - 10px;
+		font-weight: 700;
+		letter-spacing: 2.5px;
+		padding: 2px 0 0 20px;
+	}
+	&gallery-noview{}
+}

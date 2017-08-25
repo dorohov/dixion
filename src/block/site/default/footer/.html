@@ -1,0 +1,58 @@
+<footer class="{{footer_class}}">	
+	<div class="container {{footer_prefix}}container">
+		<div class="row {{footer_prefix}}row">			
+			<div class="cols {{footer_prefix}}copyright-cols">
+				<a href="/">
+					<span class="_logo">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="logotip" ]]</span>
+				</a>
+			</div>
+			<div class="cols {{footer_prefix}}contacts-cols">
+				<div class="row {{footer_prefix}}contacts-row">
+					<div class="cols">						
+						<div class="{{footer_prefix}}contacts-item">
+							<a href="tel:{{contacts.phone_tel}}" class="{{footer_prefix}}phone">{{contacts.phone}}</a>
+						</div>				
+						<div class="{{footer_prefix}}contacts-item">
+							<a href="tel:{{contacts.phone2_tel}}" class="{{footer_prefix}}phone">{{contacts.phone2-full}}</a>
+						</div>
+					</div>
+					<div class="cols">						
+						<div class="{{footer_prefix}}contacts-item">
+							{{contacts.address1}}
+						</div>						
+						<div class="{{footer_prefix}}contacts-item">
+							{{contacts.address2}}
+						</div>
+					</div>
+					<div class="cols">
+						<div class="{{footer_prefix}}contacts-item">
+							<a href="#" class="{{footer_prefix}}cabinet">Личный кабинет</a>
+						</div>						
+					</div>
+				</div>	
+			</div>	
+			<div class="cols {{footer_prefix}}soc-cols">
+				[[azbntple
+					tpl="/src/block/site/default/social/.html"
+					social_class="social-block"
+					social_prefix="social__"
+					block_prefix="footer__"
+				]]
+			</div>	
+			<div class="cols {{footer_prefix}}dorohovdesign-cols">
+				<div class="row {{footer_prefix}}dorohovdesign__row"> 
+					<div class="cols">
+						<div>Создание сайта</div>
+					</div>
+					<div class="cols">
+						<div class="{{footer_prefix}}dorohovdesign__logo">
+							<a href="http://www.dorohovdesign.ru/" target="_blank">
+								[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="dorohovdesign" class="{{prefix}}dd" ]]
+							</a>
+						</div>	
+					</div>
+				</div>				 
+			</div>		
+		</div>
+	</div>
+</footer>

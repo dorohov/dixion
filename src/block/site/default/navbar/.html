@@ -1,0 +1,245 @@
+[[azbntple tpl="/src/block/fecss/_go-to-top/.html" to-top="body" ]]
+
+<nav class="navbar {{class}} scroll">
+	<div class="container {{navbar_prefix}}container">
+		<div class="row {{navbar_prefix}}row">
+			<div class="cols {{navbar_prefix}}col-header"> 				
+				<div class="{{navbar_prefix}}header">
+					<div class="row {{navbar_prefix}}row-header ">
+						<!--
+						<div class="navbar__hamburger-wrap">
+								<a href="tel:+74862760000" class="navbar__soc round is--header">
+									<svg class="icon-svg icon-tel" role="img">
+										<use xlink:href="/img/svg/sprite.svg#tel"></use>
+									</svg>
+								</a>
+								<div class="navbar__hamburger">
+									<button class="navbar__hamburger-btn hamburger hamburger--rotate-close" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false" data-toggle-nav=".navbar-site" data-body="html" data-collapse-nav=".navbar__collapse">
+										<span class="hamburger-box">
+											<span class="hamburger-inner"></span>
+										</span>
+									</button>
+								</div>
+						</div>
+						-->
+						<div class="cols {{navbar_prefix}}col-hamburger">
+							<a href="tel:+74862760000" class="navbar__soc round is--header">
+								<svg class="icon-svg icon-tel" role="img">
+									<use xlink:href="/img/svg/sprite.svg#tel"></use>
+								</svg>
+							</a>
+							<div class="{{navbar_prefix}}hamburger">
+								<button class="{{navbar_prefix}}hamburger-btn hamburger hamburger--rotate-close" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false" data-toggle-nav=".navbar-site" data-body="html" data-collapse-nav=".navbar__collapse">
+									<span class="hamburger-box">
+										<span class="hamburger-inner"></span>
+									</span>
+								</button>
+							</div>
+						</div>
+						<div class="cols {{navbar_prefix}}col-brand">
+							<a class="{{navbar_prefix}}brand" href="/">
+								<span class="_logo">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="logotip" ]]</span>
+							</a>
+						</div>
+					</div>
+				</div>
+ 			</div>
+ 			<div class="cols {{navbar_prefix}}col-collapse">
+				<div class="{{navbar_prefix}}collapse" >
+					<div class="{{navbar_prefix}}collapse-inner">
+						<div class="row {{navbar_prefix}}collapse-row" >
+							<div class="cols {{navbar_prefix}}tel-cols" >
+								<div class="{{navbar_prefix}}tel-block">
+									<a href="tel:{{contacts.phone_tel}}" class="{{navbar_prefix}}tel">
+										{{contacts.phone}},
+									</a> <a href="tel:{{contacts.phone2_tel}}" class="{{navbar_prefix}}tel">
+										{{contacts.phone2}}
+									</a>
+								</div>
+								<div class="{{navbar_prefix}}address-block">
+									{{contacts.address1}}
+								</div>
+								<div class="{{navbar_prefix}}address-block">
+									{{contacts.address2}}
+								</div>
+							</div>
+							<div class="cols {{navbar_prefix}}nav-cols" >
+								<ul class="{{navbar_prefix}}nav">
+									<li class="dropdown {{navbar_prefix}}nav-item">
+										<a href="#" class="dropdown-toggle {{navbar_prefix}}nav-link" data-toggle="dropdown">О нас</a>
+										<div class="dropdown-menu {{navbar_prefix}}nav-dropdown-menu">
+											<ul class=" {{navbar_prefix}}nav-dropdown-menu-inner is--item5">
+												<li class="{{navbar_prefix}}nav-dropdown-item">
+													<a href="/about.html" class="{{navbar_prefix}}nav-dropdown-link">
+													<span class="{{navbar_prefix}}nav-dropdown-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="nav-about" ]]</span>
+													<span class="{{navbar_prefix}}nav-dropdown-name"> 
+													О клиниках</span> 
+													</a>
+												</li>
+												<li class="{{navbar_prefix}}nav-dropdown-item">
+													<a href="/personnel.html" class="{{navbar_prefix}}nav-dropdown-link">
+													<span class="{{navbar_prefix}}nav-dropdown-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="nav-personnel" ]]</span>
+													<span class="{{navbar_prefix}}nav-dropdown-name"> 
+													Специалисты</span> 
+													</a>
+												</li>
+												<li class="{{navbar_prefix}}nav-dropdown-item">
+													<a href="/license.html" class="{{navbar_prefix}}nav-dropdown-link">
+													<span class="{{navbar_prefix}}nav-dropdown-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="nav-license" ]]</span>
+													<span class="{{navbar_prefix}}nav-dropdown-name"> 
+													Лицензии и разрешения</span> 
+													</a>
+												</li>
+												<li class="{{navbar_prefix}}nav-dropdown-item">
+													<a href="/schedule.html" class="{{navbar_prefix}}nav-dropdown-link">
+													<span class="{{navbar_prefix}}nav-dropdown-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="nav-schedule" ]]</span>
+													<span class="{{navbar_prefix}}nav-dropdown-name"> 
+													Расписание</span>  
+													</a>
+												</li>
+												<li class="{{navbar_prefix}}nav-dropdown-item">
+													<a href="/action.html" class="{{navbar_prefix}}nav-dropdown-link">
+													<span class="{{navbar_prefix}}nav-dropdown-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="nav-action" ]]</span>
+													<span class="{{navbar_prefix}}nav-dropdown-name"> 
+													Мероприятия</span>  
+													</a>
+												</li>
+												<li class="{{navbar_prefix}}nav-dropdown-item">
+													<a href="/reviews.html" class="{{navbar_prefix}}nav-dropdown-link">
+													<span class="{{navbar_prefix}}nav-dropdown-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="nav-reviews" ]]</span>
+													<span class="{{navbar_prefix}}nav-dropdown-name"> 
+													Отзывы о работе</span>  
+													</a>
+												</li>
+												<li class="{{navbar_prefix}}nav-dropdown-item">
+													<a href="/tour.html" class="{{navbar_prefix}}nav-dropdown-link">
+													<span class="{{navbar_prefix}}nav-dropdown-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="nav-tour" ]]</span>
+													<span class="{{navbar_prefix}}nav-dropdown-name"> 
+													План помещений</span>  
+													</a>
+												</li>
+												<li class="{{navbar_prefix}}nav-dropdown-item">
+													<a href="/vacancy.html" class="{{navbar_prefix}}nav-dropdown-link">
+													<span class="{{navbar_prefix}}nav-dropdown-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="nav-vacancy" ]]</span>
+													<span class="{{navbar_prefix}}nav-dropdown-name"> 
+													Вакансии</span>  
+													</a>
+												</li>
+												<li class="{{navbar_prefix}}nav-dropdown-item">
+													<a href="#" class="{{navbar_prefix}}nav-dropdown-link">
+													<span class="{{navbar_prefix}}nav-dropdown-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="nav-action-2" ]]</span>
+													<span class="{{navbar_prefix}}nav-dropdown-name"> 
+													Акции</span>  
+													</a>
+												</li>
+												<li class="{{navbar_prefix}}nav-dropdown-item">
+													<a href="#" class="{{navbar_prefix}}nav-dropdown-link">
+													<span class="{{navbar_prefix}}nav-dropdown-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="nav-article" ]]</span>
+													<span class="{{navbar_prefix}}nav-dropdown-name"> 
+													Статьи</span>  
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li> 	
+									<li class="{{navbar_prefix}}nav-item">
+										<a href="/directions.html" class="{{navbar_prefix}}nav-link">
+											Направления
+										</a>  
+									</li>	
+									<li class="dropdown {{navbar_prefix}}nav-item">
+										<a href="#" class="dropdown-toggle {{navbar_prefix}}nav-link" data-toggle="dropdown">Услуги</a>
+										<div class="dropdown-menu {{navbar_prefix}}nav-dropdown-menu">
+											<ul class=" {{navbar_prefix}}nav-dropdown-menu-inner is--item3">
+												<li class="{{navbar_prefix}}nav-dropdown-item">
+													<a href="/services-med.html" class="{{navbar_prefix}}nav-dropdown-link">
+													<span class="{{navbar_prefix}}nav-dropdown-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="nav-serv-med" ]]</span>
+													<span class="{{navbar_prefix}}nav-dropdown-name"> 
+													Медицинские услуги</span> 
+													</a>
+												</li>
+												<li class="{{navbar_prefix}}nav-dropdown-item">
+													<a href="/services-programs.html" class="{{navbar_prefix}}nav-dropdown-link">
+													<span class="{{navbar_prefix}}nav-dropdown-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="nav-serv-programs" ]]</span>
+													<span class="{{navbar_prefix}}nav-dropdown-name">Программы обслуживания 
+													</span> 
+													</a>
+												</li>
+												<li class="{{navbar_prefix}}nav-dropdown-item">
+													<a href="/edit.html" class="{{navbar_prefix}}nav-dropdown-link">
+													<span class="{{navbar_prefix}}nav-dropdown-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="nav-pharmacy" ]]</span>
+													<span class="{{navbar_prefix}}nav-dropdown-name">Аптека 
+													</span> 
+													</a>
+												</li>
+												<li class="{{navbar_prefix}}nav-dropdown-item">
+													<a href="/abroad.html" class="{{navbar_prefix}}nav-dropdown-link">
+													<span class="{{navbar_prefix}}nav-dropdown-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="nav-abroad" ]]</span>
+													<span class="{{navbar_prefix}}nav-dropdown-name">Лечение за рубежом 
+													</span> 
+													</a>
+												</li>
+												<li class="{{navbar_prefix}}nav-dropdown-item">
+													<a href="/research.html" class="{{navbar_prefix}}nav-dropdown-link">
+													<span class="{{navbar_prefix}}nav-dropdown-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="nav-research" ]]</span>
+													<span class="{{navbar_prefix}}nav-dropdown-name">Подготовка к исследованиям
+													</span> 
+													</a>
+												</li>
+												<li class="{{navbar_prefix}}nav-dropdown-item">
+													<a href="/edit.html" class="{{navbar_prefix}}nav-dropdown-link">
+													<span class="{{navbar_prefix}}nav-dropdown-icon">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="nav-reviews" ]]</span>
+													<span class="{{navbar_prefix}}nav-dropdown-name">Второе мнение 
+													</span> 
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="{{navbar_prefix}}nav-item">
+										<a href="/services-price.html" class="{{navbar_prefix}}nav-link">
+											Прейскурант услуг
+										</a> 
+									</li>	
+									<li class="{{navbar_prefix}}nav-item">
+										<a href="#" class="{{navbar_prefix}}nav-link">
+											Вопросы врачам
+										</a> 
+									</li>	
+									<li class="{{navbar_prefix}}nav-item">
+										<a href="/contacts.html" class="{{navbar_prefix}}nav-link">
+											Контакты
+										</a> 
+									</li>	 
+								</ul>
+							</div>
+							<div class="cols {{navbar_prefix}}soc-cols" >
+								<div class="dropdown {{navbar_prefix}}soc-dropdown">
+									<a href="tel:{{contacts.phone_tel}}" class="{{navbar_prefix}}soc round dropdown-toggle" data-toggle="dropdown">
+										[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="search" ]]
+									</a>
+									<ul class="dropdown-menu {{navbar_prefix}}soc-dropdown-menu">
+										[[azbntple
+											tpl="/src/block/site/default/search/.html"
+											search_block="search__"
+											search_placeholder="Поиск"
+										]]
+									</ul>
+								</div>
+								<a href="tel:{{contacts.phone_tel}}" class="{{navbar_prefix}}soc round  is--tel">
+									[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="tel" ]]
+								</a>
+								<a href="skype:{{soc.skype}}?call" class="{{navbar_prefix}}soc">
+									[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="skype" ]]
+								</a>
+								<a href="/forum.html" class="{{navbar_prefix}}soc round">
+									[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="question" ]]
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+ 			</div>
+ 		</div>
+ 	</div>
+</nav>
