@@ -657,15 +657,15 @@ body._preloading {
 	}
 	&dorohovdesign-cols{
 		font-size: @b-fs - 4px;
+		.footer-site &{display: none;}			
+		.footer-site.dd &{display: block;}
 		@media @media-size-xs{
 			margin-bottom: 0px;
 			.footer-site.dd &{margin-bottom: 15px}	
 		}
 		@media @media-size-sm{.makeCols(12, 12); padding-top: 20px;}
 		@media @media-screen{
-			.makeCols(2, 12);
-			.footer-site &{display: none;}			
-			.footer-site.dd &{display: block;}			
+			.makeCols(2, 12);			
 		}
 		@media @media-size-mdl{.makeCols(2, 12); max-width: 145px;}
 	}
