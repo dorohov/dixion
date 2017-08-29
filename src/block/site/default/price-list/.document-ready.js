@@ -4,8 +4,9 @@
 		
 		var btn = $(this)
 		var tree_uid = btn.attr('data-category-tree') || '';
+		var href = btn.attr('href');
 		
-		if(tree_uid != '') {
+		if(tree_uid != '' && href.indexOf('#') == 0) {
 			$('.price-list__nav_azbn[data-category-tree="' + tree_uid + '"]').toggleClass('is--active');
 		}
 		
