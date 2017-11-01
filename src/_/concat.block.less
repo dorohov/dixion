@@ -654,6 +654,31 @@ body._preloading {
 		//@media @media-size-mdl{.makeCols(2, 12);}
 		.social__row{
 			@media @media-screen {justify-content: flex-end;}
+			@media @media-size-xs {
+				margin-left: -3px;
+				margin-right: -3px;
+			}
+			@media @media-size-sm {
+				flex-wrap: wrap;
+				margin-top: -5px;
+			}
+			@media @media-size-mdl {
+				margin-left: -2.5px;
+				margin-right: -2.5px;
+			}
+		}
+		.social__cols{
+			@media @media-size-xs {
+				padding-left: 3px;
+				padding-right: 3px;
+			}
+			@media @media-size-sm {
+				padding-top: 5px;
+			}
+			@media @media-size-mdl {
+				padding-left: 2.5px;
+				padding-right: 2.5px;
+			}
 		}
 	}
 	&bitrix-cols{
@@ -1863,7 +1888,7 @@ textarea.form__control{height: 150px;}
 		vertical-align: middle;
 		color: @navbar-color; 
 		&.is--tel{
-			@media @media-size-xs {display: none;}
+			//@media @media-size-xs {display: none;}
 		}
 		&.is--header{
 			@media @media-size-xs {
@@ -1891,6 +1916,30 @@ textarea.form__control{height: 150px;}
 				background-color: @blue;
 			}  
 		}
+	}
+	&soc-dropdown{
+		position: relative;
+		.dropdown-backdrop{
+			display: none!important;
+		}
+	}
+	&soc-menu{
+		top: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		padding: 5px 10px;
+		background: none;
+		@media @media-device-lg {
+			left: 110%;
+		}
+	}
+	&soc-dropdown-list{
+		list-style: none;
+		display: flex;
+		margin: 0 -2.5px;
+	}
+	&soc-dropdown-item{
+		padding: 0 2.5px;
 	}
 	&hamburger{
 		@media @media-device-lg{text-align: right;}
@@ -3243,7 +3292,19 @@ textarea.form__control{height: 150px;}
 		}
 		svg{
 			fill: @b-social-bc;
-			transition: @trs-site;		
+			transition: @trs-site;	
+			display: block;	
+		}
+		&[href^="https://www.instagram.com/"],
+		&[href^="https://instagram.com/"]{
+			padding: 12px;
+			@media @media-size-sm {padding: 8px}
+			@media @media-size-mdl {padding: 5px}
+			.footer-site.dd &{
+				@media @media-screen {
+					padding: 5px;
+				}
+			}
 		}
 		&:hover{
 			svg{fill:@white;}
@@ -3258,6 +3319,10 @@ textarea.form__control{height: 150px;}
 			&[href^="https://www.instagram.com/"],
 			&[href^="https://instagram.com/"]{
 				background-color: @color-inst;
+			}
+			&[href^="https://www.youtube.com/"],
+			&[href^="https://youtube.com/"]{
+				background-color: @color-youtube;
 			}
 			&[href^="https://ok.ru/"],
 			&[href^="https://www.ok.ru/"]{
@@ -3278,6 +3343,20 @@ textarea.form__control{height: 150px;}
 		background-color: @blue-gray;
 		svg{
 			fill: @footer-bg;
+		}
+		@media @media-size-mdl {
+			width: 22px;
+			height: 22px;
+			padding: 4px;
+		}
+		.footer-site.dd &{
+			@media @media-screen {
+			
+			
+				width: 32px;
+				height: 32px;
+				padding: 4px;			
+			}
 		}
 	}
 }

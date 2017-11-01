@@ -31,7 +31,19 @@
 		}
 		svg{
 			fill: @b-social-bc;
-			transition: @trs-site;		
+			transition: @trs-site;	
+			display: block;	
+		}
+		&[href^="https://www.instagram.com/"],
+		&[href^="https://instagram.com/"]{
+			padding: 12px;
+			@media @media-size-sm {padding: 8px}
+			@media @media-size-mdl {padding: 5px}
+			.footer-site.dd &{
+				@media @media-screen {
+					padding: 5px;
+				}
+			}
 		}
 		&:hover{
 			svg{fill:@white;}
@@ -46,6 +58,10 @@
 			&[href^="https://www.instagram.com/"],
 			&[href^="https://instagram.com/"]{
 				background-color: @color-inst;
+			}
+			&[href^="https://www.youtube.com/"],
+			&[href^="https://youtube.com/"]{
+				background-color: @color-youtube;
 			}
 			&[href^="https://ok.ru/"],
 			&[href^="https://www.ok.ru/"]{
@@ -66,6 +82,20 @@
 		background-color: @blue-gray;
 		svg{
 			fill: @footer-bg;
+		}
+		@media @media-size-mdl {
+			width: 22px;
+			height: 22px;
+			padding: 4px;
+		}
+		.footer-site.dd &{
+			@media @media-screen {
+			
+			
+				width: 32px;
+				height: 32px;
+				padding: 4px;			
+			}
 		}
 	}
 }

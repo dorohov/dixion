@@ -226,12 +226,33 @@
 										]]
 									</ul>
 								</div>
-								<a href="tel:{{contacts.phone_tel}}" class="{{navbar_prefix}}soc round  is--tel">
-									[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="tel" ]]
-								</a>
-								<a href="skype:{{soc.skype}}?call" class="{{navbar_prefix}}soc">
-									[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="skype" ]]
-								</a>
+								<div class="dropdown {{navbar_prefix}}soc-dropdown">
+									<a href="#" class="dropdown-toggle {{navbar_prefix}}soc  round  is--tel" data-toggle="dropdown">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="tel" ]]</a>
+									<div class="dropdown-menu {{navbar_prefix}}soc-menu">
+										<ul class="{{navbar_prefix}}soc-dropdown-list">
+											<li class="{{navbar_prefix}}soc-dropdown-item">	
+												<a href="tel:{{contacts.phone_tel}}" class="{{navbar_prefix}}soc round  is--tel">
+													[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="tel" ]]
+												</a>
+											</li>
+											<li class="{{navbar_prefix}}soc-dropdown-item">
+												<a href="skype:{{soc.skype}}?call" class="{{navbar_prefix}}soc">
+													[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="skype" ]]
+												</a>
+											</li>
+											<li class="{{navbar_prefix}}soc-dropdown-item">
+												<a href="https://api.whatsapp.com/send?phone=+79807616262" class="{{navbar_prefix}}soc">
+													[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="whatsapp" ]]
+												</a>
+											</li>
+											<li class="{{navbar_prefix}}soc-dropdown-item">
+												<a href="viber://public?id=+79807616262" class="{{navbar_prefix}}soc">
+													[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="viber" ]]
+												</a>
+											</li>
+										</ul>
+									</div> 
+								</div>
 								<a href="/forum.html" class="{{navbar_prefix}}soc round">
 									[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="question" ]]
 								</a>

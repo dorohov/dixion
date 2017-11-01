@@ -69,6 +69,31 @@
 		//@media @media-size-mdl{.makeCols(2, 12);}
 		.social__row{
 			@media @media-screen {justify-content: flex-end;}
+			@media @media-size-xs {
+				margin-left: -3px;
+				margin-right: -3px;
+			}
+			@media @media-size-sm {
+				flex-wrap: wrap;
+				margin-top: -5px;
+			}
+			@media @media-size-mdl {
+				margin-left: -2.5px;
+				margin-right: -2.5px;
+			}
+		}
+		.social__cols{
+			@media @media-size-xs {
+				padding-left: 3px;
+				padding-right: 3px;
+			}
+			@media @media-size-sm {
+				padding-top: 5px;
+			}
+			@media @media-size-mdl {
+				padding-left: 2.5px;
+				padding-right: 2.5px;
+			}
 		}
 	}
 	&bitrix-cols{
