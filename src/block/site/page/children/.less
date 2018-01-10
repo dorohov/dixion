@@ -1,0 +1,355 @@
+.children-page__{
+	&page{
+		position: relative;
+		overflow: hidden;
+		color: @ch_blue;
+		font-family: @b-ff-2;
+		&.is--bottom{
+			padding-top: 35px;
+			padding-bottom: 35px;
+			@media @media-screen {
+				padding-top: 4.3vw;
+				padding-bottom: 4.3vw;
+			}
+		}
+	}
+	&container{
+		&.is--zindex{
+			position: relative;
+			z-index: 2;
+		}
+	}
+	&heading-block{
+		margin-bottom: 25px;
+		&.is--adv{
+			max-width: 620px;
+		}
+		&.is--spec{
+			@media @media-screen {
+				margin-bottom: 2.5vw;
+			}
+		}
+		&.is--personnel{
+			@media @media-screen {
+				margin-bottom: 3.2vw;
+			}
+		}
+	}
+	&heading{
+		color: @ch_acua;
+		.calcFontSize(36, 66, 320, 1680);
+		.calcLineHeight(36, 72, 320, 1680);
+		font-family: @b-ff-3;
+		font-weight: 400;
+		margin-bottom: 0;
+		&.is--spec{
+			text-align: center;
+		}
+		&.is--center{
+			@media @media-notsmart {
+				text-align: center;
+			}
+		}
+	}
+	&header{
+
+	}
+	&adv{
+		position: relative;
+		padding-top: 40px;
+		@media @media-screen {
+			padding-top: 6.4vw;
+			padding-bottom: 3vw;
+		}
+	}
+	&adv-card{
+		position: relative;
+		@media @media-size-xs {
+			margin-bottom: 35px;
+		}
+	}  
+	&adv-row{
+		align-items: center;
+	}
+	&adv-cols{
+		&.is--desc{
+			.makeCols(6, 12);
+			@media @media-size-xs-p {
+				order: -1;
+				.makeCols(12, 12);
+			}
+			@media @media-notsmart {}
+			@media @media-notsmart {.makeCols(5, 12);}
+		}
+		&.is--preview{
+			.makeCols(6, 12);
+			@media @media-size-xs-p {
+				.makeCols(12, 12);
+			}
+			@media @media-notsmart {.makeCols(7, 12);}
+		}
+	}
+	&adv-desc{
+		position: relative;
+		z-index: 2;
+		.calcFontSize(18, 34, 320, 1680);
+		.calcLineHeight(24, 36, 320, 1680);
+		&::before{
+			content: attr(data-num);  
+			font-family: @b-ff-3;
+			color: fadeout(@ch_yellow, 50%);
+			.calcFontSize(60, 190, 320, 1680);
+			.calcLineHeight(30, 120, 320, 1680);
+			@media @media-notsmart {
+				position: absolute;
+				transform: translate(0,-50%);
+				z-index: -1;
+				top: 0;
+				left: 0;	
+			}
+			@media @media-screen {
+				transform: translate(-33%,-50%);
+			}
+		}
+		&.is--card-1{
+			//margin-top: 12.8vw;
+			color: @ch_acua-dark;
+			@media @media-screen {
+				margin-left: 10vw;
+				margin-bottom: 5.5vw;
+			}		
+		}
+		&.is--card-2{
+			color: #547600;
+			@media @media-screen {
+				margin-left: 2.5vw;
+				margin-bottom: -3.5vw;
+				max-width: 500px;
+			}
+			&::before{
+				color: fadeout(@ch_green, 50%);
+				@media @media-screen {	
+					transform: translate(-23%,-50%);
+				}				
+			}				
+		}
+		&.is--card-3{
+			@media @media-screen {
+				margin-left: 9.5vw;
+				margin-top: .5vw;
+			}
+			&::before{
+				color: fadeout(#79e7e6, 50%);
+				@media @media-screen {	
+					transform: translate(-23%,-50%);
+				}	
+			}				
+		}
+	}
+	&adv-preview{ 
+		&.is--card-3{
+			@media @media-screen {
+				img{margin-left: auto;}
+			}
+		}
+	}
+	&directions{
+		margin-bottom: 45px;
+		@media @media-screen {
+			margin-bottom: 7.3vw;
+		}
+	}
+	&pricelist-cols{
+		&.is--preview{
+			display: none;
+			@media @media-screen {
+				display: block;
+				.makeCols(4, 12);
+			}
+		}
+		&.is--table{
+			.makeCols(12, 12);
+			@media @media-screen {
+				.makeCols(8, 12);
+			}
+		}
+	}
+	&table{
+		thead{
+			tr{
+				th,td{
+					color: @ch_turq;
+					padding: 8px 16px;
+					font-size: 22px;
+					line-height: 32px;
+					border-bottom-color: @ch_turq;
+					letter-spacing: 2px;
+				}
+			}
+		}
+		tbody{
+			tr{
+				th,td{
+					border-top-width: 2px;
+					padding: 14px 16px;
+					border-top-color: @ch_turq;
+				}
+				&:last-child{					
+					th,td{
+						border-bottom: 2px solid @ch_turq;
+					}
+				}
+			}
+		}
+		td, th{
+			&.is--center{
+				text-align: center;
+			}
+		}
+	}
+	&pricelist-caption{
+		padding-top: 20px;
+	}
+	&pricelist-caption-row{
+		justify-content: space-between;
+		align-items: center;
+	}
+	&pricelist-caption-heading{
+		font-weight: 700;
+		.calcFontSize(18, 23, 320, 1680);
+		.calcLineHeight(24, 27, 320, 1680);
+		@media @media-notsmart {
+			position: relative;
+			padding-right: 8.3vw;
+			&::after{
+				content: '';
+				height: 2px;
+				width: 7.3vw;
+				position: absolute;
+				top: ~"calc(50% - 1px)";
+				right: 0;
+				background-color: @ch_yellow;
+
+			}
+		}
+		
+	}
+}
+.children-bg__{
+	&bg{
+		@media @media-device {
+			display: none;
+		}
+		position: absolute;
+		z-index: 1;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		&.is--header-outside{
+			max-width: 1920px;
+			max-height: 522px;
+			top: -8.2vw;
+			left: 0;
+			width: 100vw;
+			height: 28vw;
+			background-position: top center;
+		}
+		&.is--bird-yellow{
+			max-width: 65px;
+			max-height: 65px;
+			min-width: 45px;
+			min-height: 45px;
+			top: 4.5vw;
+			left: 27.5vw;
+			width: 4vw;
+			height: 4vw;
+		}
+		&.is--bird-blue{
+			max-width: 65px;
+			max-height: 65px;
+			min-width: 45px;
+			min-height: 45px;
+			top: 19vw;
+			left: 2.5vw;
+			width: 4vw;
+			height: 4vw;
+		}
+		&.is--fish-yellow{
+			max-width: 80px;
+			max-height: 80px;
+			min-width: 60px;
+			min-height: 60px;
+			bottom: 9.5vw;
+			left: 22.5vw;
+			width: 5vw;
+			height: 5vw;
+		}
+		&.is--fish-purple{
+			max-width: 80px;
+			max-height: 80px;
+			min-width: 60px;
+			min-height: 60px;
+			top: 9vw;
+			left: .5vw;
+			width: 5vw;
+			height: 5vw;
+		}
+		&.is--bubble{
+			max-width: 50px;
+			max-height: 50px;
+			min-width: 30px;
+			min-height: 30px;
+			top: 25vw;
+			left: 2vw;
+			width: 3vw;
+			height: 3vw;
+		}
+		&.is--bubble-two{
+			max-width: 65px;
+			max-height: 140px;
+			top: 2.5vw;
+			left: 37.5vw;
+			width: 4vw;
+			height: 8vw;			
+		}
+		&.is--bubble-big{
+			max-width: 90px;
+			max-height: 90px;
+			min-width: 70px;
+			min-height: 70px;
+			bottom: 2.5vw;
+			right: 18.5vw;
+			width: 5vw;
+			height: 5vw;			
+		}
+		&.is--doctor-spec{
+			max-width: 380px;
+			max-height: 600px;
+			top: -8.15vw;
+			left: 1.5vw;
+			width: 21vw;
+			height: 33vw;
+			display: block;
+			
+		}
+		&.is--roboto{
+			max-width: 620px;
+			max-height: 520px;
+			top: 0;
+			right: 0;    
+			width: 34vw;
+    		height: 29vw;
+			background-position: top right;
+			
+		}
+	}
+}
+.color--{
+	&blue {color: @ch_blue}
+	&acua {color: @ch_acua}
+	&acua-dark {color: @ch_acua-dark}
+	&turq {color: @ch_turq}
+	&yellow {color: @ch_yellow}
+	&green-dark {color: @ch_green-dark}
+	&green {color: @ch_green}
+}

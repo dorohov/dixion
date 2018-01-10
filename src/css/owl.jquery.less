@@ -96,11 +96,17 @@
 			transition: @trs-site;
 			margin: 5px 5px 0;
 			transform: scale(0.5);
-			.price-list-block__inner &{background-color: @white;}
+			.price-list-block__inner &{background-color: @white;} 
+			.specialists-block.is--children &{
+				background-color: @ch_acua;
+			}
 			&.active{
 				background-color: darken(@white, 35%);
 				transform: scale(1);
 				.price-list-block__inner &{background-color: @white;} 
+				.specialists-block.is--children &{
+					background-color: @ch_turq;
+				}
 			}
 		}
 	}
@@ -124,6 +130,13 @@
 			svg{
 				width: 12px;
 				height: 12px;
+			}
+			.specialists-block.is--children &{
+				color: @ch_turq;
+				font-family: @b-ff-2;
+				text-transform: none;
+				font-size: @b-fs;
+				font-weight: 400;
 			}
 		}
 		.owl-prev{left: 0;}

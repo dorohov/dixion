@@ -14,6 +14,10 @@
 	&inner{
 		border-left: 2px solid @blue;
 		@media @media-device-lg {padding-left: 10px;}
+		&.is--children{
+			padding: 0;
+			border: none;
+		}
 	}
 	&preview{
 		border: 6px solid @blue-gray;
@@ -52,6 +56,11 @@
 			@media @media-size-md {
 				.makeCols(4, 12);
 				&.cols-6{.makeCols(6, 12);}
+			}
+			&.is--children{
+				@media @media-screen {
+					.makeCols(3, 12);
+				}
 			}
 		}
 	}

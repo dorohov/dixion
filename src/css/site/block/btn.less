@@ -5,7 +5,25 @@
 	background: none;
 	text-decoration: none;
 	transition: @trs-btn;
+
 }
+.btn-children{
+	background-color: @ch_yellow;
+	padding: 10px 25px 8px;
+    .calcFontSize(16, 18, 320, 1680);
+    .calcLineHeight(22, 24, 320, 1680);
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    color: @ch_blue;
+    @media @media-screen {
+    	padding: 16px 2.5vw 14px;
+    }
+    &:hover{
+    	background-color: @ch_turq;
+    	color: @white;
+    }
+} 
 .btn-line{
 	border: 3px solid @b-color-a;
 	text-transform: uppercase;

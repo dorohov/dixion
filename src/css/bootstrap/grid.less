@@ -40,6 +40,12 @@
 .row {
 	.make-row();
 	&.is--wrap{flex-wrap: wrap;}
+	&.is--gutter{
+		margin-top: -20px;
+		& > .cols{
+			padding-top: 20px;
+		}
+	}
 }
 .cols {
 	.make-cols();	

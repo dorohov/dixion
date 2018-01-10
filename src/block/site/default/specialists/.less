@@ -1,8 +1,24 @@
-.specialists-block{}
+.specialists-block{
+	&.is--children{
+		background: #eee;
+		padding-top: 35px;
+		padding-bottom: 45px;
+		position: relative;
+		@media @media-screen {
+			padding-top: 3.7vw;
+			padding-bottom: 4.7vw;
+		}
+	}
+}
 .specialists-block__{}
 .specialists-item__{
 	&item{		
 		position: relative;
+		&.is--children{
+			border-radius: 30px;
+			overflow: hidden;
+			border: 3px solid @ch_yellow;
+		}
 	}
 	&inner{
 		display: block;
@@ -13,6 +29,9 @@
 		background-size: cover;
 		transition: @trs-site;
 		overflow: hidden;
+		&.is--children{
+			//border-radius: 30px;
+		}
 	}
 	&heading-block{
 		position: absolute;
@@ -30,6 +49,30 @@
 		.specialists-item__item.is--hover &{
 			transform: translateX(100%);
 		}
+		&.is--children{
+			background: none;
+			&::before{
+				content: '';
+				position: absolute;
+				z-index: 1;
+				top: 0;
+				left: -47%;
+				background-color: fadeout(@ch_yellow, 30%);
+				width: 675px;
+				height: 675px;
+				border-radius: 50%;
+				@media @media-size-sm-l {
+					left: -77%;
+				}
+				@media @media-screen {
+					max-width: 675px;
+					max-height: 675px;
+					width: 70vw;
+					height: 70vw;
+					left: -77%;
+				}
+			}
+		}
 	}
 	&heading{
 		margin: 0;
@@ -38,6 +81,12 @@
 		.calcFontSize(14, 16, 320, 1680);
 		.calcLineHeight(22, 24, 320, 1680);
 		font-weight: 500;
+		&.is--children{
+			position: relative;
+			z-index: 2;
+			color: @ch_blue;
+			font-family: @b-ff-2;
+		}
 	}
 	&note{
 		transition: @trs-site;
@@ -54,6 +103,10 @@
 		font-size: @b-fs - 4px;
 		line-height: @b-lh - 6px;
 		padding: 45px 30px 80px;
+		&.is--children{
+			background-color: fadeout(@ch_yellow, 30%);
+			color: @ch_blue;
+		}
 		.specialists-item__item.is--hover &{
 			transform: translateX(0%);
 		}
@@ -80,6 +133,9 @@
 			opacity: 1;
 			transition-delay: 0.2s;
 		}
+		&.is--children{		
+			background-color: @ch_turq;
+		}
 	}
 	&appointment{
 		border-radius: 50%;
@@ -98,6 +154,9 @@
 			transform: translateX(0%);
 			opacity: 1;
 			transition-delay: 0.2s;
+		}
+		&.is--children{		
+			background-color: @ch_turq;
 		}
 	}
 }
