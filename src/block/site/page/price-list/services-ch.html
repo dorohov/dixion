@@ -1,0 +1,159 @@
+<div class="content-block {{block_prefix}}page  {{block_mod}}  is--full  is--page" role="main">
+	[[azbntple 
+		tpl="/src/block/site/page/children/bg.html"
+		block_prefix="children-bg__"     
+		block_mod="is--bird-orange-rounds"
+		block_bg="bg-bird-orange-rounds.png"
+	]]
+	[[azbntple 
+		tpl="/src/block/site/page/children/bg.html"
+		block_prefix="children-bg__"     
+		block_mod="is--fish-round"
+		block_bg="bg-fish-round.png"
+	]]
+	[[azbntple 
+		tpl="/src/block/site/page/children/bg.html"
+		block_prefix="children-bg__"     
+		block_mod="is--bird-orange-left"
+		block_bg="bg-bird-orange-left.png"
+	]]
+	[[azbntple 
+		tpl="/src/block/site/page/children/bg.html"
+		block_prefix="children-bg__"     
+		block_mod="is--bird-blue  is--price"
+		block_bg="bg-bird-blue.png"
+	]]
+	<div class="container {{block_prefix}}container  is--zindex content-container">		
+ 		[[azbntple
+ 			tpl="/src/block/site/default/page-header/group-ch.html" 			
+ 			header_prefix="{{block_prefix}}"
+ 			header_mod="is--turq  is--page"
+ 			header_level="h1"
+ 			header="Прайс-лист детской клиники" 
+ 			header_small_level="h2"
+ 			header_small="Диксион"
+ 		]]
+		<div class="row {{block_prefix}}row  is--price">
+			<div class="cols {{block_prefix}}cols  is--price  is--nav">
+				<!--<div class="{{block_prefix}}btn-collapse-block">
+					<button type="button" class="{{price_prefix}}btn btn-site btn-line btn-blue" data-toggle="collapse" data-target="#price-navbar">Меню раздела</button>
+				</div>
+				<div class="collapse {{price_prefix}}collapse  {{price_mod}}" id="price-navbar">-->
+					<!--<ul class="{{price_prefix}}nav_azbn-filter" data-clinic-filter=".{{price_prefix}}nav" >
+						<li class="is--active" ><button class="_azbn-btn" data-clinic-code="dixion-orel" >Многофункциональная клиника</button></li>
+						<li class="" ><button class="_azbn-btn" data-clinic-code="dixion-oka" >Детская клиника</button></li>
+					</ul>-->
+					<ul class="{{price_prefix}}nav  {{price_mod}}">
+						<li><a href="#">Аллергология-иммунология</a></li>
+						<li><a href="#">Вакцинация</a></li>
+						<li class="is--active"><a href="#">Гастроэнтерология</a></li>
+						<li><a href="#">Детская дерматология</a></li>
+						<li><a href="#">Детская кардиология</a></li>
+						<li><a href="#">Детская офтальмология</a></li>
+						<li><a href="#">Детская урология-андрология</a></li>
+						<li><a href="#">Детская хирургия</a></li>
+						<li><a href="#">Детская эндокринология</a></li>
+						<li><a href="#">Детский гинеколог</a></li>
+						<li><a href="#">Детский невролог</a></li>
+						<li><a href="#">Детский психолог</a></li>
+						<li><a href="#">Медицинский массаж</a></li>
+						<li><a href="#">Нефрология</a></li>
+						<li><a href="#">Оториноларингология</a></li>
+						<li><a href="#">Педиатрия</a></li>
+						<li><a href="#">Травматология-ортопедия</a></li>
+						<li><a href="#">Травматология-ортопедия</a></li>
+						<!--<li>
+							<a href="#" data-category-tree="x123" >Физиотерапия</a>
+							
+							<ul class="{{price_prefix}}nav_azbn  {{price_mod}}" data-category-tree="x123" >
+								<li><a href="#">Урология</a></li>
+								<li class="is--active" ><a href="#">Хирургия</a></li>
+								<li><a href="#">Лазерное удаление новообразований кожи</a></li>
+								<li><a href="#">Малые операции</a></li>
+							</ul>
+						</li>-->
+					</ul>
+				<!-- </div> -->
+				<div class="{{block_prefix}}btn-price-block">
+					<a class="{{price_prefix}}btn-price" href="/services-price.html">
+						<span class="{{price_prefix}}btn-price-before">
+							[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="btn-price" ]]
+						</span>
+						Многофункциональная клиника
+						<span class="{{price_prefix}}btn-price-after">
+							[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="arrow-right-950" ]]
+						</span> 
+					</a>
+				</div>
+			</div>
+			<div class="cols {{block_prefix}}cols  is--price  is--table">
+				<div class="{{price_prefix}}scrollbar">					
+					<div class="mCustomScrollbar scroller" data-mcs-theme="blue">
+						<div class="table-responsive price-list__table-responsive">
+							<table class="table price-list__table  {{price_mod}}">
+								<thead>
+									<tr>
+										<th>
+											Офтальмология
+											<br><span>Наименование услуги</span>
+										</th>
+										<th>
+											Цена<span>/руб.</span>				
+											<br><span>перв./повторн. прием</span>
+										</th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="azbn__service-item" title="Услуга доступка в Многофункциональной клинике" data-service-id="1" data-service-title="Авторефрактометрия" data-service-cost1="12345" data-service-cost2="" >
+										<td>
+											<div>Авторефрактометрия</div>
+											<!--<div class="price-list__table__row__help" >Услуга доступка в Многофункциональной клинике</div>-->
+										</td>
+										<td>280</td>
+										<td><button class="btn-site btn-basket is--add  {{price_mod}} azbn__service-item__add  is--active" >[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="basket-active" ]]</button></td>
+									</tr>
+									<tr class="azbn__service-item" data-service-id="2" data-service-title="Инъекции п/к в висок" data-service-cost1="1245" data-service-cost2="" >
+										<td>Инъекции п/к в висок</td>
+										<td>220</td>
+										<td><button class="btn-site btn-basket is--add  {{price_mod}} azbn__service-item__add">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="basket-add" ]]</button></td>
+									</tr>
+									<tr class="azbn__service-item" data-service-id="3" data-service-title="Исследование глазного дна под мидриазом" data-service-cost1="13245" data-service-cost2="" >
+										<td>Исследование глазного дна под мидриазом </td>
+										<td>330</td>
+										<td><button class="btn-site btn-basket is--add  {{price_mod}} azbn__service-item__add">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="basket-add" ]]</button></td>
+									</tr>
+									<tr>
+										<td>Компьютерная тонометрия бесконтактная/контактная</td>
+										<td>220/110</td>
+										<td><button class="btn-site btn-basket is--add  {{price_mod}}">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="basket-add" ]]</button></td>
+									</tr>
+									<tr>
+										<td>Курс лечения (стандарт)</td>
+										<td>4400</td>
+										<td><button class="btn-site btn-basket is--add  {{price_mod}}">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="basket-add" ]]</button></td>
+									</tr>
+									<tr>
+										<td>Массаж края век</td>
+										<td>110</td>
+										<td><button class="btn-site btn-basket is--add  {{price_mod}}">[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="basket-add" ]]</button></td>
+									</tr> 	
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="price-list__table-caption  {{price_mod}}">
+						<div class="row price-list__caption-row">
+							<div class="cols price-list__caption-cols  is--name">
+								<div class="price-list__caption-name  {{price_mod}}">Всего <span class="azbn__incart-qty  color--turq" >2</span> услуг в корзине на сумму: <span class="azbn__incart-sum  color--turq" >5600</span> р.</div>
+							</div>
+							<div class="cols price-list__caption-cols  is--btn  {{price_mod}}">
+								<button type="button" class="btn-site btn-children  is--basket" data-toggle="modal" data-target="#modal-basket"><span>Заказать</span></button> 
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

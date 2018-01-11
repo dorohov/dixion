@@ -19,11 +19,43 @@
     @media @media-screen {
     	padding: 16px 2.5vw 14px;
     }
+    &.is--md{
+    	font-size: @b-fs - 4;
+    	line-height: @b-lh - 6;
+	    @media @media-screen {
+	    	padding: 16px 2.2vw 14px;
+	    }    	
+    }
     &:hover{
     	background-color: @ch_turq;
     	color: @white;
     }
 } 
+.btn-children-link{
+	font-family: @b-ff-2;
+	position: relative;
+	padding-right: 30px;
+	font-size: @b-fs + 6;
+	line-height: @b-lh;
+	color: @ch_blue;
+	font-weight: 700;
+	letter-spacing: 1px;
+	border-bottom: 6px solid @ch_yellow;
+	.btn-children-link-icon{
+		width: 22px;
+		height: 22px;
+		position: absolute;
+		right: 0;
+		top: 45%;
+		transform: translateY(-50%);
+		svg{display: block;}
+	}
+	&:hover{
+		//color: @ch_yellow;
+		border-bottom-color: fadeout(@ch_yellow, 100%);
+
+	}
+}
 .btn-line{
 	border: 3px solid @b-color-a;
 	text-transform: uppercase;
@@ -86,5 +118,13 @@
 	&.is--active{
 		background-color: @blue-sat;
 		color: @white;
+	}
+	&.is--children{
+		color: @ch_turq;
+		&:hover,
+		&.is--active{
+			color: @white;
+			background-color: @ch_turq;
+		}
 	}
 }

@@ -22,7 +22,8 @@
 			transform: translateY(-100%);		   	
 			padding-top: 15px;
 			padding-bottom: 15px;
-			transition: @trs-site;				
+			transition: @trs-site;	
+			background: #e3ebf1;		
 		}
 		&.fixed{
 			position: fixed;
@@ -420,6 +421,10 @@
 				margin-top: 0;
 				margin-right: 12px;
 			}
+			@media @media-size-md {
+				margin-top: 0;
+				margin-right: 12px;
+			}
 		}
 		@media @media-device-lg{margin-right: 5px; margin-top: 5px;}
 		@media @media-screen-lg{margin-left: 5px;}
@@ -465,5 +470,6 @@
 		@media @media-device-lg{text-align: right;}
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 	}
 }

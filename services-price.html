@@ -44,17 +44,19 @@
 						</div>
 						-->
 						<div class="cols navbar__col-hamburger">
-							<a href="tel:+74862760000" class="navbar__soc round is--header">
-								<svg class="icon-svg icon-tel" role="img">
-									<use xlink:href="/img/svg/sprite.svg#tel"></use>
-								</svg>
-							</a>
-							<div class="navbar__hamburger">
-								<button class="navbar__hamburger-btn hamburger hamburger--rotate-close" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false" data-toggle-nav=".navbar-site" data-body="html" data-collapse-nav=".navbar__collapse">
-									<span class="hamburger-box">
-										<span class="hamburger-inner"></span>
-									</span>
-								</button>
+							<div class="navbar__hamburger-wrap">
+								<a href="tel:+74862760000" class="navbar__soc round is--header">
+									<svg class="icon-svg icon-tel" role="img">
+										<use xlink:href="/img/svg/sprite.svg#tel"></use>
+									</svg>
+								</a>
+								<div class="navbar__hamburger">
+									<button class="navbar__hamburger-btn hamburger hamburger--rotate-close" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false" data-toggle-nav=".navbar-site" data-body="html" data-collapse-nav=".navbar__collapse">
+										<span class="hamburger-box">
+											<span class="hamburger-inner"></span>
+										</span>
+									</button>
+								</div>
 							</div>
 						</div>
 						<div class="cols navbar__col-brand">
@@ -345,12 +347,12 @@
 </div> 
 		<div class="row _plp__row">
 			<div class="cols _plp__cols cols-5">
-				<button type="button" class="price-list__btn btn-site btn-line btn-blue" data-toggle="collapse" data-target="#price-navbar">Меню раздела</button>
-				<div class="collapse price-list__collapse" id="price-navbar">
-					<ul class="price-list__nav_azbn-filter" data-clinic-filter=".price-list__nav" >
+				<!-- <button type="button" class="price-list__btn btn-site btn-line btn-blue" data-toggle="collapse" data-target="#price-navbar">Меню раздела</button> -->
+				<!-- <div class="collapse price-list__collapse" id="price-navbar"> -->
+					<!--<ul class="price-list__nav_azbn-filter" data-clinic-filter=".price-list__nav" >
 						<li class="is--active" ><button class="_azbn-btn" data-clinic-code="dixion-orel" >Многофункциональная клиника</button></li>
 						<li class="" ><button class="_azbn-btn" data-clinic-code="dixion-oka" >Детская клиника</button></li>
-					</ul>
+					</ul>-->
 					<ul class="price-list__nav">
 						<li>
 							<a href="#" data-category-tree="x123" >Приём специалистов</a>
@@ -391,6 +393,21 @@
 						<li><a href="#">Программы диспансеризации</a></li>
 						<li><a href="#">Выдача справок</a></li>
 					</ul>
+				<!-- </div> -->
+				<div class="{{block_prefix}}btn-price-block">
+					<a class="price-list__btn-price" href="/services-price-children.html">
+						<span class="price-list__btn-price-before">
+							<svg class="icon-svg icon-btn-price" role="img">
+	<use xlink:href="/img/svg/sprite.svg#btn-price"></use>
+</svg>
+						</span>
+						Детская клиника
+						<span class="price-list__btn-price-after">
+							<svg class="icon-svg icon-arrow-right-950" role="img">
+	<use xlink:href="/img/svg/sprite.svg#arrow-right-950"></use>
+</svg>
+						</span> 
+					</a>
 				</div>
 			</div>
 			<div class="cols _plp__cols cols-7 ">

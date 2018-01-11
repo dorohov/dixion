@@ -139,6 +139,17 @@ svg polygon.azbn-tour-polygon {
 	@media @media-size-xxl{		
 		min-height: ~"calc(100vh - @{navbar-top-screen-xxl} - @{footer-screen-xxl})"; 
 	}*/
+	&.is--full{
+		@media @media-screen{		
+			min-height: ~"calc(100vh - @{navbar-top-screen} -  @{footer-screen})"; 
+		}
+		@media @media-size-xl{		
+			min-height: ~"calc(100vh - @{navbar-top-screen} - @{footer-screen-xxl})"; 
+		}
+		@media @media-size-xxl{		
+			min-height: ~"calc(100vh - @{navbar-top-screen-xxl} - @{footer-screen-xxl})"; 
+		}
+	}
 }
 .content-container{	
 	/*@media @media-screen{

@@ -8,12 +8,12 @@
 		]] 
 		<div class="row {{prefix_block}}row">
 			<div class="cols {{prefix_block}}cols cols-5">
-				<button type="button" class="{{price_prefix}}btn btn-site btn-line btn-blue" data-toggle="collapse" data-target="#price-navbar">Меню раздела</button>
-				<div class="collapse {{price_prefix}}collapse" id="price-navbar">
-					<ul class="{{price_prefix}}nav_azbn-filter" data-clinic-filter=".{{price_prefix}}nav" >
+				<!-- <button type="button" class="{{price_prefix}}btn btn-site btn-line btn-blue" data-toggle="collapse" data-target="#price-navbar">Меню раздела</button> -->
+				<!-- <div class="collapse {{price_prefix}}collapse" id="price-navbar"> -->
+					<!--<ul class="{{price_prefix}}nav_azbn-filter" data-clinic-filter=".{{price_prefix}}nav" >
 						<li class="is--active" ><button class="_azbn-btn" data-clinic-code="dixion-orel" >Многофункциональная клиника</button></li>
 						<li class="" ><button class="_azbn-btn" data-clinic-code="dixion-oka" >Детская клиника</button></li>
-					</ul>
+					</ul>-->
 					<ul class="{{price_prefix}}nav">
 						<li>
 							<a href="#" data-category-tree="x123" >Приём специалистов</a>
@@ -54,6 +54,17 @@
 						<li><a href="#">Программы диспансеризации</a></li>
 						<li><a href="#">Выдача справок</a></li>
 					</ul>
+				<!-- </div> -->
+				<div class="{{block_prefix}}btn-price-block">
+					<a class="{{price_prefix}}btn-price" href="/services-price-children.html">
+						<span class="{{price_prefix}}btn-price-before">
+							[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="btn-price" ]]
+						</span>
+						Детская клиника
+						<span class="{{price_prefix}}btn-price-after">
+							[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="arrow-right-950" ]]
+						</span> 
+					</a>
 				</div>
 			</div>
 			<div class="cols {{prefix_block}}cols cols-7 ">

@@ -5,11 +5,20 @@
 	@media @media-screen {
 		margin-bottom: 4vw;
 	}
+	&.is--children{
+		position: relative;
+	}
 }
 .license-block__{
 	&heading{
 		@media @media-device {margin-bottom: 20px;}
 		@media @media-screen {margin-bottom: 2vw;}
+	}
+	&.inner{
+		&.is--children{
+			position: relative;
+			z-index: 2;
+		}		
 	}
 }
 .license-item__{
@@ -22,6 +31,9 @@
 		background-size: cover;
 		transition: @trs-site;
 		overflow: hidden;
+		&.is--children{
+			border-radius: 30px;
+		}
 	}
 	&more{
 		border-radius: 50%;

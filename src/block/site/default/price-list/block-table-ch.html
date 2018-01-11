@@ -1,0 +1,91 @@
+<div class="{{block_prefix}}pricelist  {{block_mod}}"> 
+
+	[[azbntple 
+		tpl="/src/block/site/page/children/bg.html"
+		block_prefix="children-bg__"     
+		block_mod="is--bird-blue-left"
+		block_bg="bg-bird-blue-left.png"
+	]]
+	[[azbntple 
+		tpl="/src/block/site/page/children/bg.html"
+		block_prefix="children-bg__"     
+		block_mod="is--bird-blue-right"
+		block_bg="bg-bird-blue-right.png"
+	]]
+	[[azbntple 
+		tpl="/src/block/site/page/children/bg.html"
+		block_prefix="children-bg__"     
+		block_mod="is--bird-yellow-right"
+		block_bg="bg-bird-yellow-right.png"
+	]]
+	<div class="container {{block_prefix}}container  is--zindex">		
+		<div class="{{block_prefix}}pricelist-row row  is--wrap">
+			<div class="{{block_prefix}}pricelist-cols cols  is--preview">
+				<div class="{{block_prefix}}pricelist-preview">
+					<img src="{{url-path-img}}/children/bg-pricelist-page.png" alt="">
+				</div>
+			</div>
+			<div class="{{block_prefix}}pricelist-cols cols  is--table">
+
+				[[azbntple
+					tpl="/src/block/site/default/page-header/block-ch.html"
+					header_prefix="{{block_prefix}}"
+					header_mod="is--heading-block  is--price"
+					header_level="h2"
+		 			header="Стоимость медицинских услуг" 
+		 		]]	
+				<div class="table-responsive">
+					<table class="table {{block_prefix}}table  is--white">
+						<thead>
+							<tr>
+								<th>УСЛУГА</th>
+								<th class="is--right">СТОИМОСТЬ,&nbsp;руб.</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Хирург (первичный)</td>
+								<td class="is--right">750</td>
+							</tr>
+							<tr>
+								<td>Хирург (повторный)</td>
+								<td class="is--right">600</td>
+							</tr>
+							<tr>
+								<td>Детский хирург (первичный)</td>
+								<td class="is--right">850</td>
+							</tr>
+							<tr>
+								<td>Детский хирург (повторный)</td>
+								<td class="is--right">650</td>
+							</tr>
+							<tr>
+								<td>Взятие отделяемого из соска для исследования</td>
+								<td class="is--right">650</td>
+							</tr>
+							<tr>
+								<td>Хирург (первичный)</td>
+								<td class="is--right">750</td>
+							</tr>
+						</tbody>
+					</table>					
+				</div>
+				<div class="{{block_prefix}}pricelist-caption">
+					<div class="{{block_prefix}}pricelist-caption-row row  is--wrap  is--gutter">
+						<div class="{{block_prefix}}pricelist-caption-cols cols">
+							<a href="#" class="btn-site btn-children-link azbn__directions__price__more" >
+								Ещё
+								<span class="btn-children-link-icon"> 
+								[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="arrow-down-900" ]]
+								</span>
+							</a>
+						</div>
+						<div class="{{block_prefix}}pricelist-caption-cols cols">
+							<a href="/services-price-children.html" class="btn-site  btn-children"><span>Полный прайс-лист</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
