@@ -11,11 +11,12 @@ $(function() {
 		//fade: true,
 		//variableWidth: true,
 		//centerMode: true,
-		prevArrow: '<button type="button" class="slick-prev"><svg class="icon-svg icon-owl-prev" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/svg/sprite.svg#arrow-left-900"></use></svg></button>',
-		nextArrow: '<button type="button" class="slick-next"><svg class="icon-svg icon-owl-next" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/svg/sprite.svg#arrow-right-900"></use></svg></button>'
+		prevArrow: '<button type="button" class="slick-prev"><svg class="icon-svg icon-owl-prev" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/bitrix/templates/azbn7theme/img/svg/sprite.svg#arrow-left-900"></use></svg></button>',
+		nextArrow: '<button type="button" class="slick-next"><svg class="icon-svg icon-owl-next" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/bitrix/templates/azbn7theme/img/svg/sprite.svg#arrow-right-900"></use></svg></button>'
 	});
 	$('#sl-nav').slick({
-		slidesToShow: 9,
+		slidesToShow: 4,
+		//slidesToShow: 9,
 		slidesToScroll: 1,
 		asNavFor: "#sl-block",
 		centerMode: true,
@@ -26,25 +27,29 @@ $(function() {
 		    {
 				breakpoint: 1200,
 				settings: {
-					slidesToShow: 7,
+					//slidesToShow: 7,
+					slidesToShow: 4,
 				}
 		    },
 		    {
 				breakpoint: 1025,
 				settings: {
-					slidesToShow: 9,
+					//slidesToShow: 9,
+					slidesToShow: 4,
 				}
 		    },
 		    {
 		      breakpoint: 767,
 		      settings: {
-		        slidesToShow: 5,
+		        //slidesToShow: 5,
+		        slidesToShow: 4,
 		      }
 		    },
 		    {
 		      breakpoint: 480,
 		      settings: {
-		        slidesToShow: 6,
+		        //slidesToShow: 6,
+		        slidesToShow: 4,
 		      }
 		    }
 		]

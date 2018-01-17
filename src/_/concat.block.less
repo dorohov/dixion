@@ -1497,6 +1497,7 @@ textarea.form__control{height: 150px;}
 .navbar-site{
 	background: @navbar-bg-screen;
 	color: @navbar-color; 
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
 	@media @media-device{
 		position: fixed;
 		width: 100%;
@@ -3320,6 +3321,13 @@ textarea.form__control{height: 150px;}
 			width: 100%;
 		}
 	} 
+	&btn{
+		text-align: center;
+		padding-top: 30px;
+		@media @media-screen {
+			padding-top: 2vw;
+		}
+	}
 }
 .reviews-item__{
 	&item{
