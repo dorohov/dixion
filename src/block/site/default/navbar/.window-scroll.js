@@ -26,4 +26,4 @@ if(snb.hasClass('fixed')) {
 	if(topPos > 400) {
 		snb.addClass('fixed');
 	}
-} 
+}  
