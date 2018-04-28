@@ -549,9 +549,15 @@
 	$(function(){
 		
 		var hash = window.location.hash;
-		var el = $(hash + '.modal');
-		if(el.length) {
-			el.modal();
+		
+		if(hash && hash != '') {
+			var el = $(hash + '.modal');
+			if(el.length) {
+				$('.azbn7-preloader').empty().remove();
+				setTimeout(function(){
+					el.modal();
+				}, 1000);
+			}
 		}
 		
 	})
