@@ -545,5 +545,17 @@
 			}
 		}
 	});
+	
+	$(function(){
+		
+		var hash = window.location.hash;
+		var el = $(hash + '.modal');
+		if(el.length) {
+			el.modal();
+		}
+		
+	})
+	
+	
 
 })();
