@@ -460,8 +460,12 @@
 			
 			var btn = $(this);
 			var spec_name = btn.attr('data-specialist-name') || '';
+			var spec_id = btn.attr('data-specialist-id') || 0;
 			
-			$('#modal-appointment input.azbn-form-editable').val(spec_name);
+			var modal = $('#modal-appointment');
+			
+			modal.find('input.azbn-form-editable').val(spec_name);
+			modal.find('form.azbn-api-formsave').attr('data-marketing-target', 'form.submit.order_service.' + spec_id);
 			
 		});
 		
