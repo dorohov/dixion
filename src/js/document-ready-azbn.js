@@ -474,8 +474,9 @@
 			
 			var btn = $(this);
 			var spec_name = btn.attr('data-service-program') || '';
+			var modal_id = btn.attr('data-target') || '';
 			
-			$('#modal-order input.azbn-form-editable').val(spec_name);
+			$(modal_id + ' input.azbn-form-editable').val(spec_name);
 			
 		});
 		
