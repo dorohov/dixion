@@ -1,208 +1,294 @@
-<div class="content-block {{class}}" role="main">
-	<div class="container content-container">		
+<div class="content-block  {{block_prefix}}page  {{block_mod}}">
+	<div class="container content-container  {{block_prefix}}container">
  		[[azbntple
- 			tpl="/src/block/site/default/page-header/group.html"
- 			header_prefix="header-page-item__"
+ 			tpl="/src/block/site/default/page-header/block.html"
+ 			header_prefix="header-page__"
  			header_level="h1"
  			header="Расписание приема врачей"
- 			header_small_level="h2"
- 			header_small="В данном расписании возможны изменения.<br> Прием осуществляется по предварительной записи по телефонам клиники."
  		]]
-		<div class="row {{prefix_block}}row">
-			<div class="cols {{prefix_block}}cols cols-3">
-				<ul class="{{price_prefix}}item">
-	 				<li class="{{price_prefix}}item-list">
-	 					<a href="#schedule-item1" data-toggle="tab" class="{{price_prefix}}item-link {{prefix_block}}item-link">Терапевт</a>
-	 				</li>
-	 				<li class="{{price_prefix}}item-list">
-	 					<a href="#schedule-item2" data-toggle="tab" class="{{price_prefix}}item-link {{prefix_block}}item-link">Функциональная диагностика</a>
-	 				</li>
-	 				<li class="{{price_prefix}}item-list">
-	 					<a href="#schedule-item3" data-toggle="tab" class="{{price_prefix}}item-link {{prefix_block}}item-link">Мануальная терапия</a>
-	 				</li>
-	 				<li class="{{price_prefix}}item-list">
-	 					<a href="#schedule-item4" data-toggle="tab" class="{{price_prefix}}item-link {{prefix_block}}item-link">Компьютерная томография</a>
-	 				</li>
-				</ul>
-			</div>
-			<div class="cols {{prefix_block}}cols cols-3">
-				<ul class="{{price_prefix}}item">
-	 				<li class="{{price_prefix}}item-list">
-	 					<a href="#schedule-item5" data-toggle="tab" class="{{price_prefix}}item-link {{prefix_block}}item-link">Рентген</a>
-	 				</li>
-	 				<li class="{{price_prefix}}item-list">
-	 					<a href="#schedule-item6" data-toggle="tab" class="{{price_prefix}}item-link {{prefix_block}}item-link">Массаж</a>
-	 				</li>
-	 				<li class="{{price_prefix}}item-list">
-	 					<a href="#schedule-item7" data-toggle="tab" class="{{price_prefix}}item-link {{prefix_block}}item-link">Другие специалисты</a>
-	 				</li>
-	 				<li class="{{price_prefix}}item-list">
-	 					<a href="#schedule-item8" data-toggle="tab" class="{{price_prefix}}item-link {{prefix_block}}item-link">Стоматология</a>
-	 				</li>
-				</ul>
-			</div>
-			<div class="cols {{prefix_block}}cols cols-3">
-				<ul class="{{price_prefix}}item">
-	 				<li class="{{price_prefix}}item-list">
-	 					<a href="#schedule-item9" data-toggle="tab" class="{{price_prefix}}item-link {{prefix_block}}item-link">Узи</a>
-	 				</li>
-	 				<li class="{{price_prefix}}item-list">
-	 					<a href="#schedule-item10" data-toggle="tab" class="{{price_prefix}}item-link {{prefix_block}}item-link">МРТ</a>
-	 				</li>
-	 				<li class="{{price_prefix}}item-list">
-	 					<a href="#schedule-item11" data-toggle="tab" class="{{price_prefix}}item-link {{prefix_block}}item-link">Лаборатория (забор&nbsp;анализов)</a>
-	 				</li>
-				</ul>
-			</div>
-
-			<div class="cols {{prefix_block}}cols cols-12">
-				<div class="tab-content">
-					<div class="tab-pane fade {{price_prefix}}tab-pane" id="schedule-item1">
-						<div class="row {{price_prefix}}tab-row">
-							<div class="cols {{price_prefix}}tab-cols">
-								<div class="{{price_prefix}}tab-item"><span>Пн-Пт</span> с 8:00 до 21:00</div>
-							</div>
-							<div class="cols {{price_prefix}}tab-cols">
-								<div class="{{price_prefix}}tab-item"><span>Сб</span> с 8:00 до 21:00</div>
-							</div>
-							<div class="cols {{price_prefix}}tab-cols">
-								<div class="{{price_prefix}}tab-item"><span>Вс</span> с 8:00 до 21:00</div>
+ 		<ul class="{{block_prefix}}tabs  {{block_mod}}">
+	 		<li class="{{block_prefix}}tabs-item  {{block_mod}}">
+		 		<a href="#" class="{{block_prefix}}tabs-link  {{block_mod}}  is--active">
+		 			<span>Взрослым</span>
+		 		</a>
+	 		</li>
+	 		<li class="{{block_prefix}}tabs-item  {{block_mod}}">
+		 		<a href="#" class="{{block_prefix}}tabs-link  {{block_mod}}">
+		 			<span>Детям</span>
+		 		</a>
+	 		</li>
+ 		</ul>
+ 		<div class="{{block_prefix}}filter  {{block_mod}}">
+	 		<div class="{{block_prefix}}filter-item  is--select  {{block_mod}}">
+	 			<div class="{{block_prefix}}filter-wrap  {{block_mod}}">
+		 			<select class="form__control  {{block_prefix}}filter-control">
+		 				<option disabled selected>Выберите профиль</option>
+		 				<option>1</option>
+		 				<option>2</option>
+		 				<option>3</option>
+		 			</select>
+	 				<div class="{{block_prefix}}filter-icon  {{block_mod}}">
+		 				[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="arrow-left-900" ]]
+		 			</div>
+		 		</div>
+	 		</div>
+	 		<div class="{{block_prefix}}filter-item  is--select  {{block_mod}}">
+	 			<div class="{{block_prefix}}filter-wrap  {{block_mod}}">
+		 			<select class="form__control  {{block_prefix}}filter-control">
+		 				<option disabled selected>Выберите врача</option>
+		 				<option>1</option>
+		 				<option>2</option>
+		 				<option>3</option>
+		 			</select>
+	 				<div class="{{block_prefix}}filter-icon  {{block_mod}}">
+		 				[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="arrow-left-900" ]]
+		 			</div>
+		 		</div>
+	 		</div>
+	 		<div class="{{block_prefix}}filter-item  is--search  {{block_mod}}">
+	 			<form action="#" method="#" class="search__form">
+					<input type="text" placeholder="Поиск по фамилии врача" class="search__input  {{block_prefix}}search-input">
+					<button type="submit" class="search__btn-submit {{block_prefix}}search-btn">
+						[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="search" ]]
+					</button>
+				</form>
+	 		</div>
+ 		</div>
+	</div>
+	<div class="{{block_prefix}}table-panel  {{block_mod}}">
+		<div class="container content-container  {{block_prefix}}container">
+			<div class="{{block_prefix}}table  {{block_mod}}">
+				<div class="{{block_prefix}}table-head  {{block_mod}}">
+					<div class="{{block_prefix}}table-row  is--head  {{block_mod}}">
+						<div class="{{block_prefix}}table-cols  is--heading  {{block_mod}}">
+							<h3 class="{{block_prefix}}heading  {{block_mod}}">Врачи</h3>
+						</div>
+						<div class="{{block_prefix}}table-cols  {{block_mod}}">
+							<div class="{{block_prefix}}table-day-card  {{block_mod}}">
+								<div class="{{block_prefix}}table-day  {{block_mod}}">
+									Пн
+								</div>
+								<div>27 июня</div>
 							</div>
 						</div>
-					</div>
-					<div class="tab-pane fade {{price_prefix}}tab-pane" id="schedule-item2">
-						<div class="row {{price_prefix}}tab-row">
-							<div class="cols {{price_prefix}}tab-cols">
-								<div class="{{price_prefix}}tab-item"><span>Пн-Пт</span> с 8:00 до 21:00</div>
-							</div>
-							<div class="cols {{price_prefix}}tab-cols">
-								<div class="{{price_prefix}}tab-item"><span>Сб</span> с 8:00 до 21:00</div>
-							</div>
-							<div class="cols {{price_prefix}}tab-cols">
-								<div class="{{price_prefix}}tab-item"><span>Вс</span> с 8:00 до 21:00</div>
+						<div class="{{block_prefix}}table-cols  {{block_mod}}">
+							<div class="{{block_prefix}}table-day-card  {{block_mod}}">
+								<div class="{{block_prefix}}table-day  {{block_mod}}">
+									Вт
+								</div>
+								<div>27 июня</div>
 							</div>
 						</div>
-					</div>
-					<div class="tab-pane fade {{price_prefix}}tab-pane" id="schedule-item3">
-						<div class="row {{price_prefix}}tab-row">
-							<div class="cols {{price_prefix}}tab-cols">
-								<div class="{{price_prefix}}tab-item"><span>Пн-Пт</span> с 8:00 до 21:00</div>
-							</div>
-							<div class="cols {{price_prefix}}tab-cols">
-								<div class="{{price_prefix}}tab-item"><span>Сб</span> с 8:00 до 21:00</div>
-							</div>
-							<div class="cols {{price_prefix}}tab-cols">
-								<div class="{{price_prefix}}tab-item"><span>Вс</span> с 8:00 до 21:00</div>
+						<div class="{{block_prefix}}table-cols  {{block_mod}}">
+							<div class="{{block_prefix}}table-day-card  {{block_mod}}">
+								<div class="{{block_prefix}}table-day  {{block_mod}}">
+									Cp
+								</div>
+								<div>27 июня</div>
 							</div>
 						</div>
-					</div>
-					<div class="tab-pane fade {{price_prefix}}tab-pane" id="schedule-item4">
-						<div class="row {{price_prefix}}tab-row">
-							<div class="cols {{price_prefix}}tab-cols">
-								<div class="{{price_prefix}}tab-item"><span>Пн-Пт</span> с 8:00 до 21:00</div>
-							</div>
-							<div class="cols {{price_prefix}}tab-cols">
-								<div class="{{price_prefix}}tab-item"><span>Сб</span> с 8:00 до 21:00</div>
-							</div>
-							<div class="cols {{price_prefix}}tab-cols">
-								<div class="{{price_prefix}}tab-item"><span>Вс</span> с 8:00 до 21:00</div>
+						<div class="{{block_prefix}}table-cols  {{block_mod}}">
+							<div class="{{block_prefix}}table-day-card  {{block_mod}}">
+								<div class="{{block_prefix}}table-day  {{block_mod}}">
+									Чт
+								</div>
+								<div>27 июня</div>
 							</div>
 						</div>
-					</div>
-					<div class="tab-pane fade {{price_prefix}}tab-pane" id="schedule-item5">
-						<div class="row {{price_prefix}}tab-row">
-							<div class="cols {{price_prefix}}tab-cols">
-								<div class="{{price_prefix}}tab-item"><span>Пн-Пт</span> с 8:00 до 21:00</div>
-							</div>
-							<div class="cols {{price_prefix}}tab-cols">
-								<div class="{{price_prefix}}tab-item"><span>Сб</span> с 8:00 до 21:00</div>
-							</div>
-							<div class="cols {{price_prefix}}tab-cols">
-								<div class="{{price_prefix}}tab-item"><span>Вс</span> с 8:00 до 21:00</div>
+						<div class="{{block_prefix}}table-cols  {{block_mod}}">
+							<div class="{{block_prefix}}table-day-card  {{block_mod}}">
+								<div class="{{block_prefix}}table-day  {{block_mod}}">
+									Пт
+								</div>
+								<div>27 июня</div>
 							</div>
 						</div>
-					</div>
-					<div class="tab-pane fade {{price_prefix}}tab-pane" id="schedule-item6">
-						<div class="row {{price_prefix}}tab-row">
-							<div class="cols {{price_prefix}}tab-cols">
-								<div class="{{price_prefix}}tab-item"><span>Пн-Пт</span> с 8:00 до 21:00</div>
-							</div>
-							<div class="cols {{price_prefix}}tab-cols">
-								<div class="{{price_prefix}}tab-item"><span>Сб</span> с 8:00 до 21:00</div>
-							</div>
-							<div class="cols {{price_prefix}}tab-cols">
-								<div class="{{price_prefix}}tab-item"><span>Вс</span> с 8:00 до 21:00</div>
+						<div class="{{block_prefix}}table-cols  {{block_mod}}">
+							<div class="{{block_prefix}}table-day-card  {{block_mod}}">
+								<div class="{{block_prefix}}table-day  {{block_mod}}">
+									Сб
+								</div>
+								<div>27 июня</div>
 							</div>
 						</div>
-					</div>
-					<div class="tab-pane fade {{price_prefix}}tab-pane" id="schedule-item7">
-						<div class="row {{price_prefix}}tab-row">
-							<div class="cols {{price_prefix}}tab-cols">
-								<div class="{{price_prefix}}tab-item"><span>Пн-Пт</span> с 8:00 до 21:00</div>
-							</div>
-							<div class="cols {{price_prefix}}tab-cols">
-								<div class="{{price_prefix}}tab-item"><span>Сб</span> с 8:00 до 21:00</div>
-							</div>
-							<div class="cols {{price_prefix}}tab-cols">
-								<div class="{{price_prefix}}tab-item"><span>Вс</span> с 8:00 до 21:00</div>
-							</div>
-						</div>
-					</div>
-					<div class="tab-pane fade {{price_prefix}}tab-pane" id="schedule-item8">
-						<div class="row {{price_prefix}}tab-row">
-							<div class="cols {{price_prefix}}tab-cols">
-								<div class="{{price_prefix}}tab-item"><span>Пн-Пт</span> с 8:00 до 21:00</div>
-							</div>
-							<div class="cols {{price_prefix}}tab-cols">
-								<div class="{{price_prefix}}tab-item"><span>Сб</span> с 8:00 до 21:00</div>
-							</div>
-							<div class="cols {{price_prefix}}tab-cols">
-								<div class="{{price_prefix}}tab-item"><span>Вс</span> с 8:00 до 21:00</div>
-							</div>
-						</div>
-					</div>
-					<div class="tab-pane fade {{price_prefix}}tab-pane" id="schedule-item9">
-						<div class="row {{price_prefix}}tab-row">
-							<div class="cols {{price_prefix}}tab-cols">
-								<div class="{{price_prefix}}tab-item"><span>Пн-Пт</span> с 8:00 до 21:00</div>
-							</div>
-							<div class="cols {{price_prefix}}tab-cols">
-								<div class="{{price_prefix}}tab-item"><span>Сб</span> с 8:00 до 21:00</div>
-							</div>
-							<div class="cols {{price_prefix}}tab-cols">
-								<div class="{{price_prefix}}tab-item"><span>Вс</span> с 8:00 до 21:00</div>
-							</div>
-						</div>
-					</div>
-					<div class="tab-pane fade {{price_prefix}}tab-pane" id="schedule-item10">
-						<div class="row {{price_prefix}}tab-row">
-							<div class="cols {{price_prefix}}tab-cols">
-								<div class="{{price_prefix}}tab-item"><span>Пн-Пт</span> с 8:00 до 21:00</div>
-							</div>
-							<div class="cols {{price_prefix}}tab-cols">
-								<div class="{{price_prefix}}tab-item"><span>Сб</span> с 8:00 до 21:00</div>
-							</div>
-							<div class="cols {{price_prefix}}tab-cols">
-								<div class="{{price_prefix}}tab-item"><span>Вс</span> с 8:00 до 21:00</div>
-							</div>
-						</div>
-					</div>
-					<div class="tab-pane fade {{price_prefix}}tab-pane" id="schedule-item11">
-						<div class="row {{price_prefix}}tab-row">
-							<div class="cols {{price_prefix}}tab-cols">
-								<div class="{{price_prefix}}tab-item"><span>Пн-Пт</span> с 8:00 до 21:00</div>
-							</div>
-							<div class="cols {{price_prefix}}tab-cols">
-								<div class="{{price_prefix}}tab-item"><span>Сб</span> с 8:00 до 21:00</div>
-							</div>
-							<div class="cols {{price_prefix}}tab-cols">
-								<div class="{{price_prefix}}tab-item"><span>Вс</span> с 8:00 до 21:00</div>
+						<div class="{{block_prefix}}table-cols  {{block_mod}}">
+							<div class="{{block_prefix}}table-day-card  {{block_mod}}">
+								<div class="{{block_prefix}}table-day  {{block_mod}}">
+									Вс
+								</div>
+								<div>27 июня</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>	
-
+				<div class="{{block_prefix}}table-body  {{block_mod}}">
+					<div class="{{block_prefix}}table-row  {{block_mod}}">
+						<div class="{{block_prefix}}table-cols  is--heading  {{block_mod}}">
+							<div class="{{block_prefix}}table-med-card  {{block_mod}}">
+								<div class="{{block_prefix}}table-med-heading  {{block_mod}}">
+									<a href="#">Иванникова Ирина Николаевна</a>
+								</div>
+								<div class="{{block_prefix}}table-med-post  {{block_mod}}">Зубной врач</div>
+								<div class="{{block_prefix}}table-med-link  {{block_mod}}">
+									<a href="#" data-toggle="modal" data-target="#modal-appointment" >Записаться на прием</a>
+								</div>
+							</div>
+						</div>
+						<div class="{{block_prefix}}table-cols  {{block_mod}}">
+							<div class="{{block_prefix}}table-time-card  {{block_mod}}">
+								<div class="{{block_prefix}}table-time-date  {{block_mod}}">Пн, <span>27 июня</span></div>
+								<div>08:00-16:00</div>
+							</div>
+						</div>
+						<div class="{{block_prefix}}table-cols  {{block_mod}}">
+							<div class="{{block_prefix}}table-time-card  {{block_mod}}">
+								<div class="{{block_prefix}}table-time-date  {{block_mod}}">Пн, <span>27 июня</span></div>
+								<div>8:00-16:00</div>
+							</div>
+						</div>
+						<div class="{{block_prefix}}table-cols  {{block_mod}}">
+							<div class="{{block_prefix}}table-time-card  {{block_mod}}">
+								<div class="{{block_prefix}}table-time-date  {{block_mod}}">Пн, <span>27 июня</span></div>
+								<div>8:00-16:00</div>
+							</div>
+						</div>
+						<div class="{{block_prefix}}table-cols  {{block_mod}}">
+							<div class="{{block_prefix}}table-time-card  {{block_mod}}">
+								<div class="{{block_prefix}}table-time-date  {{block_mod}}">Пн, <span>27 июня</span></div>
+								<div>8:00-16:00</div>
+							</div>
+						</div>
+						<div class="{{block_prefix}}table-cols  {{block_mod}}">
+							<div class="{{block_prefix}}table-time-card  {{block_mod}}">
+								<div class="{{block_prefix}}table-time-date  {{block_mod}}">Пн, <span>27 июня</span></div>
+								<div>Выходной</div>
+							</div>
+						</div>
+						<div class="{{block_prefix}}table-cols  {{block_mod}}">
+							<div class="{{block_prefix}}table-time-card  {{block_mod}}">
+								<div class="{{block_prefix}}table-time-date  {{block_mod}}">Пн, <span>27 июня</span></div>
+								<div>8:00-16:00</div>
+							</div>
+						</div>
+						<div class="{{block_prefix}}table-cols  {{block_mod}}">
+							<div class="{{block_prefix}}table-time-card  {{block_mod}}">
+								<div class="{{block_prefix}}table-time-date  {{block_mod}}">Пн, <span>27 июня</span></div>
+								<div>8:00-16:00</div>
+							</div>
+						</div>
+					</div>
+					<div class="{{block_prefix}}table-row  {{block_mod}}">
+						<div class="{{block_prefix}}table-cols  is--heading  {{block_mod}}">
+							<div class="{{block_prefix}}table-med-card  {{block_mod}}">
+								<div class="{{block_prefix}}table-med-heading  {{block_mod}}">
+									<a href="#">Иванникова Ирина Николаевна</a>
+								</div>
+								<div class="{{block_prefix}}table-med-post  {{block_mod}}">Зубной врач</div>
+								<div class="{{block_prefix}}table-med-link  {{block_mod}}">
+									<a href="#" data-toggle="modal" data-target="#modal-appointment" >Записаться на прием</a>
+								</div>
+							</div>
+						</div>
+						<div class="{{block_prefix}}table-cols  {{block_mod}}">
+							<div class="{{block_prefix}}table-time-card  {{block_mod}}">
+								<div class="{{block_prefix}}table-time-date  {{block_mod}}">Пн, <span>27 июня</span></div>
+								<div>08:00-16:00</div>
+							</div>
+						</div>
+						<div class="{{block_prefix}}table-cols  {{block_mod}}">
+							<div class="{{block_prefix}}table-time-card  {{block_mod}}">
+								<div class="{{block_prefix}}table-time-date  {{block_mod}}">Пн, <span>27 июня</span></div>
+								<div>8:00-16:00</div>
+							</div>
+						</div>
+						<div class="{{block_prefix}}table-cols  {{block_mod}}">
+							<div class="{{block_prefix}}table-time-card  {{block_mod}}">
+								<div class="{{block_prefix}}table-time-date  {{block_mod}}">Пн, <span>27 июня</span></div>
+								<div>8:00-16:00</div>
+							</div>
+						</div>
+						<div class="{{block_prefix}}table-cols  {{block_mod}}">
+							<div class="{{block_prefix}}table-time-card  {{block_mod}}">
+								<div class="{{block_prefix}}table-time-date  {{block_mod}}">Пн, <span>27 июня</span></div>
+								<div>8:00-16:00</div>
+							</div>
+						</div>
+						<div class="{{block_prefix}}table-cols  {{block_mod}}">
+							<div class="{{block_prefix}}table-time-card  {{block_mod}}">
+								<div class="{{block_prefix}}table-time-date  {{block_mod}}">Пн, <span>27 июня</span></div>
+								<div>Выходной</div>
+							</div>
+						</div>
+						<div class="{{block_prefix}}table-cols  {{block_mod}}">
+							<div class="{{block_prefix}}table-time-card  {{block_mod}}">
+								<div class="{{block_prefix}}table-time-date  {{block_mod}}">Пн, <span>27 июня</span></div>
+								<div>8:00-16:00</div>
+							</div>
+						</div>
+						<div class="{{block_prefix}}table-cols  {{block_mod}}">
+							<div class="{{block_prefix}}table-time-card  {{block_mod}}">
+								<div class="{{block_prefix}}table-time-date  {{block_mod}}">Пн, <span>27 июня</span></div>
+								<div>8:00-16:00</div>
+							</div>
+						</div>
+					</div>
+					<div class="{{block_prefix}}table-row  {{block_mod}}">
+						<div class="{{block_prefix}}table-cols  is--heading  {{block_mod}}">
+							<div class="{{block_prefix}}table-med-card  {{block_mod}}">
+								<div class="{{block_prefix}}table-med-heading  {{block_mod}}">
+									<a href="#">Иванникова Ирина Николаевна</a>
+								</div>
+								<div class="{{block_prefix}}table-med-post  {{block_mod}}">Зубной врач</div>
+								<div class="{{block_prefix}}table-med-link  {{block_mod}}">
+									<a href="#" data-toggle="modal" data-target="#modal-appointment" >Записаться на прием</a>
+								</div>
+							</div>
+						</div>
+						<div class="{{block_prefix}}table-cols  {{block_mod}}">
+							<div class="{{block_prefix}}table-time-card  {{block_mod}}">
+								<div class="{{block_prefix}}table-time-date  {{block_mod}}">Пн, <span>27 июня</span></div>
+								<div>08:00-16:00</div>
+							</div>
+						</div>
+						<div class="{{block_prefix}}table-cols  {{block_mod}}">
+							<div class="{{block_prefix}}table-time-card  {{block_mod}}">
+								<div class="{{block_prefix}}table-time-date  {{block_mod}}">Пн, <span>27 июня</span></div>
+								<div>8:00-16:00</div>
+							</div>
+						</div>
+						<div class="{{block_prefix}}table-cols  {{block_mod}}">
+							<div class="{{block_prefix}}table-time-card  {{block_mod}}">
+								<div class="{{block_prefix}}table-time-date  {{block_mod}}">Пн, <span>27 июня</span></div>
+								<div>8:00-16:00</div>
+							</div>
+						</div>
+						<div class="{{block_prefix}}table-cols  {{block_mod}}">
+							<div class="{{block_prefix}}table-time-card  {{block_mod}}">
+								<div class="{{block_prefix}}table-time-date  {{block_mod}}">Пн, <span>27 июня</span></div>
+								<div>8:00-16:00</div>
+							</div>
+						</div>
+						<div class="{{block_prefix}}table-cols  {{block_mod}}">
+							<div class="{{block_prefix}}table-time-card  {{block_mod}}">
+								<div class="{{block_prefix}}table-time-date  {{block_mod}}">Пн, <span>27 июня</span></div>
+								<div>Выходной</div>
+							</div>
+						</div>
+						<div class="{{block_prefix}}table-cols  {{block_mod}}">
+							<div class="{{block_prefix}}table-time-card  {{block_mod}}">
+								<div class="{{block_prefix}}table-time-date  {{block_mod}}">Пн, <span>27 июня</span></div>
+								<div>8:00-16:00</div>
+							</div>
+						</div>
+						<div class="{{block_prefix}}table-cols  {{block_mod}}">
+							<div class="{{block_prefix}}table-time-card  {{block_mod}}">
+								<div class="{{block_prefix}}table-time-date  {{block_mod}}">Пн, <span>27 июня</span></div>
+								<div>8:00-16:00</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
