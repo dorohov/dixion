@@ -4992,6 +4992,23 @@ blockquote {
 		}
 	}
 }
+.schedule-page{}
+._shp__{
+	&row{
+		@media @media-notsmart {margin-top: -30px;}
+		flex-wrap: wrap;
+	}
+	&cols{		
+		@media @media-notsmart {padding-top: 30px;}
+		&.cols-3{
+			@media @media-size-sm {.makeCols(4, 12);}
+		}
+	}
+	&item-link{
+		.calcFontSize(18, 20, 320, 1680);
+		.calcLineHeight(24, 26, 320, 1680);
+	}
+}
 .schedule__{
 	&page{
 		padding-bottom: 0;
