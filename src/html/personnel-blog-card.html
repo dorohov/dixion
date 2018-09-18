@@ -5,59 +5,30 @@
 			tpl="/src/block/site/default/head/.html" 
 			title=" "
 			description=" "
-		]]
-		
-		<!--<link href="/css/azbn7-preloader.css" rel="stylesheet" />-->
-		
+		]] 		
 	</head>
-	<body class="_preloading" >	
-		[[azbntple 
-			tpl="8/src/block/azbn7/b/_azbn7-preloader/.html"
-		]] 
+	<body>	
 		[[azbntple 
 			tpl="/src/block/site/default/navbar/.html"
 			class="navbar-site scroll"
 			navbar_prefix="navbar__" 
 		]] 
-		[[azbntple
-			tpl="/src/block/site/default/search/panel.html"
-			block_prefix="search__"
-			block_mod="  "
-		]]
-		[[azbntple
-			tpl="/src/block/site/default/banner/.html"
-			banner_class="banner-block"
-			banner_prefix="banner__"
-			banner_carousel_id="banner-carousel"
-		]]
-		[[azbntple
-			tpl="/src/block/site/default/btn-nav/panel.html"
-			block_prefix="btn-nav__"
-			block_mod="  "
-		]]
-		[[azbntple
-			tpl="/src/block/site/default/btn-nav/panel-fix.html"
-			block_prefix="btn-fix__"
-			block_mod="  "
-		]]
-
 		[[azbntple 
-			tpl="/src/block/site/page/index/.html"
-			class="index-page"
-			prefix_block="_ip__"    
+			tpl="/src/block/site/page/personnel/blog-card.html"
+			class="personnel-page"
+			prefix_block="_psip__"      
 		]]
-			
 		[[azbntple
 			tpl="/src/block/site/default/price-list/block.html"
 			price_class="price-list-block index-block"
 			price_prefix="price-list-block__" 
-		]]	
-
+		]]
 		[[azbntple 
 			tpl="/src/block/site/default/footer/.html" 
 			footer_class="footer-site"
 			footer_prefix="footer__" 
 		]]
+		
 		[[azbntple 
 			tpl="/src/block/site/default/modals/appointment.html"
 			modals_class="modal-base"
@@ -70,8 +41,14 @@
 			modals_id="modal-call"
 			modals_prefix="modal-base__"
 		]] 
+
+		[[azbntple 
+			tpl="/src/block/site/default/modals/reviews.html"
+			modals_class="modal-base"
+			modals_id="modal-reviews"
+			modals_prefix="modal-base__"
+		]] 
 		[[azbntple tpl="/src/block/site/default/script/script.html" ]] 
-		[[azbntple tpl="/src/block/site/default/script/owl.html" ]] 
 		[[azbntple tpl="/src/block/site/default/script/validationEngine.html" ]] 
 	</body>
 </html>

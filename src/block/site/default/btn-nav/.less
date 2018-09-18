@@ -26,6 +26,9 @@
 		@media @media-size-sm{
 			.makeCols(3, 12);
 		}
+		@media @media-point-tablet {
+			.makeCols(3, 12);
+		}
 	}
 	&card{
 		height: 100%;
@@ -56,6 +59,98 @@
 		transition: @trs-site;
 		.btn-nav__card:hover &{
 			color: @white;
+		}
+	}
+}
+.btn-fix__{
+	@gutter: 10px;
+	&panel{
+		position: fixed;
+		top: 41%;
+		right: 0;
+		background-color: @blue-gray;
+		z-index: 1000;
+		border-radius: 45px 0 0 45px;
+		width: 66px;
+		@media @media-point-xxl {
+			width: 86px;
+		}
+		@media @media-point-device {
+			display: none;
+		}
+	}
+	&container{
+		width: 100%;
+		max-width: 100%;
+		padding: 0;
+	}
+	&row{
+		flex-wrap: wrap;
+	}
+	&cols{
+		.makeCols(12, 12);
+	}
+	&card{
+		position: relative;
+		display: block;
+		border: 3px solid @blue-gray;
+		background-color: @white;
+		border-radius: 45px;
+		width: 66px;
+		height: 66px;
+		text-align: center;
+		padding: 20px 10px;
+		transition: @trs-site;
+		&:hover{
+			width: 200px;
+			margin-left: ~"calc(-200px + 66px)";
+		}
+		@media @media-point-xxl {
+			width: 86px;
+			height: 86px;
+			&:hover{
+				width: 220px;
+				margin-left: ~"calc(-220px + 86px)";
+			}
+		}
+		&:hover{
+
+		}
+	}
+	&preview{
+		width: 34px;
+		height: 44px;
+		position: absolute;
+		left: 15px;
+		top: 50%;
+		transform: translateY(-50%);
+		color: @blue-gray;
+		transition: @trs-site;
+		@media @media-point-xxl {
+			width: 44px;
+			height: 54px;	
+			left: 18px;		
+		}
+		.btn-fix__card:nth-child(1) &{
+			@media @media-point-xxl {
+				left: 20px;
+			}			
+		}
+	}
+	&heading{
+		position: absolute;
+		top: 50%;
+		left: 60px;
+		transform: translateY(-50%);
+		color: @blue-sat;
+		transition: @trs-site;
+		opacity: 0;
+		white-space: nowrap;
+		@media @media-point-xxl {
+			left: 80px;
+		}
+		.btn-fix__card:hover &{
+			opacity: 1
 		}
 	}
 }

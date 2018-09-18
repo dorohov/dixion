@@ -40,9 +40,184 @@
 			@media @media-screen {.makeCols(9.6, 12);}
 			@media @media-size-mdl {.makeCols(8, 12);}
 		}
+		&.is--preview,
+		&.is--note{
+			.makeCols(12, 12);
+			@media @media-point-screen {
+				.makeCols(6, 12);
+			}
+		}
+	}
+	&note-group{
+		margin-bottom: 25px;
+		@media @media-point-screen {
+			margin-bottom: 1.8vw;
+		}
+	}
+	&preview-group{
+		position: relative;
+		@media @media-point-tablet {
+			margin-bottom: 80px;
+		}
+		@media @media-point-screen {
+			margin-bottom: 7vw;
+		}
 	}
 	&preview{
 		margin-bottom: 30px;
 	}
-
+	&docm{
+		display: flex;
+		align-items: flex-end;
+		@media @media-point-notsmart {
+			position: absolute;
+			bottom: 0;
+			transform: translateY(40%);
+			left: 2%;
+			right: 2%;	
+			max-width: 600px;		
+		}
+	}
+	&docm-preview{
+		border-radius: 50%;
+		background-size: cover;
+		background-position: top center;
+		min-width: 110px;
+		height: 110px;
+		@media @media-point-tablet {
+			min-width: 200px;
+			height: 200px;
+			border: 10px solid @white;
+		}
+		@media @media-point-screen {
+			min-width: auto;
+			width: 20vw;
+			height: 20vw;
+			max-width: 300px;
+			max-height: 300px;
+			border: 10px solid @white;
+		}
+	}
+	&docm-name{
+		padding-left: 25px;
+		.calcFontSize(20, 26, 320, 1680);
+		.calcLineHeight(24, 32, 320, 1680);
+		text-transform: uppercase;
+		font-weight: 700;
+		flex-grow: 1;
+		background-color: @white;
+		@media @media-point-screen {			
+			max-width: 300px;
+			padding-left: 10px;
+		}	
+	}
+	&comment-group{
+		margin-bottom: 35px;
+		@media @media-point-screen {
+			margin-bottom: 3.5vw;
+		}
+	}
+	&comment-card{
+		position: relative;
+		margin-bottom: 35px;
+		padding-left: 75px;
+		@media @media-point-tablet {
+			padding-left: 125px;
+		}
+		@media @media-point-screen {
+			padding-left: 170px;
+			margin-bottom: 2.5vw;			
+		}
+		&::last-child{
+			margin-bottom: 0;
+		}
+	}
+	&comment-preview{
+		position: absolute;
+		top: 0;
+		left: 0;
+		@media @media-point-smart {
+			width: 50px;
+			height: 50px;
+		}
+		@media @media-point-tablet {
+			width: 100px;
+			height: 100px;
+		}
+	}
+	&comment-heading{
+		.calcFontSize(22, 26, 320, 1680);
+		.calcLineHeight(26, 30, 320, 1680);
+		font-weight: 700;
+		text-transform: uppercase;
+		margin-bottom: 15px;
+	}
+	&comment-note{}
+	&btn{
+		text-align: center;
+	}
+}
+//blog
+.personnel-blog__{
+	&block{
+		background-color: @white8;
+		@media @media-point-device {
+			min-height: auto;
+		}
+	}
+	&slider-block{
+		min-height: auto;
+		@media @media-point-tablet {
+			padding-top: 45px;
+		}
+	}
+	&cols{
+		&.is--preview{
+			@media @media-point-smart {
+				width: 250px;
+			}
+			@media @media-point-tablet {
+				.makeCols(4, 12);
+			}
+			@media @media-point-screen {
+				.makeCols(3.2, 12);
+			}
+		}
+		&.is--note{
+			.makeCols(12, 12);
+			@media @media-point-tablet {
+				.makeCols(8, 12);
+			}
+			@media @media-point-screen {
+				.makeCols(8.8, 12);
+				padding-left: ~"calc(15px + 1vw)";
+			}
+		}
+	}
+	&preview{
+		border-radius: 50%;
+		background-size: cover;
+		background-position: top center;
+		width: 225px;
+		height: 225px;
+		@media @media-point-smart {
+			margin-bottom: 30px;
+		}
+		@media @media-point-screen {
+			max-width: 380px;
+			max-height: 380px;
+			width: 20vw;
+			height: 20vw;
+		}
+	}
+	&note{
+		color: @blue-purple;
+		.calcFontSize(18, 28, 320, 1680);
+		.calcLineHeight(24, 34, 320, 1680);
+		@media @media-point-screen {
+			p, div{
+				margin-bottom: 2vw;
+			}
+		}
+	}
 }
