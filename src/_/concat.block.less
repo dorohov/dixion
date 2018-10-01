@@ -3985,8 +3985,8 @@ textarea.form__control{height: 150px;}
 			height: 15vw;
 		}
 		&.is--lg{			
-			max-width: 360px;
-			max-height: 360px;
+			max-width: 200px;
+			max-height: 200px;
 			@media @media-point-screen {
 				width: 19vw;
 				height: 19vw;
@@ -4026,15 +4026,15 @@ textarea.form__control{height: 150px;}
 		}
 		&.is--lg{
 			font-weight: 700;
-			.calcFontSize(20, 33, 320, 1680);
-			.calcLineHeight(24, 40, 320, 1680);
+			//.calcFontSize(20, 33, 320, 1680);
+			//.calcLineHeight(24, 40, 320, 1680);
 			margin-bottom: 20px;
 		}
 	}
 	&note{
 		&.is--lg{
-			.calcFontSize(18, 22, 320, 1680);
-			.calcLineHeight(24, 28, 320, 1680);
+			//.calcFontSize(18, 22, 320, 1680);
+			//.calcLineHeight(24, 28, 320, 1680);
 			color: @blue-purple;
 		}
 	}
@@ -5301,7 +5301,7 @@ blockquote {
 				.makeCols(4, 12);
 			}
 			@media @media-point-screen {
-				.makeCols(3.2, 12);
+				//.makeCols(2, 12);
 			}
 		}
 		&.is--note{
@@ -5310,7 +5310,7 @@ blockquote {
 				.makeCols(8, 12);
 			}
 			@media @media-point-screen {
-				.makeCols(8.8, 12);
+				.makeCols(6, 12);
 				padding-left: ~"calc(15px + 1vw)";
 			}
 		}
@@ -5324,20 +5324,20 @@ blockquote {
 		@media @media-point-smart {
 			margin-bottom: 30px;
 		}
-		@media @media-point-screen {
+		/*@media @media-point-screen {
 			max-width: 380px;
 			max-height: 380px;
 			width: 20vw;
 			height: 20vw;
-		}
+		}*/
 	}
 	&note{
 		color: @blue-purple;
-		.calcFontSize(18, 28, 320, 1680);
-		.calcLineHeight(24, 34, 320, 1680);
+		//.calcFontSize(18, 28, 320, 1680);
+		//.calcLineHeight(24, 34, 320, 1680);
 		@media @media-point-screen {
 			p, div{
-				margin-bottom: 2vw;
+				//margin-bottom: 2vw;
 			}
 		}
 	}
