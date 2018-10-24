@@ -702,6 +702,36 @@ body._preloading {
 			@media @media-size-sm {.makeCols(4, 12);}
 			@media @media-size-md {.makeCols(4, 12);}
 		}
+		&.col-1{//изменено добавлен класс
+			margin-top: 30px;
+			border-top: 2px solid @blue-gray;
+			border-left: 2px solid @blue-gray;
+			border-right: 2px solid @blue-gray;
+			@media @media-point-device{.makeCols(12, 12);}
+			@media @media-point-screen{.makeCols(6, 12);}
+		}
+		&.col-2{//изменено добавлен класс
+			margin-top: 30px;
+			border-top: 2px solid @blue-gray;
+			border-right:2px solid @blue-gray;
+			@media @media-point-device{.makeCols(12, 12);}
+			@media @media-point-screen{.makeCols(6, 12);}
+			@media @media-point-smart{
+				margin-top: 0;
+				border-left: 2px solid @blue-gray;
+			}
+		}
+		&.col-3{//изменено добавлен класс
+			border:2px solid @blue-gray;
+			text-align: center;
+			@media @media-point-device{.makeCols(12, 12);}
+			@media @media-point-screen{.makeCols(12, 12);}
+			@media @media-point-smart{text-align: left;}
+		}
+		//изменено добавлено правило
+		&.col-1, &.col-2, &.col-3{
+			padding: 20px;
+		}
 	}
 }
 .docs-item__{
